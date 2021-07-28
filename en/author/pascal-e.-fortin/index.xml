@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pascal E. Fortin | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/en/author/pascal-e.-fortin/</link>
+      <atom:link href="https://www.weill-duflos.fr/en/author/pascal-e.-fortin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pascal E. Fortin</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Pascal E. Fortin</title>
+      <link>https://www.weill-duflos.fr/en/author/pascal-e.-fortin/</link>
+    </image>
+    
+    <item>
+      <title>Contact Force Estimation from Raw Photoplethysmogram Signal</title>
+      <link>https://www.weill-duflos.fr/en/publication/fortin-contact-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/en/publication/fortin-contact-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptic Augmentation of Audio and Its Effects on Speech Perception</title>
+      <link>https://www.weill-duflos.fr/en/publication/weill-duflos-haptic-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/en/publication/weill-duflos-haptic-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

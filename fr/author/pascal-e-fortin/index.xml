@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pascal E Fortin | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/fr/author/pascal-e-fortin/</link>
+      <atom:link href="https://www.weill-duflos.fr/fr/author/pascal-e-fortin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pascal E Fortin</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Pascal E Fortin</title>
+      <link>https://www.weill-duflos.fr/fr/author/pascal-e-fortin/</link>
+    </image>
+    
+    <item>
+      <title>BarryWhaptics: Towards Countering Social Biases Using Real-Time Haptic Enhancement of Voice</title>
+      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-barrywhaptics-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-barrywhaptics-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BarryWhaptics: Towards Countering Social Biases Using Real-Time Haptic Enhancement of Voice</title>
+      <link>https://www.weill-duflos.fr/fr/publication/weillduflos-barrywhaptics-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/weillduflos-barrywhaptics-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Getting Your Hands Dirty Outside the Lab: A Practical Primer for Conducting Wearable Vibrotactile Haptics Research</title>
+      <link>https://www.weill-duflos.fr/fr/publication/blum-getting-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/blum-getting-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reversing Voice-Related Biases Through Haptic Reinforcement</title>
+      <link>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>medical | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/fr/tag/medical/</link>
+      <atom:link href="https://www.weill-duflos.fr/fr/tag/medical/index.xml" rel="self" type="application/rss+xml" />
+    <description>medical</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Sat, 12 Oct 2019 14:55:11 -0400</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>medical</title>
+      <link>https://www.weill-duflos.fr/fr/tag/medical/</link>
+    </image>
+    
+    <item>
+      <title>Haptic for OR/ICU</title>
+      <link>https://www.weill-duflos.fr/fr/project/hapticicu/</link>
+      <pubDate>Sat, 12 Oct 2019 14:55:11 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/project/hapticicu/</guid>
+      <description>&lt;p&gt;At present, the operating room (OR) and intensive care unit (ICU) are noisy environments, exacerbated by frequent alarms. Regardless of whether the alarms are valid or false, all command attention, raise stress, and are often irrelevant to the responsibilities of individual clinicians. To cope with these problems, we are investigating the possibility of using audio only for those alarms that should be announced to the entire team, but delivering other alarm cues individually, through haptics vibrations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haptic device for sensory reeducation</title>
+      <link>https://www.weill-duflos.fr/fr/project/hapticrehab/</link>
+      <pubDate>Sat, 12 Oct 2019 14:55:03 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/project/hapticrehab/</guid>
+      <description>&lt;p&gt;Nerve damage, frequently caused by injury, can result in the loss of sensorimotor functions in certain parts of the hand. After suturing the nerve, unpleasant sensations on contact, including tingling and electric shocks are often felt. Following nerve regrowth, it is necessary to re-train the brain to interpret the signals from these nerves correctly. This project involves the design of haptic devices to help in this process of sensory reeducation, which can involve two phases, depending on the severity of the loss of sensitivity: relearning how to localize sensations, and differentiation of shapes and textures in the identification of objects.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

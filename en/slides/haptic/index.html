@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Wowchemy 5.3.0 for Hugo">
+
+  
+  <link rel="manifest" href="/en/index.webmanifest">
+  
+  
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://www.weill-duflos.fr/en/slides/haptic/">
+
+  <title>Haptic | Antoine Weill--Duflos</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" id="highlight-theme">
+
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      <h1 id="designing-haptic-interactions">Designing haptic interactions</h1>
+<aside class="notes">
+  <p>We often underestimate how important the sense of touch is in our daily interactions.</p>
+<p>It&rsquo;s the first sense baby develops.</p>
+<p>If you think about the other senses, they are very localized, but touched is all around !</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="a-bit-of-taxonomy">A bit of Taxonomy</h2>
+<ul>
+<li>
+<p>Somatosensory systems</p>
+</li>
+<li>
+<p>Somesthetic senses:</p>
+<ul>
+<li>sense of touch</li>
+<li>proprioception</li>
+<li>haptic perception</li>
+</ul>
+</li>
+<li>
+<p><span class="fragment " >
+Haptic feedback
+</span></p>
+<ul>
+<li><span class="fragment " >
+Kinesthetic
+</span></li>
+<li><span class="fragment " >
+Tactile
+</span></li>
+</ul>
+</li>
+</ul>
+<aside class="notes">
+  <p>When we say «touch» we may actually refer to different things, is the pain felt the same way as cold ? Do we feel force with the same mechanisms as we feel the softness of a blanket ?</p>
+<p>Let&rsquo;s talk about how everything works, but first let&rsquo;s introduce some words.</p>
+<p>The somatosensory system is a part of the sensory nervous system, it responds to changes at the surface or inside of the body.</p>
+<p>The somatic senses or somesthetic senses are the sense of touch, proprioception (sense of position and movement) and haptic perception. Haptic perception is often associated with active touch.</p>
+<p>And because that&rsquo;s not enough term, engineer often talks about Haptic feedback being divided in kinesthetic and tactile.</p>
+<p>Still following ? lets try to get into how it works.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="types-of-tactile-receptors">Types of tactile receptors</h2>
+<ul>
+<li>Mechanoreceptors</li>
+<li>Thermoreceptors</li>
+<li>Nociceptors</li>
+</ul>
+<p><span class="fragment " >
+All sharing the same channel
+</span></p>
+<p><span class="fragment " >
+Gate Control Theory
+</span></p>
+<p><span class="fragment " >
+running cool water on a burned area = less pain
+</span></p>
+<aside class="notes">
+  <p>Tactile receptors are cells reacting to tactile stimilus, they can be divide in thre types.</p>
+<p>Interestingly they sort of use the same channel to convey the information to the brain.</p>
+<p>This create an effect called gating, information are competing to get to the brain.</p>
+<p>And that&rsquo;s a why running your finger under cool water diminish the pain sensation associated with a burn.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="tactile-receptors">Tactile receptors</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_b965803bb2705bf3cfc1c160da997788.png 400w,
+               /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_36dec3ea05b69badbd85134275788684.png 760w,
+               /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_1200x1200_fit_lanczos_2.png 1200w"
+               src="/en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_b965803bb2705bf3cfc1c160da997788.png"
+               width="500"
+               height="600"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<aside class="notes">
+  <p>Jets give a closer look a tactile receptors.</p>
+<p>Ruffini corpuscle are sensing skin stretch.</p>
+<p>Meissner respond to light touch and virbation around 50Hz
+Pacinain corpuscle will detect rapid 200-300Hz vibration</p>
+<p>Merkel disc detect pressure.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="two-point-discrimination">Two-point discrimination</h2>
+<p>Do we have the same tactile sensitivity everywhere?</p>
+<aside class="notes">
+  <p>Mow, do you think we have the same tactile sensitivity everywhere</p>
+<p>2dp 1mm in the tongue</p>
+<p>3 to 8 on the finger</p>
+<p>36 to 75mm on the back</p>
+<p>It&rsquo;s optimisation of the ressources, we don&rsquo;t need more informations from the back, but we use our hand to grab stuff.</p>
+<p>Why optimise</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="cortical-homunculus">Cortical Homunculus</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_87355edbd00331b001fefef59f99c051.jpg 400w,
+               /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_ece89aa96be0aee23cb7a83572993d6f.jpg 760w,
+               /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_1200x1200_fit_q90_lanczos.jpg 1200w"
+               src="/en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_87355edbd00331b001fefef59f99c051.jpg"
+               width="500"
+               height="757"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<aside class="notes">
+  <p>Because we don&rsquo;t have infinite ressources</p>
+<p>This is a sensory homunculus, it shows the parts of the brain that are processing tactile input from specific inputs of the body.</p>
+<p>Does someone have a guess on what would happends if I loose a finger, or an hand ?</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h1 id="playing-with-the-senses">Playing with the senses</h1>
+<aside class="notes">
+  <p>Now that we covered how it&rsquo;s working, let&rsquo;s try to find how to break it.</p>
+<p>By that I mean, can we send signals that will create a confusing sensation.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="optical-illusions">Optical illusions</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt=""
+           src="/en/slides/haptic/spiral.svg"
+           loading="lazy" data-zoomable width="500" /></div>
+  </div></figure>
+<aside class="notes">
+  <p>I bet you&rsquo;ve all seen an optical illusion before.</p>
+<p>Here it&rsquo;s circle that looks like a spiral.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="auditory-illusions">Auditory illusions</h2>
+<p>Auditory illusions</p>
+<p>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<audio controls >
+  <source src="DescenteInfinie.ogg" type="audio/ogg">
+</audio>
+
+<aside class="notes">
+  Auditory illusions are less known but I think you may know about the Yanny or Laurel one.
+</aside></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="haptic-illusions">Haptic illusions</h2>
+<ul>
+<li>cross your finger and touch your nose</li>
+<li>cutaneous rabbit illusion</li>
+</ul>
+<aside class="notes">
+  <p>Haptic illusion are less known, Prof. Vincent Hayward, former McGill professor, gives a nice explaination for that in a talk I&rsquo;m attaching in the end of this presentation. The issue with haptic illusion is that they tend involve mechanical apparatus.</p>
+<p>Still, I listed two exemple that only requires your hands.</p>
+<p>And I&rsquo;ve also been doing a project on making tactile illusions more accessible by taking advantage of the democratization of 3D printing.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="haptic-communication">Haptic communication</h2>
+<ul>
+<li>Tactile feedback</li>
+<li>Vibrotactile feedback</li>
+<li>Thermal feedback</li>
+<li>Force feedback</li>
+</ul>
+<aside class="notes">
+  <p>I think that was already a big explaination of the senses, now let&rsquo;s take a look at the design aspect.</p>
+<p>Haptic communication is divided into 4 cat.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h1 id="some-realisations">Some realisations</h1>
+<aside class="notes">
+  I will give you two exemple of haptic device and I&rsquo;d like you to think about what type of category are involved.
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="surface-interaction">Surface Interaction</h2>
+<p>MIT Tangible Media Group</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://player.vimeo.com/video/326196792" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="haptic-teleoperation">Haptic teleoperation</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/HY4bfnHMdtk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<aside class="notes">
+  This second exemple is a nice reminder of why we need haptic feedback.
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="vibrotactile-actuators">Vibrotactile actuators</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_23453f0d3babcc578a32de0ee98151c2.jpg 400w,
+               /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_17cf3f12f1f78a45056ae6888d4f777c.jpg 760w,
+               /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_1200x1200_fit_q90_lanczos.jpg 1200w"
+               src="/en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_23453f0d3babcc578a32de0ee98151c2.jpg"
+               width="500"
+               height="167"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<aside class="notes">
+  <p>The exemple where not that much about vibrotactile feedback.
+Vibrotactile feedback is probably the type of haptic communication you are the more familiar with, because of smartphones or video game console.</p>
+<p>Vibrotactile is achieved using a vibrotactile actuators. They can be divided in 3cat.</p>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="more-vibrotactile-actuators">More vibrotactile actuators</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/UuMfQEZAhyY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<aside class="notes">
+  Taptic engive or high-end haptic devices are actually just carrefully tuned lras.
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="try-it-on-your-phone-">Try it on your phone !</h2>
+<p><a href="https://www.weill-duflos.fr/en/courses/haptic/">Using html5 API</a></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="recent-work">Recent work</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/UFgp7A1IK7o" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="online-ressources">Online ressources</h2>
+<h3 id="talks">Talks</h3>
+<p><a href="https://vimeo.com/85782362" target="_blank" rel="noopener">A sense of Truth, interview of V. Hayward</a></p>
+<p><a href="https://www.ted.com/talks/katherine_kuchenbecker_the_technology_of_touch" target="_blank" rel="noopener">The technology of touch, K. Kuchenbecker TED talk</a></p>
+<h3 id="online-tools">Online tools</h3>
+<p><a href="https://haptipedia.org/" target="_blank" rel="noopener">Haptipedia: online database of haptic devices</a></p>
+<p><a href="https://www.cs.ubc.ca/~seifi/VibViz/main.html" target="_blank" rel="noopener">VibViz: explore vibrations patterns</a></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h1 id="questions">Questions?</h1>
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js" integrity="sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js" integrity="sha512-eZZqO4ECmVvGhCt+6VZ7ian2bCu4S6yrjSFH9fXLY1zTokpAWsxAxQwM4x6+7G+G4ha5tFIe0jY0XjpBUqS49Q==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js" integrity="sha512-NA5UCab7xDKQPXGsmIp8iEuId5BAKGPiqHZsZQcBuySfp1n3dZrwBDKpPNL23Db5upay1nULxU14JV1ggFOD2A==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js" integrity="sha512-FYeeQscKqibmYKr0+nE2+fN5prBsFwgjsBVwkrA88O6mN2+ai6EvRkSi6txuhXlWsyK1MUfoV+94+q6HLouJSQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/search/search.min.js" integrity="sha512-2yh3Y2gEdboEnZb9d0QZP05N3e0jTkcjhbG9xYL97mbnZ53IXzF5R2TCTmSrtuspDyJ5FWBSh+8izjiGjVdLWw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js" integrity="sha512-FUzQmRJDLL111zqJg/vN1YzQFQtZNWfBH2VaOiv30dXRXgaTRn3F/Ibda92klSAVjfz3Q9UqS88R4RF4Ip01fQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/zoom/zoom.min.js" integrity="sha512-zPYOPjR7Hg9BPUYkfNlvVtrC37QlYwq/7mI42VTuXKTcNBp7QvMfuqUTMesOf74OrZ3AEdxJGndGSrJG9O2j5Q==" crossorigin="anonymous"></script>
+
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/plugin.js" integrity="sha256-M6JwAjnRAWmi+sbXURR/yAhWZKYhAw7YXnnLvIxrdGs=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js" integrity="sha256-l14dklFcW5mWar6w/9KaW0fWVerf3mYr7Wt0+rXzFAA=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.css" integrity="sha256-0fU8HKLaTjgzfaV9CgSqbsN8ilA3zo6zK1M6rlgULd8=" crossorigin="anonymous">
+  
+
+  
+
+  
+  <script src="/js/wowchemy-slides.js"></script>
+
+</body>
+</html>

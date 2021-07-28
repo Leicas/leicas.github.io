@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/en/courses/haptic/</link>
+      <atom:link href="https://www.weill-duflos.fr/en/courses/haptic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Overview</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Overview</title>
+      <link>https://www.weill-duflos.fr/en/courses/haptic/</link>
+    </image>
+    
+    <item>
+      <title>Basic usage</title>
+      <link>https://www.weill-duflos.fr/en/courses/haptic/basic/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/haptic/basic/</guid>
+      <description>&lt;p&gt;As long as your device support the Vibration API, usage is very simple.&lt;/p&gt;
+&lt;p&gt;The only functions to use is :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;navigator.vibrate();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to make a simple vibration:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Vibrate for 300ms
+navigator.vibrate([300]);
+// or
+navigator.vibrate(300);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;script&gt;function example1() {
+// Vibrate for 300ms
+ navigator.vibrate([300]);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;example1()&#34;&gt;Try it !&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;For more complex pattern you can pass a pattern of vibrations followed by pauses:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// &#39;SOS&#39; in morse code
+navigator.vibrate([50,50,50,50,50,150,150,50,150,50,150,150,50,50,50,50,50]]); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;script&gt;function example2() {
+ navigator.vibrate([50,50,50,50,50,150,150,50,150,50,150,150,50,50,50,50,50]);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;example2()&#34;&gt;Try it !&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes smartphone actuator cannot play fast changes, so here is a slower version:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// a slower &#39;SOS&#39; in morse code
+navigator.vibrate([100,100,100,100,100,300,300,100,300,100,300,300,100,100,100,100,100]); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;script&gt;function example2b() {
+ navigator.vibrate([100,100,100,100,100,300,300,100,300,100,300,300,100,100,100,100,100]);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;example2b()&#34;&gt;Try it !&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;To stop a vibration, just call the function with the value 0:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;navigator.vibrate(0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;script&gt;function example3s() {
+ navigator.vibrate(3000);
+}
+&lt;/script&gt;
+&lt;script&gt;function example3() {
+ navigator.vibrate(0);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;example3s()&#34;&gt;Start it !&lt;/button&gt;
+&lt;button onclick=&#34;example3()&#34;&gt;Stop it !&lt;/button&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Activity</title>
+      <link>https://www.weill-duflos.fr/en/courses/haptic/exercise/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/haptic/exercise/</guid>
+      <description>&lt;p&gt;Try to create vibrations patterns matching different types of content.&lt;/p&gt;
+&lt;script&gt;function warning() {
+ navigator.vibrate(1);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;warning()&#34;&gt;Warning !&lt;/button&gt;&lt;/p&gt;
+&lt;script&gt;function win() {
+ navigator.vibrate(1);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;win()&#34;&gt;You won !&lt;/button&gt;&lt;/p&gt;
+&lt;script&gt;function loose() {
+ navigator.vibrate(1);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;loose()&#34;&gt;You lost !&lt;/button&gt;&lt;/p&gt;
+&lt;script&gt;function hurry() {
+ navigator.vibrate(1);
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick=&#34;hurry()&#34;&gt;Hurry !&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;You can start with the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;Vibrations pattern example&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;script&amp;gt;function warning() {
+ navigator.vibrate(1);
+}
+&amp;lt;/script&amp;gt;
+&amp;lt;button onclick=&amp;quot;warning()&amp;quot;&amp;gt;Warning !&amp;lt;/button&amp;gt;
+&amp;lt;script&amp;gt;function win() {
+ navigator.vibrate(1);
+}
+&amp;lt;/script&amp;gt;
+&amp;lt;button onclick=&amp;quot;win()&amp;quot;&amp;gt;You won !&amp;lt;/button&amp;gt;
+&amp;lt;script&amp;gt;function loose() {
+ navigator.vibrate(1);
+}
+&amp;lt;/script&amp;gt;
+&amp;lt;button onclick=&amp;quot;loose()&amp;quot;&amp;gt;You lost !&amp;lt;/button&amp;gt;
+&amp;lt;script&amp;gt;function hurry() {
+ navigator.vibrate(1);
+}
+&amp;lt;/script&amp;gt;
+&amp;lt;button onclick=&amp;quot;hurry()&amp;quot;&amp;gt;Hurry !&amp;lt;/button&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Application example</title>
+      <link>https://www.weill-duflos.fr/en/courses/haptic/interactions/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/haptic/interactions/</guid>
+      <description>&lt;p&gt;The script is based on a &lt;a href=&#34;https://codepen.io/zetyler/pen/LergVR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simple ball collision simulation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When a ball hit the wall, it triggers a vibration. The script uses the smartphone accelerometer to change the direction of the gravity force.&lt;/p&gt;
+&lt;style class=&#34;cp-pen-styles&#34;&gt;
+canvas {
+  border: 1px solid black;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas width=&#34;350&#34; height=&#34;350&#34;&gt;&lt;/canvas&gt;
+&lt;pre class=&#34;output&#34;&gt;&lt;/pre&gt;
+&lt;p&gt;Press button to reset.&lt;/p&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/script.js&#34;&gt;&lt;/script&gt;
+&lt;/script&gt;
+&lt;button onclick=&#34;reset()&#34;&gt;Reset&lt;/button&gt;
+&lt;button onclick=&#34;addball()&#34;&gt;add ball&lt;/button&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;
+var canvas = document.querySelector(&#39;canvas&#39;);
+var pen = canvas.getContext(&#39;2d&#39;);
+const W = canvas.width;
+const H = canvas.height;
+var numBalls = 1;
+var grav = [0, -0.1];
+function Ball(x, y, dx, dy, r) {
+  this.x = x;
+  this.y = y;
+  this.dx = dx;
+  this.dy = dy;
+  this.r = r;
+  this.color = &#39;hsl(&#39; + Math.random() * 360 + &#39;,90%,50%)&#39;;
+  this.draw = function () {
+    pen.fillStyle = this.color;
+    pen.beginPath();
+    pen.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+    pen.fill();
+  };
+  this.update = function () {
+    this.x += this.dx;
+    this.y += this.dy;
+    this.dx += grav[0];
+    this.dy -= grav[1];
+    if (this.x &amp;gt; W - this.r) {
+      this.x = W - this.r;
+      if (this.dx &amp;gt; 4)
+      navigator.vibrate(10);
+      // We made the phone vibrate because it had sufficent velocity
+      this.dx *= -0.5;
+    } else if (this.x &amp;lt; this.r) {
+      this.x = this.r;
+      if (this.dx &amp;lt; 4)
+      navigator.vibrate(10);
+      this.dx *= -0.5;
+    }
+    if (this.y &amp;gt; H - this.r) {
+      this.y = H - this.r;
+      if (this.dy &amp;gt; 4)
+      navigator.vibrate(10);
+      this.dy *= -0.5;
+    } else if (this.y &amp;lt; this.r) {
+      this.y = this.r + 1;
+      if (this.dy &amp;lt; 4)
+      navigator.vibrate(10);
+      this.dy *= -0.5;
+    }
+    this.draw();
+  };
+}
+var balls = [];
+function reset() {
+  balls = [];
+  for (var i = 0; i &amp;lt; numBalls; i++) {
+    var x = Math.random() * W;
+    var y = Math.random() * H;
+    var r = Math.random() * 20 + 10;
+    balls.push(new Ball(x, y, Math.random() * 10 - 5, Math.random() * 10 - 5, r));
+  }
+}
+reset();
+var output = document.querySelector(&#39;.output&#39;);
+function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180]
+  var y = event.gamma; // In degree in the range [-90,90]
+  output.innerHTML  = &amp;quot;beta : &amp;quot; + x + &amp;quot;\n&amp;quot;;
+  output.innerHTML += &amp;quot;gamma: &amp;quot; + y + &amp;quot;\n&amp;quot;;
+  if (x &amp;gt;  90) { x =  90};
+  if (x &amp;lt; -90) { x = -90};
+  grav[1] = -x/90;
+  grav[0] = y/90;
+
+}
+
+window.addEventListener(&#39;deviceorientation&#39;, handleOrientation, false);
+
+window.addEventListener(&#39;keydown&#39;, function (key) {
+  if (key.code === &#39;Space&#39;) {
+    reset();
+  }
+});
+var mouseDown = false;
+var cooldown = 0;
+var mouse = {
+  x: undefined,
+  y: undefined };
+canvas.addEventListener(&#39;mousedown&#39;, function (event) {
+  mouseDown = true;
+});
+canvas.addEventListener(&#39;mouseup&#39;, function (event) {
+  mouseDown = false;
+});
+canvas.addEventListener(&#39;mousemove&#39;, function (event) {
+  mouse.x = event.x - 15;
+  mouse.y = event.y - 15;
+});
+function addball() {
+  var r = Math.random() * 20 + 10;
+    balls.push(new Ball(0, 0, Math.random() * 10 - 5, Math.random() * 10 - 5, r));
+}
+
+function animateb() {
+  pen.clearRect(0, 0, W, H);
+  cooldown++;
+  if (mouseDown &amp;amp;&amp;amp; cooldown &amp;gt; 2) {
+    var r = Math.random() * 20 + 10;
+    balls.push(new Ball(mouse.x, mouse.y, Math.random() * 10 - 5, Math.random() * 10 - 5, r));
+    cooldown = 0;
+  }
+  for (var ball of balls) {
+    ball.update();
+    for (var ball2 of balls) {//Not the most efficient way to check every pair, but this is just a rough version
+      if (ball !== ball2) {
+        var collision = checkCollision(ball, ball2);
+        if (collision[0]) {
+          adjustPositions(ball, ball2, collision[1]);
+          resolveCollision(ball, ball2);
+        }
+      }
+    }
+  }
+  requestAnimationFrame(animateb);
+}
+animateb();
+function checkCollision(ballA, ballB) {
+  var rSum = ballA.r + ballB.r;
+  var dx = ballB.x - ballA.x;
+  var dy = ballB.y - ballA.y;
+  return [rSum * rSum &amp;gt; dx * dx + dy * dy, rSum - Math.sqrt(dx * dx + dy * dy)];
+}
+function resolveCollision(ballA, ballB) {
+  var relVel = [ballB.dx - ballA.dx, ballB.dy - ballA.dy];
+  var norm = [ballB.x - ballA.x, ballB.y - ballA.y];
+  var mag = Math.sqrt(norm[0] * norm[0] + norm[1] * norm[1]);
+  norm = [norm[0] / mag, norm[1] / mag];
+  var velAlongNorm = relVel[0] * norm[0] + relVel[1] * norm[1];
+  if (velAlongNorm &amp;gt; 0)
+  return;
+  var bounce = 0.7;
+  var j = -(1 + bounce) * velAlongNorm;
+  j /= 1 / ballA.r + 1 / ballB.r;
+  var impulse = [j * norm[0], j * norm[1]];
+  ballA.dx -= 1 / ballA.r * impulse[0];
+  ballA.dy -= 1 / ballA.r * impulse[1];
+  ballB.dx += 1 / ballB.r * impulse[0];
+  ballB.dy += 1 / ballB.r * impulse[1];
+  vit = relVel[0] + relVel[1]
+}
+function adjustPositions(ballA, ballB, depth) {//Inefficient implementation for now
+  const percent = 0.2;
+  const slop = 0.01;
+  var correction = Math.max(depth - slop, 0) / (1 / ballA.r + 1 / ballB.r) * percent;
+  var norm = [ballB.x - ballA.x, ballB.y - ballA.y];
+  var mag = Math.sqrt(norm[0] * norm[0] + norm[1] * norm[1]);
+  norm = [norm[0] / mag, norm[1] / mag];
+  correction = [correction * norm[0], correction * norm[1]];
+  ballA.x -= 1 / ballA.r * correction[0];
+  ballA.y -= 1 / ballA.r * correction[1];
+  ballB.x += 1 / ballB.r * correction[0];
+  ballB.y += 1 / ballB.r * correction[1];
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

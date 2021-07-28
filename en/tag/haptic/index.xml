@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>haptic | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/en/tag/haptic/</link>
+      <atom:link href="https://www.weill-duflos.fr/en/tag/haptic/index.xml" rel="self" type="application/rss+xml" />
+    <description>haptic</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 12 Oct 2019 14:55:19 -0400</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>haptic</title>
+      <link>https://www.weill-duflos.fr/en/tag/haptic/</link>
+    </image>
+    
+    <item>
+      <title>3D printed haptic illusions</title>
+      <link>https://www.weill-duflos.fr/en/project/3dprintedillusions/</link>
+      <pubDate>Sat, 12 Oct 2019 14:55:19 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/3dprintedillusions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptic for OR/ICU</title>
+      <link>https://www.weill-duflos.fr/en/project/hapticicu/</link>
+      <pubDate>Sat, 12 Oct 2019 14:55:11 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/hapticicu/</guid>
+      <description>&lt;p&gt;At present, the operating room (OR) and intensive care unit (ICU) are noisy environments, exacerbated by frequent alarms. Regardless of whether the alarms are valid or false, all command attention, raise stress, and are often irrelevant to the responsibilities of individual clinicians. To cope with these problems, we are investigating the possibility of using audio only for those alarms that should be announced to the entire team, but delivering other alarm cues individually, through haptics vibrations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haptic device for sensory reeducation</title>
+      <link>https://www.weill-duflos.fr/en/project/hapticrehab/</link>
+      <pubDate>Sat, 12 Oct 2019 14:55:03 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/hapticrehab/</guid>
+      <description>&lt;p&gt;Nerve damage, frequently caused by injury, can result in the loss of sensorimotor functions in certain parts of the hand. After suturing the nerve, unpleasant sensations on contact, including tingling and electric shocks are often felt. Following nerve regrowth, it is necessary to re-train the brain to interpret the signals from these nerves correctly. This project involves the design of haptic devices to help in this process of sensory reeducation, which can involve two phases, depending on the severity of the loss of sensitivity: relearning how to localize sensations, and differentiation of shapes and textures in the identification of objects.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wearable Haptic devices</title>
+      <link>https://www.weill-duflos.fr/en/project/wearablehaptics/</link>
+      <pubDate>Sat, 12 Oct 2019 14:54:52 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/wearablehaptics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HapticPhonemes</title>
+      <link>https://www.weill-duflos.fr/en/project/hapticphonemes/</link>
+      <pubDate>Sat, 12 Oct 2019 14:54:40 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/hapticphonemes/</guid>
+      <description>&lt;p&gt;The tactile sense can be used as a channel for general communication, especially in contexts where the visual and auditory modalities are occupied with other tasks or compromised. We propose a new method for communicating generic words through the sense of touch that relies on delivering vibration patterns, representing the phonemes composing the words, to the user&amp;rsquo;s skin through two vibrotactile transducers worn on the forearm. The novelty of this technique is that vibration patterns are created from the audio of the corresponding English phoneme, resulting in vibration patterns that resemble physical characteristics when uttering the phoneme during normal speech.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BarryWhaptics</title>
+      <link>https://www.weill-duflos.fr/en/project/barrywhaptics/</link>
+      <pubDate>Sat, 12 Oct 2019 14:46:35 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/barrywhaptics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptic Micro Teleoperation</title>
+      <link>https://www.weill-duflos.fr/en/project/haptic-micro-teleoperation/</link>
+      <pubDate>Mon, 16 Oct 2017 13:05:29 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/haptic-micro-teleoperation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>High Fidelity Haptic Devices</title>
+      <link>https://www.weill-duflos.fr/en/project/high-fidelity-haptic-devices/</link>
+      <pubDate>Mon, 16 Oct 2017 13:00:22 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/project/high-fidelity-haptic-devices/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

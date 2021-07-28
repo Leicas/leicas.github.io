@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>haptics | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/fr/tag/haptics/</link>
+      <atom:link href="https://www.weill-duflos.fr/fr/tag/haptics/index.xml" rel="self" type="application/rss+xml" />
+    <description>haptics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Thu, 11 Jun 2020 13:32:56 -0400</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>haptics</title>
+      <link>https://www.weill-duflos.fr/fr/tag/haptics/</link>
+    </image>
+    
+    <item>
+      <title>Broadcasting Haptic</title>
+      <link>https://www.weill-duflos.fr/fr/project/broadcasting-haptic/</link>
+      <pubDate>Thu, 11 Jun 2020 13:32:56 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/project/broadcasting-haptic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evidence of Sensory Adaptation to Kinaesthetic Sensations in the Human Somatosensory System</title>
+      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-evidence-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-evidence-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploring the Effectiveness of Haptic Alarm Displays for Critical Care Environments</title>
+      <link>https://www.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ten Little Fingers, Ten Little Toes: Can Toes Match Fingers for Haptic Discrimination?</title>
+      <link>https://www.weill-duflos.fr/fr/publication/vyas-ten-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/vyas-ten-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reversing Voice-Related Biases Through Haptic Reinforcement</title>
+      <link>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

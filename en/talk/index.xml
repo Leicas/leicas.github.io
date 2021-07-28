@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks | Antoine Weill--Duflos</title>
+    <link>http://srl.mcgill.ca/~antoinew/talk/</link>
+      <atom:link href="http://srl.mcgill.ca/~antoinew/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 21 Aug 2020 10:00:00 -0400</lastBuildDate>
+    <image>
+      <url>http://srl.mcgill.ca/~antoinew/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Talks</title>
+      <link>http://srl.mcgill.ca/~antoinew/talk/</link>
+    </image>
+    
+    <item>
+      <title>Haptic Augmentation of Audio and its Effects on Speech Perception</title>
+      <link>http://srl.mcgill.ca/~antoinew/talk/haid2020/</link>
+      <pubDate>Fri, 21 Aug 2020 10:00:00 -0400</pubDate>
+      <guid>http://srl.mcgill.ca/~antoinew/talk/haid2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects Overview, Montréal Haptics HUB</title>
+      <link>http://srl.mcgill.ca/~antoinew/talk/montreal_haptic/</link>
+      <pubDate>Sun, 26 Jul 2020 10:00:00 -0400</pubDate>
+      <guid>http://srl.mcgill.ca/~antoinew/talk/montreal_haptic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptics introduction, HCI class (ECSE 424/542)</title>
+      <link>http://srl.mcgill.ca/~antoinew/talk/hci_haptic/</link>
+      <pubDate>Thu, 31 Oct 2019 11:46:50 -0400</pubDate>
+      <guid>http://srl.mcgill.ca/~antoinew/talk/hci_haptic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

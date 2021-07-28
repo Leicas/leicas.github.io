@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/en/event/</link>
+      <atom:link href="https://www.weill-duflos.fr/en/event/index.xml" rel="self" type="application/rss+xml" />
+    <description>Events</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 21 Aug 2020 10:00:00 -0400</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Events</title>
+      <link>https://www.weill-duflos.fr/en/event/</link>
+    </image>
+    
+    <item>
+      <title>Haptic Augmentation of Audio and its Effects on Speech Perception</title>
+      <link>https://www.weill-duflos.fr/en/event/haid2020/</link>
+      <pubDate>Fri, 21 Aug 2020 10:00:00 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/event/haid2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects Overview, Montréal Haptics HUB</title>
+      <link>https://www.weill-duflos.fr/en/event/montreal_haptic/</link>
+      <pubDate>Sun, 26 Jul 2020 10:00:00 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/event/montreal_haptic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptics introduction, HCI class (ECSE 424/542)</title>
+      <link>https://www.weill-duflos.fr/en/event/hci_haptic/</link>
+      <pubDate>Thu, 31 Oct 2019 11:46:50 -0400</pubDate>
+      <guid>https://www.weill-duflos.fr/en/event/hci_haptic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting started | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/en/courses/leapmotion/</link>
+      <atom:link href="https://www.weill-duflos.fr/en/courses/leapmotion/index.xml" rel="self" type="application/rss+xml" />
+    <description>Getting started</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Getting started</title>
+      <link>https://www.weill-duflos.fr/en/courses/leapmotion/</link>
+    </image>
+    
+    <item>
+      <title>Basis</title>
+      <link>https://www.weill-duflos.fr/en/courses/leapmotion/basis/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/leapmotion/basis/</guid>
+      <description>&lt;p&gt;All the informations on the API calls can be found on the &lt;a href=&#34;https://developer-archive.leapmotion.com/documentation/javascript/api/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official Leapmotion website.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To access the leapmotion on a webpage, first import the libs:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;leap-0.6.4.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;leap-plugins-0.1.12.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;http://srl.mcgill.ca/~antoinew/leap-0.6.4.js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeapJS download link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://srl.mcgill.ca/~antoinew/leap-plugins-0.1.12.js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;leap plugin download link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then we create a controller&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var controller = new Leap.Controller();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and finally, create and execute the loop:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;controller.on(&#39;frame&#39;, function(frame){
+// instructions of your loop
+});
+controller.connect();
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Positions</title>
+      <link>https://www.weill-duflos.fr/en/courses/leapmotion/positions/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/leapmotion/positions/</guid>
+      <description>&lt;h2 id=&#34;fingers&#34;&gt;Fingers:&lt;/h2&gt;
+&lt;p&gt;Positions of the tips of the fingers:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;//finger from 0 to 4 are, in order: thumb, index, middle, ring and pinky
+frame.fingers[0].tipPosition
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;thumb &lt;span id=&#34;thumb&#34;&gt;…&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;index &lt;span id=&#34;index&#34;&gt;…&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;middle &lt;span id=&#34;middle&#34;&gt;…&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;ring &lt;span id=&#34;ring&#34;&gt;…&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;pinky &lt;span id=&#34;pinky&#34;&gt;…&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The positions can be used to compute distances between the tips.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;distance = function(a,b) {
+var x = a[0]-b[0]
+var y = a[1]-b[1]
+var z = a[2]-b[2]
+x *= x
+y *= y
+z *= z
+return Math.sqrt(x+y+z)
+}
+distance(frame.fingers[0].tipPosition, frame.fingers[1].tipPosition);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Distance between the tip of the finger and thumb: &lt;span id=&#34;stabPosition&#34;&gt;…&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hands&#34;&gt;Hands&lt;/h2&gt;
+&lt;p&gt;Position of the Palm of the hand&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;frame.hands[0].palmPosition;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Position of the first hand: &lt;span id=&#34;palm&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Type of hand (right/left):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;frame.hands[0].type;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First hand I&amp;rsquo;ve seen is: &lt;span id=&#34;type&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Indication of pinch:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;frame.hands[0].pinchStrength;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    MacOS/Linux and Windows have a very different interpretation of pinch. For Windows a two finger pinch will put the index close to 1, for MacOS and Linux a closed fist will be required.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Pinch index: &lt;span id=&#34;pinchStrength&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To investigate other information available, which depends on the version of the Leapmotion software you are running, you can dump the “hands” info to the console.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;console.log(frame.hands[0])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-0.6.4.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-plugins-0.1.12.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/positions.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gestures</title>
+      <link>https://www.weill-duflos.fr/en/courses/leapmotion/gestures/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/leapmotion/gestures/</guid>
+      <description>&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    Unfortunately this is deprecated in the current version of the Windows build and will not work…
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To get the gesture information, the easiest way is to print the info in the console.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;frame.gestures.forEach(function(gesture, index) {
+  console.log(gesture)
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;types-of-gestures&#34;&gt;Types of gestures&lt;/h2&gt;
+&lt;p&gt;There are 4 types of recognized gestures:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Circle : &lt;span id=&#34;circle&#34;&gt;0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Swipe : &lt;span id=&#34;swipe&#34;&gt;0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;keyTap : &lt;span id=&#34;keyTap&#34;&gt;0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Screentap : &lt;span id=&#34;screen&#34;&gt;0&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-0.6.4.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-plugins-0.1.12.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/gesture.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cats</title>
+      <link>https://www.weill-duflos.fr/en/courses/leapmotion/zcats/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/leapmotion/zcats/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var cats = {};
+
+Leap.loop(function(frame) {
+
+  frame.hands.forEach(function(hand, index) {
+
+    var cat = ( cats[index] || (cats[index] = new Cat()) );
+    cat.setTransform(hand.screenPosition(), hand.roll());
+
+  });
+
+}).use(&#39;screenPosition&#39;, {scale: 0.25});
+
+
+var Cat = function() {
+  var cat = this;
+  var img = document.createElement(&#39;img&#39;);
+  img.src = &#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/109794/cat_2.png&#39;;
+  img.style.position = &#39;absolute&#39;;
+  img.onload = function () {
+    cat.setTransform([window.innerWidth/2,window.innerHeight/2], 0);
+    document.body.appendChild(img);
+  }
+
+  cat.setTransform = function(position, rotation) {
+
+    img.style.left = position[0] - img.width  / 2 + &#39;px&#39;;
+    img.style.top  = position[1] - img.height / 2 + &#39;px&#39;;
+
+    img.style.transform = &#39;rotate(&#39; + -rotation + &#39;rad)&#39;;
+
+    img.style.webkitTransform = img.style.MozTransform = img.style.msTransform =
+    img.style.OTransform = img.style.transform;
+
+  };
+
+};
+
+cats[0] = new Cat();
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-0.6.4.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-plugins-0.1.12.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leapdemo.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Leap-theremin</title>
+      <link>https://www.weill-duflos.fr/en/courses/leapmotion/theremin/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.weill-duflos.fr/en/courses/leapmotion/theremin/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var volume = 0
+var pitch = 0
+var context = new AudioContext()
+var o = context.createOscillator()
+var  g = context.createGain()
+o.connect(g)
+g.connect(context.destination)
+g.gain.value = 0.0
+o.start(0)
+Leap.loop(function(frame) {
+
+  frame.hands.forEach(function(hand, index) {
+    if (hand.type == &amp;quot;left&amp;quot;)
+    {
+     volume = -1 *hand.screenPosition()[1] / 200.0
+     g.gain.value = volume
+    }
+    else {
+      pitch = hand.screenPosition()[2]
+      o.frequency.value = pitch/2.0+440
+    }
+
+  });
+
+}).use(&#39;screenPosition&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-0.6.4.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/leap-plugins-0.1.12.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/theremin.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

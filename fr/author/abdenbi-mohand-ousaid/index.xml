@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abdenbi Mohand-Ousaid | Antoine Weill--Duflos</title>
+    <link>https://www.weill-duflos.fr/fr/author/abdenbi-mohand-ousaid/</link>
+      <atom:link href="https://www.weill-duflos.fr/fr/author/abdenbi-mohand-ousaid/index.xml" rel="self" type="application/rss+xml" />
+    <description>Abdenbi Mohand-Ousaid</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Abdenbi Mohand-Ousaid</title>
+      <link>https://www.weill-duflos.fr/fr/author/abdenbi-mohand-ousaid/</link>
+    </image>
+    
+    <item>
+      <title>Modeling and Experimental Characterization of an Active MEMS Based Force Sensor</title>
+      <link>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2019/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modeling and Experimental Characterization of an Active MEMS Based Force Sensor</title>
+      <link>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2018/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimizing Transparency of Haptic Device through Velocity Estimation</title>
+      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
