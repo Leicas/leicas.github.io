@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>micro-robotic | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/en/tag/micro-robotic/</link>
-      <atom:link href="https://www.weill-duflos.fr/en/tag/micro-robotic/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/en/tag/micro-robotic/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/tag/micro-robotic/index.xml" rel="self" type="application/rss+xml" />
     <description>micro-robotic</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Oct 2017 13:05:29 -0400</lastBuildDate>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>micro-robotic</title>
-      <link>https://www.weill-duflos.fr/en/tag/micro-robotic/</link>
+      <link>https://antoine.weill-duflos.fr/en/tag/micro-robotic/</link>
     </image>
     
     <item>
       <title>Haptic Micro Teleoperation</title>
-      <link>https://www.weill-duflos.fr/en/project/haptic-micro-teleoperation/</link>
+      <link>https://antoine.weill-duflos.fr/en/project/haptic-micro-teleoperation/</link>
       <pubDate>Mon, 16 Oct 2017 13:05:29 -0400</pubDate>
-      <guid>https://www.weill-duflos.fr/en/project/haptic-micro-teleoperation/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/project/haptic-micro-teleoperation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Force Sensors</title>
-      <link>https://www.weill-duflos.fr/en/project/force-sensors/</link>
+      <link>https://antoine.weill-duflos.fr/en/project/force-sensors/</link>
       <pubDate>Mon, 16 Oct 2017 13:00:27 -0400</pubDate>
-      <guid>https://www.weill-duflos.fr/en/project/force-sensors/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/project/force-sensors/</guid>
       <description></description>
     </item>
     

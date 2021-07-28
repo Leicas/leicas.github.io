@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>social computing | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/fr/tag/social-computing/</link>
-      <atom:link href="https://www.weill-duflos.fr/fr/tag/social-computing/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/fr/tag/social-computing/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/tag/social-computing/index.xml" rel="self" type="application/rss+xml" />
     <description>social computing</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>social computing</title>
-      <link>https://www.weill-duflos.fr/fr/tag/social-computing/</link>
+      <link>https://antoine.weill-duflos.fr/fr/tag/social-computing/</link>
     </image>
     
     <item>
       <title>Reversing Voice-Related Biases Through Haptic Reinforcement</title>
-      <link>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Antoine Weill | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/fr/author/antoine-weill/</link>
-      <atom:link href="https://www.weill-duflos.fr/fr/author/antoine-weill/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/fr/author/antoine-weill/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/author/antoine-weill/index.xml" rel="self" type="application/rss+xml" />
     <description>Antoine Weill</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Antoine Weill</title>
-      <link>https://www.weill-duflos.fr/fr/author/antoine-weill/</link>
+      <link>https://antoine.weill-duflos.fr/fr/author/antoine-weill/</link>
     </image>
     
     <item>
       <title>Speaking Haptically: From Phonemes to Phrases with a Mobile Haptic Communication System</title>
-      <link>https://www.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/en/courses/haptic/</link>
-      <atom:link href="https://www.weill-duflos.fr/en/courses/haptic/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/en/courses/haptic/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/courses/haptic/index.xml" rel="self" type="application/rss+xml" />
     <description>Overview</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Overview</title>
-      <link>https://www.weill-duflos.fr/en/courses/haptic/</link>
+      <link>https://antoine.weill-duflos.fr/en/courses/haptic/</link>
     </image>
     
     <item>
       <title>Basic usage</title>
-      <link>https://www.weill-duflos.fr/en/courses/haptic/basic/</link>
+      <link>https://antoine.weill-duflos.fr/en/courses/haptic/basic/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://www.weill-duflos.fr/en/courses/haptic/basic/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/courses/haptic/basic/</guid>
       <description>&lt;p&gt;As long as your device support the Vibration API, usage is very simple.&lt;/p&gt;
 &lt;p&gt;The only functions to use is :&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;navigator.vibrate();
@@ -69,9 +69,9 @@ navigator.vibrate([100,100,100,100,100,300,300,100,300,100,300,300,100,100,100,1
     
     <item>
       <title>Activity</title>
-      <link>https://www.weill-duflos.fr/en/courses/haptic/exercise/</link>
+      <link>https://antoine.weill-duflos.fr/en/courses/haptic/exercise/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0100</pubDate>
-      <guid>https://www.weill-duflos.fr/en/courses/haptic/exercise/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/courses/haptic/exercise/</guid>
       <description>&lt;p&gt;Try to create vibrations patterns matching different types of content.&lt;/p&gt;
 &lt;script&gt;function warning() {
  navigator.vibrate(1);
@@ -128,9 +128,9 @@ navigator.vibrate([100,100,100,100,100,300,300,100,300,100,300,300,100,100,100,1
     
     <item>
       <title>Application example</title>
-      <link>https://www.weill-duflos.fr/en/courses/haptic/interactions/</link>
+      <link>https://antoine.weill-duflos.fr/en/courses/haptic/interactions/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://www.weill-duflos.fr/en/courses/haptic/interactions/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/courses/haptic/interactions/</guid>
       <description>&lt;p&gt;The script is based on a &lt;a href=&#34;https://codepen.io/zetyler/pen/LergVR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simple ball collision simulation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;When a ball hit the wall, it triggers a vibration. The script uses the smartphone accelerometer to change the direction of the gravity force.&lt;/p&gt;
 &lt;style class=&#34;cp-pen-styles&#34;&gt;
@@ -145,7 +145,7 @@ canvas {
 &lt;p&gt;Press button to reset.&lt;/p&gt;
 
 
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.weill-duflos.fr/script.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://antoine.weill-duflos.fr/script.js&#34;&gt;&lt;/script&gt;
 &lt;/script&gt;
 &lt;button onclick=&#34;reset()&#34;&gt;Reset&lt;/button&gt;
 &lt;button onclick=&#34;addball()&#34;&gt;add ball&lt;/button&gt;

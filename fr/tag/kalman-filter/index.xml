@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kalman filter | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/fr/tag/kalman-filter/</link>
-      <atom:link href="https://www.weill-duflos.fr/fr/tag/kalman-filter/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/fr/tag/kalman-filter/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/tag/kalman-filter/index.xml" rel="self" type="application/rss+xml" />
     <description>Kalman filter</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Wed, 01 Jul 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Kalman filter</title>
-      <link>https://www.weill-duflos.fr/fr/tag/kalman-filter/</link>
+      <link>https://antoine.weill-duflos.fr/fr/tag/kalman-filter/</link>
     </image>
     
     <item>
       <title>Optimizing Transparency of Haptic Device through Velocity Estimation</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</link>
       <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</guid>
       <description></description>
     </item>
     

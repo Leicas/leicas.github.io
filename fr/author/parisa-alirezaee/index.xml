@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parisa Alirezaee | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/fr/author/parisa-alirezaee/</link>
-      <atom:link href="https://www.weill-duflos.fr/fr/author/parisa-alirezaee/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/fr/author/parisa-alirezaee/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/author/parisa-alirezaee/index.xml" rel="self" type="application/rss+xml" />
     <description>Parisa Alirezaee</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Parisa Alirezaee</title>
-      <link>https://www.weill-duflos.fr/fr/author/parisa-alirezaee/</link>
+      <link>https://antoine.weill-duflos.fr/fr/author/parisa-alirezaee/</link>
     </image>
     
     <item>
       <title>Exploring the Effectiveness of Haptic Alarm Displays for Critical Care Environments</title>
-      <link>https://www.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Getting Your Hands Dirty Outside the Lab: A Practical Primer for Conducting Wearable Vibrotactile Haptics Research</title>
-      <link>https://www.weill-duflos.fr/fr/publication/blum-getting-2019/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/blum-getting-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/blum-getting-2019/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/blum-getting-2019/</guid>
       <description></description>
     </item>
     

@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/en/slides/</link>
-      <atom:link href="https://www.weill-duflos.fr/en/slides/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/en/slides/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/slides/index.xml" rel="self" type="application/rss+xml" />
     <description>Slides</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Adaptation</title>
-      <link>https://www.weill-duflos.fr/en/slides/adaptation/</link>
+      <link>https://antoine.weill-duflos.fr/en/slides/adaptation/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/en/slides/adaptation/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/slides/adaptation/</guid>
       <description>
 &lt;section data-noprocess data-shortcode-slide
   
@@ -75,7 +75,7 @@ $~$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/adaptationlight.gif&#34;
+           src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/adaptationlight.gif&#34;
            loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;aside class=&#34;notes&#34;&gt;
@@ -110,7 +110,7 @@ $~$&lt;/p&gt;
                /en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_ce74a08f744880c68901f403bf54b0a0.png 400w,
                /en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_9872ad230c72abde08e85ccaa82d78fc.png 760w,
                /en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_ce74a08f744880c68901f403bf54b0a0.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_ce74a08f744880c68901f403bf54b0a0.png&#34;
                width=&#34;500&#34;
                height=&#34;662&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -148,7 +148,7 @@ $~$&lt;/p&gt;
                /en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_0bc0de202a1dbf5a748873caf00a3b21.png 400w,
                /en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_cc9d8a527f35ffe2230ffdbef2ceefc4.png 760w,
                /en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_0bc0de202a1dbf5a748873caf00a3b21.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_0bc0de202a1dbf5a748873caf00a3b21.png&#34;
                width=&#34;500&#34;
                height=&#34;662&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -182,7 +182,7 @@ $~$&lt;/p&gt;
                /en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_ad13acc573a32c9bca2e99e124510788.png 400w,
                /en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_b02c17dfadc688206fe7e29e2437a6ee.png 760w,
                /en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_ad13acc573a32c9bca2e99e124510788.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_ad13acc573a32c9bca2e99e124510788.png&#34;
                width=&#34;500&#34;
                height=&#34;404&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -220,7 +220,7 @@ $~$&lt;/p&gt;
                /en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_0810105ae6630155de920c070ac8543f.png 400w,
                /en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_542a882cbde8c728a99355ab2a18e21f.png 760w,
                /en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_0810105ae6630155de920c070ac8543f.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_0810105ae6630155de920c070ac8543f.png&#34;
                width=&#34;500&#34;
                height=&#34;404&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -258,7 +258,7 @@ $~$&lt;/p&gt;
                /en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_fed22d79a215771a42c947fc3baf1360.png 400w,
                /en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_d60f774e6bb5f7593eae0b58dc2744b1.png 760w,
                /en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_fed22d79a215771a42c947fc3baf1360.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_fed22d79a215771a42c947fc3baf1360.png&#34;
                width=&#34;500&#34;
                height=&#34;520&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -313,7 +313,7 @@ $Torque(t)=A\exp\left(\frac{-(t-b)}{\tau}\right)$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://www.weill-duflos.fr/en/slides/adaptation/histoexp1.svg&#34;
+           src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/histoexp1.svg&#34;
            loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;aside class=&#34;notes&#34;&gt;
@@ -345,9 +345,9 @@ $Torque(t)=A\exp\left(\frac{-(t-b)}{\tau}\right)$&lt;/p&gt;
     
     <item>
       <title>BarryWhaptics HAID</title>
-      <link>https://www.weill-duflos.fr/en/slides/bwhaid2020/</link>
+      <link>https://antoine.weill-duflos.fr/en/slides/bwhaid2020/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/en/slides/bwhaid2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/slides/bwhaid2020/</guid>
       <description>
 &lt;section data-noprocess data-shortcode-slide
   
@@ -452,9 +452,9 @@ strength is reinforced
     
     <item>
       <title>Haptic</title>
-      <link>https://www.weill-duflos.fr/en/slides/haptic/</link>
+      <link>https://antoine.weill-duflos.fr/en/slides/haptic/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/en/slides/haptic/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/slides/haptic/</guid>
       <description>&lt;h1 id=&#34;designing-haptic-interactions&#34;&gt;Designing haptic interactions&lt;/h1&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;We often underestimate how important the sense of touch is in our daily interactions.&lt;/p&gt;
@@ -544,7 +544,7 @@ running cool water on a burned area = less pain
                /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_b965803bb2705bf3cfc1c160da997788.png 400w,
                /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_36dec3ea05b69badbd85134275788684.png 760w,
                /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_b965803bb2705bf3cfc1c160da997788.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_b965803bb2705bf3cfc1c160da997788.png&#34;
                width=&#34;500&#34;
                height=&#34;600&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -591,7 +591,7 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
                /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_87355edbd00331b001fefef59f99c051.jpg 400w,
                /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_ece89aa96be0aee23cb7a83572993d6f.jpg 760w,
                /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_1200x1200_fit_q90_lanczos.jpg 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_87355edbd00331b001fefef59f99c051.jpg&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_87355edbd00331b001fefef59f99c051.jpg&#34;
                width=&#34;500&#34;
                height=&#34;757&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -628,7 +628,7 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://www.weill-duflos.fr/en/slides/haptic/spiral.svg&#34;
+           src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/spiral.svg&#34;
            loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;aside class=&#34;notes&#34;&gt;
@@ -731,7 +731,7 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
                /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_23453f0d3babcc578a32de0ee98151c2.jpg 400w,
                /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_17cf3f12f1f78a45056ae6888d4f777c.jpg 760w,
                /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_1200x1200_fit_q90_lanczos.jpg 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_23453f0d3babcc578a32de0ee98151c2.jpg&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_23453f0d3babcc578a32de0ee98151c2.jpg&#34;
                width=&#34;500&#34;
                height=&#34;167&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -754,7 +754,7 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 &lt;/aside&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;try-it-on-your-phone-&#34;&gt;Try it on your phone !&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.weill-duflos.fr/en/courses/haptic/&#34;&gt;Using html5 API&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://antoine.weill-duflos.fr/en/courses/haptic/&#34;&gt;Using html5 API&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;recent-work&#34;&gt;Recent work&lt;/h2&gt;
 
@@ -777,9 +777,9 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
     
     <item>
       <title>Sharing haptic and haptic in shared spaces</title>
-      <link>https://www.weill-duflos.fr/en/slides/montrealhaptic2020/</link>
+      <link>https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/en/slides/montrealhaptic2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/</guid>
       <description>&lt;h1 id=&#34;sharing-haptic-and-haptic-in-shared-spaces&#34;&gt;Sharing haptic and haptic in shared spaces&lt;/h1&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;We often underestimate how important the sense of touch is in our daily interactions.&lt;/p&gt;
@@ -834,7 +834,7 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
                /en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_b947f2d1136152133768001823c18f2c.JPG 400w,
                /en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_0a2baa5e2a175f8e1f1632982d10dfaa.JPG 760w,
                /en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_1200x1200_fit_q90_lanczos.JPG 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_b947f2d1136152133768001823c18f2c.JPG&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_b947f2d1136152133768001823c18f2c.JPG&#34;
                width=&#34;500&#34;
                height=&#34;411&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -864,7 +864,7 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
                /en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_f770e704f568588d5eb6f3eec6c21a86.png 400w,
                /en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_6debe91249caf588dbeafdb2fd0fef0d.png 760w,
                /en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_f770e704f568588d5eb6f3eec6c21a86.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_f770e704f568588d5eb6f3eec6c21a86.png&#34;
                width=&#34;500&#34;
                height=&#34;363&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -897,7 +897,7 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
                /en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_b8a409486ba5ab8169162594ed8a794f.png 400w,
                /en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_fc225e68d90e7a22ddcca9c33465d65a.png 760w,
                /en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://www.weill-duflos.fr/en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_b8a409486ba5ab8169162594ed8a794f.png&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_b8a409486ba5ab8169162594ed8a794f.png&#34;
                width=&#34;500&#34;
                height=&#34;500&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

@@ -2,197 +2,197 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Antoine Weill--Duflos</title>
-    <link>https://www.weill-duflos.fr/fr/publication/</link>
-      <atom:link href="https://www.weill-duflos.fr/fr/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://antoine.weill-duflos.fr/fr/publication/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language>
     <image>
-      <url>https://www.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Publications</title>
-      <link>https://www.weill-duflos.fr/fr/publication/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/</link>
     </image>
     
     <item>
       <title>Speaking Haptically: From Phonemes to Phrases with a Mobile Haptic Communication System</title>
-      <link>https://www.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact Force Estimation from Raw Photoplethysmogram Signal</title>
-      <link>https://www.weill-duflos.fr/fr/publication/fortin-contact-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/fortin-contact-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/fortin-contact-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/fortin-contact-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design and Control of a Large-Range Nil-Stiffness Electro-Magnetic Active Force Sensor</title>
-      <link>https://www.weill-duflos.fr/fr/publication/cailliez-design-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cailliez-design-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/cailliez-design-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cailliez-design-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embedded Haptic Waveguides to Improve Tactile Feedback: Designing a Custom 3D-Printed Surface to Enhance Signal Mediation</title>
-      <link>https://www.weill-duflos.fr/fr/publication/farooq-embedded-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/farooq-embedded-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/farooq-embedded-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/farooq-embedded-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Evidence of Sensory Adaptation to Kinaesthetic Sensations in the Human Somatosensory System</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-evidence-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-evidence-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-evidence-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-evidence-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exploring the Effectiveness of Haptic Alarm Displays for Critical Care Environments</title>
-      <link>https://www.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/alirezaee-exploring-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Haptic Augmentation of Audio and Its Effects on Speech Perception</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-haptic-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-haptic-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-haptic-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-haptic-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Single-Actuator Simultaneous Haptic Rendering for Multiple Vital Signs</title>
-      <link>https://www.weill-duflos.fr/fr/publication/regimbal-single-actuator-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/regimbal-single-actuator-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/regimbal-single-actuator-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/regimbal-single-actuator-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ten Little Fingers, Ten Little Toes: Can Toes Match Fingers for Haptic Discrimination?</title>
-      <link>https://www.weill-duflos.fr/fr/publication/vyas-ten-2020-1/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/vyas-ten-2020-1/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/vyas-ten-2020-1/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/vyas-ten-2020-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ten Little Fingers, Ten Little Toes: Can Toes Match Fingers for Haptic Discrimination?</title>
-      <link>https://www.weill-duflos.fr/fr/publication/vyas-ten-2020/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/vyas-ten-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/vyas-ten-2020/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/vyas-ten-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modeling and Experimental Characterization of an Active MEMS Based Force Sensor</title>
-      <link>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2019/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cailliez-modeling-2019/</link>
       <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2019/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cailliez-modeling-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BarryWhaptics: Towards Countering Social Biases Using Real-Time Haptic Enhancement of Voice</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-barrywhaptics-2019/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-barrywhaptics-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-barrywhaptics-2019/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-barrywhaptics-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BarryWhaptics: Towards Countering Social Biases Using Real-Time Haptic Enhancement of Voice</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weillduflos-barrywhaptics-2019/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weillduflos-barrywhaptics-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weillduflos-barrywhaptics-2019/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weillduflos-barrywhaptics-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Getting Your Hands Dirty Outside the Lab: A Practical Primer for Conducting Wearable Vibrotactile Haptics Research</title>
-      <link>https://www.weill-duflos.fr/fr/publication/blum-getting-2019/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/blum-getting-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/blum-getting-2019/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/blum-getting-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Haptic Speech Communication Using Stimuli Evocative of Phoneme Production</title>
-      <link>https://www.weill-duflos.fr/fr/publication/de-vargas-haptic-2019/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/de-vargas-haptic-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/de-vargas-haptic-2019/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/de-vargas-haptic-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modeling and Experimental Characterization of an Active MEMS Based Force Sensor</title>
-      <link>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2018/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cailliez-modeling-2018/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/cailliez-modeling-2018/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cailliez-modeling-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interface Haptique à Adaptation de Perception</title>
-      <link>https://www.weill-duflos.fr/fr/publication/2018-br-4668/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/2018-br-4668/</link>
       <pubDate>Tue, 16 Jan 2018 11:04:55 -0400</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/2018-br-4668/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/2018-br-4668/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Capteur de force sans raideur mécanique</title>
-      <link>https://www.weill-duflos.fr/fr/publication/2018-br-4560/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/2018-br-4560/</link>
       <pubDate>Mon, 01 Jan 2018 11:05:09 -0400</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/2018-br-4560/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/2018-br-4560/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reversing Voice-Related Biases Through Haptic Reinforcement</title>
-      <link>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/al-taha-reversing-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sensors and devices for a micro-teleoperation system</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-interfaces-2017/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-interfaces-2017/</link>
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-interfaces-2017/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-interfaces-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>High Fidelity Haptic Device</title>
-      <link>https://www.weill-duflos.fr/fr/publication/hayward-high-fidelity-2017/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/hayward-high-fidelity-2017/</link>
       <pubDate>Sun, 04 Jun 2017 11:04:39 -0400</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/hayward-high-fidelity-2017/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/hayward-high-fidelity-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linear Induction Actuators for a Haptic Interface: A Quasi-Perfect Transparent Mechanism</title>
-      <link>https://www.weill-duflos.fr/fr/publication/ortega-linear-2017/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/ortega-linear-2017/</link>
       <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/ortega-linear-2017/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/ortega-linear-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Optimizing Transparency of Haptic Device through Velocity Estimation</title>
-      <link>https://www.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</link>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</link>
       <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>https://www.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</guid>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-optimizing-2015/</guid>
       <description></description>
     </item>
     
