@@ -32,32 +32,6 @@
     <loc>https://antoine.weill-duflos.fr/en/courses/leapmotion/theremin/</loc>
     <lastmod>2019-10-27T17:53:46-04:00</lastmod>
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/en/publication-type/2/</loc>
-    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/publication-type/2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/publication-type/2/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/en/author/antoine-weill/</loc>
-    <lastmod>2021-07-23T16:27:29-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/author/antoine-weill/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/author/antoine-weill/"
-                />
-  </url><url>
     <loc>https://antoine.weill-duflos.fr/en/</loc>
     <lastmod>2021-07-23T16:27:37-04:00</lastmod>
     <xhtml:link
@@ -69,6 +43,71 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://antoine.weill-duflos.fr/en/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/en/project/2diy/</loc>
+    <lastmod>2021-02-01T14:55:19-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/project/2diy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/project/2diy/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/en/tag/haptic/</loc>
+    <lastmod>2021-02-01T14:55:19-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/tag/haptic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/tag/haptic/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/en/project/</loc>
+    <lastmod>2021-02-01T14:55:19-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/project/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/en/tags/</loc>
+    <lastmod>2021-02-01T14:55:19-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/tags/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/en/publication-type/2/</loc>
+    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/publication-type/2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/publication-type/2/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/en/authors/</loc>
@@ -168,19 +207,6 @@
                 href="https://antoine.weill-duflos.fr/en/tag/haptics/"
                 />
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/en/tags/</loc>
-    <lastmod>2020-08-21T10:00:00-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/tags/"
-                />
-  </url><url>
     <loc>https://antoine.weill-duflos.fr/en/event/montreal_haptic/</loc>
     <lastmod>2020-07-26T10:00:00-04:00</lastmod>
   </url><url>
@@ -195,19 +221,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://antoine.weill-duflos.fr/en/project/broadcasting-haptic/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/en/project/</loc>
-    <lastmod>2020-07-29T11:59:09-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/project/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/en/tag/teleoperation/</loc>
@@ -256,19 +269,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://antoine.weill-duflos.fr/en/author/ahmed-farooq/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/en/author/antoine-weillduflos/</loc>
-    <lastmod>2021-07-23T16:27:35-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/author/antoine-weillduflos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/author/antoine-weillduflos/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/en/publication/fortin-contact-2020/</loc>
@@ -603,19 +603,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://antoine.weill-duflos.fr/en/project/3dprintedillusions/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/en/tag/haptic/</loc>
-    <lastmod>2019-10-27T17:53:46-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/tag/haptic/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/tag/haptic/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/en/project/hapticicu/</loc>

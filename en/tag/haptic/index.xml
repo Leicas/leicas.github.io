@@ -5,12 +5,20 @@
     <link>https://antoine.weill-duflos.fr/en/tag/haptic/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/tag/haptic/index.xml" rel="self" type="application/rss+xml" />
     <description>haptic</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 12 Oct 2019 14:55:19 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2021 14:55:19 -0400</lastBuildDate>
     <image>
       <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>haptic</title>
       <link>https://antoine.weill-duflos.fr/en/tag/haptic/</link>
     </image>
+    
+    <item>
+      <title>Haply 2diy</title>
+      <link>https://antoine.weill-duflos.fr/en/project/2diy/</link>
+      <pubDate>Mon, 01 Feb 2021 14:55:19 -0400</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/project/2diy/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>3D printed haptic illusions</title>
