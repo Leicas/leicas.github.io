@@ -5,12 +5,44 @@
     <link>https://antoine.weill-duflos.fr/fr/publication-type/1/</link>
       <atom:link href="https://antoine.weill-duflos.fr/fr/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>1</title>
       <link>https://antoine.weill-duflos.fr/fr/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>CanHap 501: Learning Haptic UX Design in Remote Teams</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/maclean-canhap-2021/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/maclean-canhap-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Active Sampling for Efficient Subjective Evaluation of Tactons at Scale</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/demers-active-2021/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/demers-active-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Context-Aware Automatic Haptic Effect Generation Algorithm for Improved Content Viewing Experiences</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/li-context-aware-2021/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/li-context-aware-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conversing Using WhatsHap: A Phoneme Based Vibrotactile Messaging Platform</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/marino-conversing-2021/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/marino-conversing-2021/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Contact Force Estimation from Raw Photoplethysmogram Signal</title>

@@ -2,8 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://antoine.weill-duflos.fr/fr/tag/conferences/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/tag/conferences/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/tag/conferences/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/tag/human-computer-interaction/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/tag/human-computer-interaction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/tag/human-computer-interaction/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/publication-type/1/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/publication-type/1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/publication-type/1/"
+                />
+  </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/</loc>
-    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +52,136 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://antoine.weill-duflos.fr/fr/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/authors/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/authors/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/publication/maclean-canhap-2021/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/publication/maclean-canhap-2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/publication/maclean-canhap-2021/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/tag/haptic-interfaces/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/tag/haptic-interfaces/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/tag/haptic-interfaces/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/jeremy-r.-cooperstock/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/jeremy-r.-cooperstock/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/jeremy-r.-cooperstock/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/karon-e-maclean/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/karon-e-maclean/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/karon-e-maclean/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/oliver-schneider/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/oliver-schneider/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/oliver-schneider/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/pourang-irani/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/pourang-irani/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/pourang-irani/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/publication_types/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/publication_types/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/tags/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/tags/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/vincent-levesque/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/vincent-levesque/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/vincent-levesque/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/project/2diy/</loc>
@@ -54,21 +223,8 @@
                 href="https://antoine.weill-duflos.fr/fr/project/"
                 />
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/tags/</loc>
-    <lastmod>2021-02-01T14:55:19-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/tags/"
-                />
-  </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/publication-type/2/</loc>
-    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
+    <lastmod>2021-09-01T14:16:34-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -80,21 +236,47 @@
                 href="https://antoine.weill-duflos.fr/fr/publication-type/2/"
                 />
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/authors/</loc>
-    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
+    <loc>https://antoine.weill-duflos.fr/fr/publication/demers-active-2021/</loc>
+    <lastmod>2021-09-01T14:16:35-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/authors/"
+                href="https://antoine.weill-duflos.fr/en/publication/demers-active-2021/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/authors/"
+                href="https://antoine.weill-duflos.fr/fr/publication/demers-active-2021/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/publication/li-context-aware-2021/</loc>
+    <lastmod>2021-09-01T14:10:24-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/publication/li-context-aware-2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/publication/li-context-aware-2021/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/publication/marino-conversing-2021/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/publication/marino-conversing-2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/publication/marino-conversing-2021/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/author/david-marino/</loc>
-    <lastmod>2021-07-23T16:27:29-04:00</lastmod>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -106,21 +288,21 @@
                 href="https://antoine.weill-duflos.fr/fr/author/david-marino/"
                 />
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/author/jeremy-r.-cooperstock/</loc>
-    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
+    <loc>https://antoine.weill-duflos.fr/fr/author/marc-demers/</loc>
+    <lastmod>2021-09-01T14:16:35-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/author/jeremy-r.-cooperstock/"
+                href="https://antoine.weill-duflos.fr/en/author/marc-demers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/author/jeremy-r.-cooperstock/"
+                href="https://antoine.weill-duflos.fr/fr/author/marc-demers/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/author/mauricio-fontana-de-vargas/</loc>
-    <lastmod>2021-07-23T16:27:29-04:00</lastmod>
+    <lastmod>2021-09-01T14:16:34-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -132,21 +314,34 @@
                 href="https://antoine.weill-duflos.fr/fr/author/mauricio-fontana-de-vargas/"
                 />
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/publication_types/</loc>
-    <lastmod>2021-07-23T16:27:37-04:00</lastmod>
+    <loc>https://antoine.weill-duflos.fr/fr/author/maur%C3%ADcio-fontana-de-vargas/</loc>
+    <lastmod>2021-09-01T14:16:36-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/publication_types/"
+                href="https://antoine.weill-duflos.fr/en/author/maur%C3%ADcio-fontana-de-vargas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/publication_types/"
+                href="https://antoine.weill-duflos.fr/fr/author/maur%C3%ADcio-fontana-de-vargas/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/pascal-e.-fortin/</loc>
+    <lastmod>2021-09-01T14:16:35-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/pascal-e.-fortin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/pascal-e.-fortin/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/</loc>
-    <lastmod>2021-07-23T16:27:29-04:00</lastmod>
+    <lastmod>2021-09-01T14:16:34-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -156,6 +351,32 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://antoine.weill-duflos.fr/fr/publication/de-vargas-speaking-2021/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/yaxuan-li/</loc>
+    <lastmod>2021-09-01T14:10:24-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/yaxuan-li/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/yaxuan-li/"
+                />
+  </url><url>
+    <loc>https://antoine.weill-duflos.fr/fr/author/yongjae-yoo/</loc>
+    <lastmod>2021-09-01T14:16:35-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://antoine.weill-duflos.fr/en/author/yongjae-yoo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://antoine.weill-duflos.fr/fr/author/yongjae-yoo/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/project/broadcasting-haptic/</loc>
@@ -195,19 +416,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://antoine.weill-duflos.fr/fr/tag/teleoperation/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/publication-type/1/</loc>
-    <lastmod>2021-07-23T16:27:35-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/publication-type/1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/publication-type/1/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/author/ahmed-farooq/</loc>
@@ -416,19 +624,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://antoine.weill-duflos.fr/fr/author/parisa-alirezaee/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/author/pascal-e.-fortin/</loc>
-    <lastmod>2021-07-23T16:27:33-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/author/pascal-e.-fortin/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/author/pascal-e.-fortin/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/author/preeti-vyas/</loc>
@@ -782,19 +977,6 @@
                 href="https://antoine.weill-duflos.fr/fr/tag/haptic-assessment/"
                 />
   </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/tag/haptic-interfaces/</loc>
-    <lastmod>2020-07-29T11:59:09-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/tag/haptic-interfaces/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/tag/haptic-interfaces/"
-                />
-  </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/publication/de-vargas-haptic-2019/</loc>
     <lastmod>2020-07-29T11:59:09-04:00</lastmod>
     <xhtml:link
@@ -858,32 +1040,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://antoine.weill-duflos.fr/fr/author/jeremy-r-cooperstock/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/author/marc-demers/</loc>
-    <lastmod>2020-07-29T11:59:09-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/author/marc-demers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/author/marc-demers/"
-                />
-  </url><url>
-    <loc>https://antoine.weill-duflos.fr/fr/author/maur%C3%ADcio-fontana-de-vargas/</loc>
-    <lastmod>2020-07-29T11:59:09-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://antoine.weill-duflos.fr/en/author/maur%C3%ADcio-fontana-de-vargas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://antoine.weill-duflos.fr/fr/author/maur%C3%ADcio-fontana-de-vargas/"
                 />
   </url><url>
     <loc>https://antoine.weill-duflos.fr/fr/author/pascal-e-fortin/</loc>
