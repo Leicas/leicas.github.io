@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/fr/tag/data/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/tag/data/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-fr</language><lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Data</title>
+      <link>https://antoine.weill-duflos.fr/fr/tag/data/</link>
+    </image>
+    
+    <item>
+      <title>Methods and Systems for Controlling a Haptic Display</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cooperstock-methods-2021/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cooperstock-methods-2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
