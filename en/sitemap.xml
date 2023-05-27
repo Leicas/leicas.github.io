@@ -24,6 +24,64 @@
   <url>
     <loc>https://antoine.weill-duflos.fr/en/courses/leapmotion/theremin/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
   <url>
+    <loc>https://antoine.weill-duflos.fr/en/</loc><lastmod>2023-05-27T15:12:56-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://antoine.weill-duflos.fr/fr/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://antoine.weill-duflos.fr/en/"
+    /></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/event/</loc><lastmod>2023-05-27T18:05:23+01:00</lastmod></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/tag/haptics/</loc><lastmod>2023-05-27T18:05:23+01:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://antoine.weill-duflos.fr/fr/tag/haptics/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://antoine.weill-duflos.fr/en/tag/haptics/"
+    /></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/event/srl_25year/</loc><lastmod>2023-05-27T18:05:23+01:00</lastmod></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/tags/</loc><lastmod>2023-05-27T18:05:23+01:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://antoine.weill-duflos.fr/fr/tags/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://antoine.weill-duflos.fr/en/tags/"
+    /></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/author/antoine-weill--duflos/</loc><lastmod>2023-05-27T15:05:23+01:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://antoine.weill-duflos.fr/fr/author/antoine-weill--duflos/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://antoine.weill-duflos.fr/en/author/antoine-weill--duflos/"
+    /></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/authors/</loc><lastmod>2023-05-27T15:12:56-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://antoine.weill-duflos.fr/fr/authors/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://antoine.weill-duflos.fr/en/authors/"
+    /></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/slides/srl25/</loc><lastmod>2023-05-27T15:05:23+01:00</lastmod></url>
+  <url>
+    <loc>https://antoine.weill-duflos.fr/en/slides/</loc><lastmod>2023-05-27T15:05:23+01:00</lastmod></url>
+  <url>
     <loc>https://antoine.weill-duflos.fr/en/publication-type/8/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
       rel="alternate"
       hreflang="fr"
@@ -34,16 +92,6 @@
       href="https://antoine.weill-duflos.fr/en/publication-type/8/"
     /></url>
   <url>
-    <loc>https://antoine.weill-duflos.fr/en/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://antoine.weill-duflos.fr/fr/"
-    /><xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://antoine.weill-duflos.fr/en/"
-    /></url>
-  <url>
     <loc>https://antoine.weill-duflos.fr/en/publication/gallacher-apparatus-2022/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
       rel="alternate"
       hreflang="fr"
@@ -52,16 +100,6 @@
       rel="alternate"
       hreflang="en"
       href="https://antoine.weill-duflos.fr/en/publication/gallacher-apparatus-2022/"
-    /></url>
-  <url>
-    <loc>https://antoine.weill-duflos.fr/en/authors/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://antoine.weill-duflos.fr/fr/authors/"
-    /><xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://antoine.weill-duflos.fr/en/authors/"
     /></url>
   <url>
     <loc>https://antoine.weill-duflos.fr/en/author/colin-gallacher/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
@@ -174,16 +212,6 @@
       href="https://antoine.weill-duflos.fr/en/tag/relative/"
     /></url>
   <url>
-    <loc>https://antoine.weill-duflos.fr/en/tags/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://antoine.weill-duflos.fr/fr/tags/"
-    /><xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://antoine.weill-duflos.fr/en/tags/"
-    /></url>
-  <url>
     <loc>https://antoine.weill-duflos.fr/en/tag/tool/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
       rel="alternate"
       hreflang="fr"
@@ -214,16 +242,6 @@
       href="https://antoine.weill-duflos.fr/en/publication-type/0/"
     /></url>
   <url>
-    <loc>https://antoine.weill-duflos.fr/en/author/antoine-weill--duflos/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://antoine.weill-duflos.fr/fr/author/antoine-weill--duflos/"
-    /><xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://antoine.weill-duflos.fr/en/author/antoine-weill--duflos/"
-    /></url>
-  <url>
     <loc>https://antoine.weill-duflos.fr/en/author/david-marino/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
       rel="alternate"
       hreflang="fr"
@@ -232,16 +250,6 @@
       rel="alternate"
       hreflang="en"
       href="https://antoine.weill-duflos.fr/en/author/david-marino/"
-    /></url>
-  <url>
-    <loc>https://antoine.weill-duflos.fr/en/tag/haptics/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://antoine.weill-duflos.fr/fr/tag/haptics/"
-    /><xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://antoine.weill-duflos.fr/en/tag/haptics/"
     /></url>
   <url>
     <loc>https://antoine.weill-duflos.fr/en/author/jeremy-cooperstock/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
@@ -684,8 +692,6 @@
       href="https://antoine.weill-duflos.fr/en/author/yongjae-yoo/"
     /></url>
   <url>
-    <loc>https://antoine.weill-duflos.fr/en/event/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
-  <url>
     <loc>https://antoine.weill-duflos.fr/en/event/haid2020/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
   <url>
     <loc>https://antoine.weill-duflos.fr/en/event/montreal_haptic/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
@@ -713,8 +719,6 @@
     <loc>https://antoine.weill-duflos.fr/en/slides/adaptation/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
   <url>
     <loc>https://antoine.weill-duflos.fr/en/slides/bwhaid2020/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
-  <url>
-    <loc>https://antoine.weill-duflos.fr/en/slides/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod></url>
   <url>
     <loc>https://antoine.weill-duflos.fr/en/author/ahmed-farooq/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
       rel="alternate"
@@ -2052,7 +2056,7 @@
       href="https://antoine.weill-duflos.fr/en/tag/velocity-measurement/"
     /></url>
   <url>
-    <loc>https://antoine.weill-duflos.fr/en/author/antoine-weill-duflos/</loc><lastmod>2022-08-12T15:38:14+02:00</lastmod><xhtml:link
+    <loc>https://antoine.weill-duflos.fr/en/author/antoine-weill-duflos/</loc><lastmod>2023-05-27T15:12:56-04:00</lastmod><xhtml:link
       rel="alternate"
       hreflang="fr"
       href="https://antoine.weill-duflos.fr/fr/author/antoine-weill--duflos/"

@@ -5,12 +5,20 @@
     <link>https://antoine.weill-duflos.fr/en/event/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Events</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 21 Aug 2020 10:00:00 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 May 2023 18:05:23 +0100</lastBuildDate>
     <image>
       <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Events</title>
       <link>https://antoine.weill-duflos.fr/en/event/</link>
     </image>
+    
+    <item>
+      <title>Shared Reality Lab 25th Anniversary</title>
+      <link>https://antoine.weill-duflos.fr/en/event/srl_25year/</link>
+      <pubDate>Sat, 27 May 2023 18:05:23 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/event/srl_25year/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Haptic Augmentation of Audio and its Effects on Speech Perception</title>

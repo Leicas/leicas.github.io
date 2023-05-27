@@ -5,7 +5,7 @@
     <link>https://antoine.weill-duflos.fr/en/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/index.xml" rel="self" type="application/rss+xml" />
     <description>Antoine Weill--Duflos</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 May 2023 18:05:23 +0100</lastBuildDate>
     <image>
       <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Antoine Weill--Duflos</title>
@@ -535,6 +535,167 @@ Leap.loop(function(frame) {
 
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://antoine.weill-duflos.fr/theremin.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shared Reality Lab 25th Anniversary</title>
+      <link>https://antoine.weill-duflos.fr/en/event/srl_25year/</link>
+      <pubDate>Sat, 27 May 2023 18:05:23 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/event/srl_25year/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shared Reality Lab 25-Year Anniversary</title>
+      <link>https://antoine.weill-duflos.fr/en/slides/srl25/</link>
+      <pubDate>Sat, 27 May 2023 15:05:23 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/slides/srl25/</guid>
+      <description>&lt;h2 id=&#34;antoine-weill--duflos&#34;&gt;Antoine Weill&amp;ndash;Duflos&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_c382cc3496d93c6f920f2a0f63085610.webp 400w,
+               /en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_91031f43c862fc3042f78cba8bd34b15.webp 760w,
+               /en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_c382cc3496d93c6f920f2a0f63085610.webp&#34;
+               width=&#34;250&#34;
+               height=&#34;250&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;Shared Reality Lab 25-Year Anniversary&lt;/p&gt;
+&lt;p&gt;2023-05-27&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-did-i-do-&#34;&gt;What did I do ?&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_f7fe913d295c2490ebb8ead973b285c6.webp 400w,
+               /en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_a13833701a9cb447cbaeb1aaa174c737.webp 760w,
+               /en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_f7fe913d295c2490ebb8ead973b285c6.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;484&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;in-short&#34;&gt;In Short&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Wearable haptic devices
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   &lt;figure  &gt;
+     &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+       &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+                  /en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_bd10e036abd119850646dde17d90807a.webp 400w,
+                  /en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_7ffcadebcb7b6bdea67f0dc9b1dbb2f9.webp 760w,
+                  /en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
+                  src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_bd10e036abd119850646dde17d90807a.webp&#34;
+                  width=&#34;128&#34;
+                  height=&#34;128&#34;
+                  loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+     &lt;/div&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;Mixing Voice and Haptic effects&lt;/li&gt;
+&lt;li&gt;Vibrotactile signals for ER/ICU&lt;/li&gt;
+&lt;li&gt;Haptic Phonemes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-memorable-anecdote&#34;&gt;A memorable anecdote&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;How long does it take to get a Raspberry Pi hacked ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;But there’s no firewall ?&lt;/p&gt;
+&lt;p&gt;-No, every machine get its own IP address on the internet&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-i-do-now&#34;&gt;What I do now&lt;/h2&gt;
+&lt;p&gt;Head of R&amp;amp;D&amp;amp;I at &lt;a href=&#34;https://haply.co&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Haply&lt;/a&gt;&lt;/p&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  (and also the IT guy, because now I now how long it takes to get a Raspberry Pi hacked)
+&lt;/span&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_82bc2199ace9ca419899440c64f1e2b9.webp 400w,
+               /en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_400e3259644c909df43b0fd59ed658d6.webp 760w,
+               /en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_82bc2199ace9ca419899440c64f1e2b9.webp&#34;
+               width=&#34;250&#34;
+               height=&#34;250&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;in-short-1&#34;&gt;In Short&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/771239806&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;thank-you&#34;&gt;Thank you&lt;/h2&gt;
 </description>
     </item>
     
