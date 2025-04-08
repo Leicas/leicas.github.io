@@ -5,12 +5,20 @@
     <link>https://antoine.weill-duflos.fr/en/tag/vibration/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/tag/vibration/index.xml" rel="self" type="application/rss+xml" />
     <description>Vibration</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
       <title>Vibration</title>
       <link>https://antoine.weill-duflos.fr/en/tag/vibration/</link>
     </image>
+    
+    <item>
+      <title>Methods and Systems for Controlling a Haptic Display</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/cooperstock-methods-2023/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/cooperstock-methods-2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Methods and Systems for Controlling a Haptic Display</title>

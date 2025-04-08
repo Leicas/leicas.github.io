@@ -5,12 +5,68 @@
     <link>https://antoine.weill-duflos.fr/en/publication/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
     <image>
-      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
       <title>Publications</title>
       <link>https://antoine.weill-duflos.fr/en/publication/</link>
     </image>
+    
+    <item>
+      <title>Haptic Interactions Subject to Variable Latency</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/hutchison-haptic-2024/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/hutchison-haptic-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptic Braking Device and Parallel Hybrid Actuator System Using Same</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/weill-duflos-haptic-2023/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/weill-duflos-haptic-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apparatus and Method for Tracking Motion and Providing Haptic Feedback</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/gallacher-apparatus-2023/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/gallacher-apparatus-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Capstan Drive Transmission Self-Tensioning Apparatus and Method</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/desourdy-capstan-2023/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/desourdy-capstan-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Training to Understand Complex Haptic Phrases: A Longitudinal Investigation</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/vargas-training-2023/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/vargas-training-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods and Systems for Controlling a Haptic Display</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/cooperstock-methods-2023/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/cooperstock-methods-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System and Method for Wearable Device Contact Force Estimation and Adjustment Feedback</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/cooperstock-system-2023/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/cooperstock-system-2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Apparatus and Method for Tracking Motion and Providing Haptic Feedback</title>
@@ -41,6 +97,14 @@
       <link>https://antoine.weill-duflos.fr/en/publication/maclean-canhap-2021/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       <guid>https://antoine.weill-duflos.fr/en/publication/maclean-canhap-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3D Printed Tactile Illusions and Demonstrations</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/waite-3-d-2021/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/waite-3-d-2021/</guid>
       <description></description>
     </item>
     
@@ -145,14 +209,6 @@
       <link>https://antoine.weill-duflos.fr/en/publication/regimbal-single-actuator-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://antoine.weill-duflos.fr/en/publication/regimbal-single-actuator-2020/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ten Little Fingers, Ten Little Toes: Can Toes Match Fingers for Haptic Discrimination?</title>
-      <link>https://antoine.weill-duflos.fr/en/publication/vyas-ten-2020-1/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://antoine.weill-duflos.fr/en/publication/vyas-ten-2020-1/</guid>
       <description></description>
     </item>
     

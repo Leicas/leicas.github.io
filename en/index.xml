@@ -5,12 +5,20 @@
     <link>https://antoine.weill-duflos.fr/en/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/index.xml" rel="self" type="application/rss+xml" />
     <description>Antoine Weill--Duflos</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 May 2023 18:05:23 +0100</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
       <title>Antoine Weill--Duflos</title>
       <link>https://antoine.weill-duflos.fr/en/</link>
     </image>
+    
+    <item>
+      <title>Haply Inverse3</title>
+      <link>https://antoine.weill-duflos.fr/en/project/inverse3/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/project/inverse3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Basis</title>
@@ -539,6 +547,343 @@ Leap.loop(function(frame) {
     </item>
     
     <item>
+      <title>Understanding Email Delivery: A Comprehensive Guide</title>
+      <link>https://antoine.weill-duflos.fr/en/post/emails/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/post/emails/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Email delivery is a complex but essential aspect of modern communication infrastructure. Whether you&amp;rsquo;re managing emails for a small business or a large organization, understanding the underlying concepts can help you improve deliverability, security, and overall email performance.&lt;/p&gt;
+&lt;p&gt;This guide covers the fundamental aspects of email delivery, from the basic SMTP protocol to advanced authentication methods and reputation management strategies. We&amp;rsquo;ll use simple analogies to explain complex concepts and provide practical recommendations for implementation.&lt;/p&gt;
+&lt;h2 id=&#34;smtp-protocol-basics&#34;&gt;SMTP Protocol Basics&lt;/h2&gt;
+&lt;p&gt;Simple Mail Transfer Protocol (SMTP) is the foundation of email delivery. It&amp;rsquo;s a communication protocol for electronic mail transmission, working like a postal service for the internet.&lt;/p&gt;
+&lt;p&gt;When you send an email, your email client connects to an SMTP server using TCP port 25, 587, or 465 (for SSL/TLS). The client provides the sender, recipient, and message content to the server.&lt;/p&gt;
+&lt;p&gt;The SMTP server then determines how to route the message, looking up the recipient&amp;rsquo;s domain MX (Mail Exchange) records through DNS to find the receiving mail server.&lt;/p&gt;
+&lt;h3 id=&#34;key-smtp-commands&#34;&gt;Key SMTP Commands:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HELO/EHLO&lt;/strong&gt;: Identifies the sending mail server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAIL FROM&lt;/strong&gt;: Specifies the sender&amp;rsquo;s address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RCPT TO&lt;/strong&gt;: Specifies the recipient&amp;rsquo;s address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DATA&lt;/strong&gt;: Begins the transfer of the message content&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QUIT&lt;/strong&gt;: Ends the session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;email-authentication&#34;&gt;Email Authentication&lt;/h2&gt;
+&lt;p&gt;Email authentication protocols help verify the identity of senders and protect against spoofing and phishing. Let&amp;rsquo;s explore the three main authentication methods using the classic &amp;ldquo;Alice and Bob&amp;rdquo; analogy.&lt;/p&gt;
+&lt;h3 id=&#34;spf-sender-policy-framework&#34;&gt;SPF (Sender Policy Framework)&lt;/h3&gt;
+&lt;p&gt;Think of SPF as a guest list for your domain&amp;rsquo;s mailroom. It specifies which mail servers are authorized to send emails on behalf of your domain.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: The domain owner publishes a list of authorized sending servers in a DNS TXT record.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy to implement&lt;/li&gt;
+&lt;li&gt;Prevents direct domain spoofing&lt;/li&gt;
+&lt;li&gt;Widely supported&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Doesn&amp;rsquo;t verify email content&lt;/li&gt;
+&lt;li&gt;Breaks with forwarding&lt;/li&gt;
+&lt;li&gt;No reporting mechanism&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dkim-domainkeys-identified-mail&#34;&gt;DKIM (DomainKeys Identified Mail)&lt;/h3&gt;
+&lt;p&gt;DKIM is like a wax seal on an envelope. It adds a digital signature to emails that can be verified using a public key published in DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: The sending server adds a digital signature to the email header, which receiving servers can verify using the public key in DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Verifies email content integrity&lt;/li&gt;
+&lt;li&gt;Survives forwarding&lt;/li&gt;
+&lt;li&gt;Cryptographically secure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex to implement&lt;/li&gt;
+&lt;li&gt;No reporting mechanism&lt;/li&gt;
+&lt;li&gt;Doesn&amp;rsquo;t prevent all spoofing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dmarc-domain-based-message-authentication-reporting--conformance&#34;&gt;DMARC (Domain-based Message Authentication, Reporting &amp;amp; Conformance)&lt;/h3&gt;
+&lt;p&gt;DMARC ties SPF and DKIM together, providing instructions on what to do when authentication fails and offering reporting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: DMARC specifies what to do when SPF or DKIM checks fail and provides a reporting mechanism.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provides reporting&lt;/li&gt;
+&lt;li&gt;Clear policy enforcement&lt;/li&gt;
+&lt;li&gt;Combines SPF and DKIM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires SPF and DKIM to be set up first&lt;/li&gt;
+&lt;li&gt;More complex to implement&lt;/li&gt;
+&lt;li&gt;Requires ongoing monitoring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;why-use-all-three&#34;&gt;Why Use All Three?&lt;/h3&gt;
+&lt;p&gt;Each protocol addresses different aspects of email authentication:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SPF verifies the sending server is authorized&lt;/li&gt;
+&lt;li&gt;DKIM ensures message integrity and authenticity&lt;/li&gt;
+&lt;li&gt;DMARC provides policy enforcement and reporting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Together, they create a comprehensive authentication system that significantly improves email security and deliverability.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Real-World Scenario&lt;/strong&gt;: If you only implement SPF, attackers can still forge emails that appear to come from your domain by manipulating the &amp;ldquo;From&amp;rdquo; header. DKIM helps prevent this by signing the headers, and DMARC ties everything together with clear policies on what to do when authentication fails.&lt;/p&gt;
+&lt;h2 id=&#34;dns-and-domain-hierarchy&#34;&gt;DNS and Domain Hierarchy&lt;/h2&gt;
+&lt;p&gt;The Domain Name System (DNS) is crucial for email delivery, acting as the internet&amp;rsquo;s phone book that translates domain names to IP addresses.&lt;/p&gt;
+&lt;h3 id=&#34;domain-hierarchy-read-right-to-left&#34;&gt;Domain Hierarchy (read right to left):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Root Domain&lt;/strong&gt;: The invisible &amp;ldquo;.&amp;rdquo; at the end of all domains&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLDs (Top-Level Domains)&lt;/strong&gt;: .com, .org, .net, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ccTLDs (Country Code TLDs)&lt;/strong&gt;: .ca (Canada), .uk (United Kingdom), etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Second-Level Domains&lt;/strong&gt;: example.co, example.ca, example.com&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Subdomains&lt;/strong&gt;: mail.example.co, support.example.co&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you control a domain like example.co, you can create subdomains and set DNS records that affect email delivery and authentication.&lt;/p&gt;
+&lt;h3 id=&#34;dns-records-for-email&#34;&gt;DNS Records for Email:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MX Records&lt;/strong&gt;: Specify which mail servers accept email for your domain and their priority.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.co. 3600 IN MX 10 aspmx.l.google.com.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TXT Records&lt;/strong&gt;: Store SPF, DKIM, and DMARC policies as text.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.co. 3600 IN TXT &amp;quot;v=spf1 include:_spf.google.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;A/AAAA Records&lt;/strong&gt;: Map hostnames to IP addresses (IPv4/IPv6).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mail.example.co. 3600 IN A 192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PTR Records&lt;/strong&gt;: Reverse DNS lookup (IP to hostname).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.1.168.192.in-addr.arpa. PTR mail.example.co.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These records work together to ensure proper email routing and authentication.&lt;/p&gt;
+&lt;h3 id=&#34;dns-and-spf-example-for-multiple-domains&#34;&gt;DNS and SPF Example for Multiple Domains:&lt;/h3&gt;
+&lt;p&gt;For organizations with multiple domains, each domain needs its own DNS records:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For main domain with Google Workspace&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.co TXT &amp;quot;v=spf1 include:_spf.google.com include:spf.mailjet.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;For secondary domain&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.ca TXT &amp;quot;v=spf1 include:_spf.google.com include:spf.mailjet.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;For marketing domain&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;marketing.example.com TXT &amp;quot;v=spf1 include:spf.mailjet.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;email-types&#34;&gt;Email Types&lt;/h2&gt;
+&lt;p&gt;Different types of emails serve different purposes and may require different delivery strategies.&lt;/p&gt;
+&lt;h3 id=&#34;transactional-emails&#34;&gt;Transactional Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Triggered by specific actions or events&lt;/li&gt;
+&lt;li&gt;Time-sensitive&lt;/li&gt;
+&lt;li&gt;Expected by recipients&lt;/li&gt;
+&lt;li&gt;High priority&lt;/li&gt;
+&lt;li&gt;Usually sent to individuals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Printer sending scan results to users&lt;/li&gt;
+&lt;li&gt;Password reset emails&lt;/li&gt;
+&lt;li&gt;Order confirmations&lt;/li&gt;
+&lt;li&gt;Account verification emails&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send transactional emails from your main domain using your primary email provider for highest deliverability and trust.&lt;/p&gt;
+&lt;h3 id=&#34;notification-emails&#34;&gt;Notification Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inform users about updates or required actions&lt;/li&gt;
+&lt;li&gt;Moderate priority&lt;/li&gt;
+&lt;li&gt;Often automated&lt;/li&gt;
+&lt;li&gt;Semi-expected by recipients&lt;/li&gt;
+&lt;li&gt;Can be sent to individuals or groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Task notifications&lt;/li&gt;
+&lt;li&gt;Signature requests&lt;/li&gt;
+&lt;li&gt;Quote notifications to customers&lt;/li&gt;
+&lt;li&gt;Project status updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send notifications using a consistent sender address (e.g., &lt;a href=&#34;mailto:notifications@example.co&#34;&gt;notifications@example.co&lt;/a&gt;) to help recipients recognize and filter these emails.&lt;/p&gt;
+&lt;h3 id=&#34;marketing-emails&#34;&gt;Marketing Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Promotional content&lt;/li&gt;
+&lt;li&gt;Sent in bulk to multiple recipients&lt;/li&gt;
+&lt;li&gt;Lower priority&lt;/li&gt;
+&lt;li&gt;Not specifically expected by recipients&lt;/li&gt;
+&lt;li&gt;Often part of campaigns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newsletter announcements&lt;/li&gt;
+&lt;li&gt;Product updates&lt;/li&gt;
+&lt;li&gt;Special offers&lt;/li&gt;
+&lt;li&gt;Event invitations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send marketing emails from a separate domain (e.g., marketing.example.com) to protect your main domain&amp;rsquo;s reputation. Always include unsubscribe options and honor opt-out requests promptly.&lt;/p&gt;
+&lt;h3 id=&#34;regular-business-emails&#34;&gt;Regular Business Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Day-to-day communication&lt;/li&gt;
+&lt;li&gt;Personalized&lt;/li&gt;
+&lt;li&gt;Conversational&lt;/li&gt;
+&lt;li&gt;Varying priority&lt;/li&gt;
+&lt;li&gt;Usually sent to individuals or small groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Communications with partners&lt;/li&gt;
+&lt;li&gt;Customer support emails&lt;/li&gt;
+&lt;li&gt;Internal team communications&lt;/li&gt;
+&lt;li&gt;Vendor communications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send regular business emails from your main domain using your primary email provider with proper signatures and branding for consistency and professionalism.&lt;/p&gt;
+&lt;h2 id=&#34;domain-separation-strategy&#34;&gt;Domain Separation Strategy&lt;/h2&gt;
+&lt;p&gt;For organizations with multiple domains, implement a strategic separation:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Main Domain (example.co)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt;: Primary email provider (e.g., Google Workspace)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use for&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Regular business emails&lt;/li&gt;
+&lt;li&gt;Transactional emails&lt;/li&gt;
+&lt;li&gt;Critical communications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Secondary Domain (marketing.example.com or example.ca)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt;: Bulk email service (e.g., Mailjet, SendGrid)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use for&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Marketing emails&lt;/li&gt;
+&lt;li&gt;Mass notifications&lt;/li&gt;
+&lt;li&gt;Newsletters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This separation helps protect your main domain&amp;rsquo;s reputation while still maintaining brand consistency across all communications.&lt;/p&gt;
+&lt;p&gt;Implement proper authentication (SPF, DKIM, DMARC) across all domains regardless of their use to ensure maximum deliverability and security.&lt;/p&gt;
+&lt;h2 id=&#34;server-reputation-factors&#34;&gt;Server Reputation Factors&lt;/h2&gt;
+&lt;p&gt;Your email server&amp;rsquo;s reputation significantly impacts deliverability. It&amp;rsquo;s like a credit score for your sending IP and domain.&lt;/p&gt;
+&lt;h3 id=&#34;ip-reputation-factors&#34;&gt;IP Reputation Factors:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spam complaints&lt;/li&gt;
+&lt;li&gt;Bounce rates&lt;/li&gt;
+&lt;li&gt;Spam trap hits&lt;/li&gt;
+&lt;li&gt;Volume consistency&lt;/li&gt;
+&lt;li&gt;Blacklist presence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;domain-reputation-factors&#34;&gt;Domain Reputation Factors:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentication setup&lt;/li&gt;
+&lt;li&gt;Domain age&lt;/li&gt;
+&lt;li&gt;Content quality&lt;/li&gt;
+&lt;li&gt;Engagement metrics&lt;/li&gt;
+&lt;li&gt;Sending history&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Why Reputation Matters&lt;/strong&gt;: Email providers like Gmail, Outlook, and Yahoo use reputation scores to determine whether your emails reach the inbox or get filtered to spam. A poor reputation can significantly impact deliverability across all your communications.&lt;/p&gt;
+&lt;h2 id=&#34;implementation-recommendations&#34;&gt;Implementation Recommendations&lt;/h2&gt;
+&lt;h3 id=&#34;recommended-setup&#34;&gt;Recommended Setup:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Primary Email Provider Configuration&lt;/strong&gt;: Configure SPF, DKIM, and DMARC for your main domain&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bulk Email Service Integration&lt;/strong&gt;: Set up a service like Mailjet or SendGrid for notifications and marketing emails&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domain Separation&lt;/strong&gt;: Use a separate domain for mass emails&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Authentication Across All Domains&lt;/strong&gt;: Implement SPF, DKIM, and DMARC for each domain&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Monitoring&lt;/strong&gt;: Set up DMARC reporting to monitor authentication results&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;benefits&#34;&gt;Benefits:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved deliverability for all email types&lt;/li&gt;
+&lt;li&gt;Protection against spoofing and phishing&lt;/li&gt;
+&lt;li&gt;Preserved reputation for your main domain&lt;/li&gt;
+&lt;li&gt;Better visibility into email performance&lt;/li&gt;
+&lt;li&gt;Reduced risk of blacklisting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Email delivery is a complex but manageable aspect of modern business infrastructure. By understanding the fundamental concepts of SMTP, authentication protocols, DNS configuration, and reputation management, you can significantly improve your email deliverability and security.&lt;/p&gt;
+&lt;p&gt;Implementing a strategic approach to different email types and using domain separation can help protect your main domain&amp;rsquo;s reputation while ensuring all your communications reach their intended recipients.&lt;/p&gt;
+&lt;p&gt;Remember that email authentication is not a one-time setup but requires ongoing monitoring and maintenance to adapt to changing email security standards and threats.&lt;/p&gt;
+&lt;h2 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h2&gt;
+&lt;h3 id=&#34;smtp-protocol-and-standards&#34;&gt;SMTP Protocol and Standards&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc5321&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RFC 5321 - Simple Mail Transfer Protocol&lt;/a&gt; - The official IETF specification for SMTP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailtrap.io/blog/smtp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simple Mail Transfer Protocol Explained&lt;/a&gt; - A comprehensive guide to understanding SMTP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.fastmail.help/hc/en-us/articles/1500000278382-Email-standards&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Email Standards&lt;/a&gt; - Overview of email-related RFCs and standards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;email-authentication-1&#34;&gt;Email Authentication&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.uriports.com/blog/spf-dkim-dmarc-best-practices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SPF, DKIM, and DMARC Best Practices&lt;/a&gt; - Comprehensive guide to implementing authentication protocols&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.higherlogic.com/blog/spf-dkim-dmarc-email-authentication/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The 3 Pillars of Email Authentication&lt;/a&gt; - Understanding how SPF, DKIM, and DMARC work together&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dmarc.org/2016/03/best-practices-for-email-senders/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Best Authentication Practices for Email Senders&lt;/a&gt; - Official recommendations from DMARC.org&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dmarcly.com/blog/how-to-implement-dmarc-dkim-spf-to-stop-email-spoofing-phishing-the-definitive-guide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Implement DMARC/DKIM/SPF&lt;/a&gt; - Step-by-step implementation guide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;server-reputation-management&#34;&gt;Server Reputation Management&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/messaging-and-targeting/the-four-pillars-of-email-reputation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Four Pillars of Managing Email Reputation&lt;/a&gt; - AWS guide to email reputation management&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.litmus.com/blog/how-to-fix-email-reputation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Fix Email Reputation and Improve Deliverability&lt;/a&gt; - Practical steps to improve sender reputation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sendgrid.com/en-us/blog/8-best-practices-to-improve-your-email-deliverability&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Best Practices to Improve Your Email Deliverability&lt;/a&gt; - SendGrid&amp;rsquo;s recommendations for better deliverability&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haptic Interactions Subject to Variable Latency</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/hutchison-haptic-2024/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/hutchison-haptic-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haply 2diy</title>
+      <link>https://antoine.weill-duflos.fr/en/project/2diy/</link>
+      <pubDate>Sun, 31 Dec 2023 14:55:19 -0400</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/project/2diy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptic Braking Device and Parallel Hybrid Actuator System Using Same</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/weill-duflos-haptic-2023/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/weill-duflos-haptic-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apparatus and Method for Tracking Motion and Providing Haptic Feedback</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/gallacher-apparatus-2023/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/gallacher-apparatus-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Capstan Drive Transmission Self-Tensioning Apparatus and Method</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/desourdy-capstan-2023/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/desourdy-capstan-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Training to Understand Complex Haptic Phrases: A Longitudinal Investigation</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/vargas-training-2023/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/vargas-training-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods and Systems for Controlling a Haptic Display</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/cooperstock-methods-2023/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/cooperstock-methods-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Shared Reality Lab 25th Anniversary</title>
       <link>https://antoine.weill-duflos.fr/en/event/srl_25year/</link>
       <pubDate>Sat, 27 May 2023 18:05:23 +0100</pubDate>
@@ -551,7 +896,9 @@ Leap.loop(function(frame) {
       <link>https://antoine.weill-duflos.fr/en/slides/srl25/</link>
       <pubDate>Sat, 27 May 2023 15:05:23 +0100</pubDate>
       <guid>https://antoine.weill-duflos.fr/en/slides/srl25/</guid>
-      <description>&lt;h2 id=&#34;antoine-weill--duflos&#34;&gt;Antoine Weill&amp;ndash;Duflos&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;antoine-weillduflos&#34;&gt;Antoine Weill&amp;ndash;Duflos&lt;/h2&gt;
+
+
 
 
 
@@ -571,14 +918,15 @@ Leap.loop(function(frame) {
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_c382cc3496d93c6f920f2a0f63085610.webp 400w,
-               /en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_91031f43c862fc3042f78cba8bd34b15.webp 760w,
-               /en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/antoine_hu834e43831e3f89b3a664f4fc8c4820cc_141172_c382cc3496d93c6f920f2a0f63085610.webp&#34;
+               /en/slides/srl25/antoine_hu_242824d9dcd58683.webp 400w,
+               /en/slides/srl25/antoine_hu_1f145c79e386d0ce.webp 760w,
+               /en/slides/srl25/antoine_hu_10351131bb7d267c.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/antoine_hu_242824d9dcd58683.webp&#34;
                width=&#34;250&#34;
                height=&#34;250&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;Shared Reality Lab 25-Year Anniversary&lt;/p&gt;
 &lt;p&gt;2023-05-27&lt;/p&gt;
 &lt;hr&gt;
@@ -599,17 +947,20 @@ Leap.loop(function(frame) {
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_f7fe913d295c2490ebb8ead973b285c6.webp 400w,
-               /en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_a13833701a9cb447cbaeb1aaa174c737.webp 760w,
-               /en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/Pasted%20image%2020230527150523_hu97148424b8672eb4d8d93ebf20a3e95b_596717_f7fe913d295c2490ebb8ead973b285c6.webp&#34;
+               /en/slides/srl25/Pasted%20image%2020230527150523_hu_3a2edbb5537c76e6.webp 400w,
+               /en/slides/srl25/Pasted%20image%2020230527150523_hu_6cd4e9df79f51892.webp 760w,
+               /en/slides/srl25/Pasted%20image%2020230527150523_hu_410f5d1a11d90ce0.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/Pasted%20image%2020230527150523_hu_3a2edbb5537c76e6.webp&#34;
                width=&#34;760&#34;
                height=&#34;484&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;hr&gt;
 &lt;h2 id=&#34;in-short&#34;&gt;In Short&lt;/h2&gt;
 &lt;ol&gt;
@@ -630,17 +981,20 @@ Leap.loop(function(frame) {
    
    
    
+   
+   
    &lt;figure  &gt;
      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-                  /en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_bd10e036abd119850646dde17d90807a.webp 400w,
-                  /en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_7ffcadebcb7b6bdea67f0dc9b1dbb2f9.webp 760w,
-                  /en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
-                  src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/fhzn01q5_hu6adf52a7361b738562ee5c1130e81178_1272054_bd10e036abd119850646dde17d90807a.webp&#34;
+                  /en/slides/srl25/fhzn01q5_hu_c6790d4f023742c5.webp 400w,
+                  /en/slides/srl25/fhzn01q5_hu_7902735c194d4711.webp 760w,
+                  /en/slides/srl25/fhzn01q5_hu_3ab0334913885739.webp 1200w&#34;
+                  src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/fhzn01q5_hu_c6790d4f023742c5.webp&#34;
                   width=&#34;128&#34;
                   height=&#34;128&#34;
                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-     &lt;/div&gt;&lt;/figure&gt;&lt;/li&gt;
+     &lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;li&gt;Mixing Voice and Haptic effects&lt;/li&gt;
 &lt;li&gt;Vibrotactile signals for ER/ICU&lt;/li&gt;
 &lt;li&gt;Haptic Phonemes&lt;/li&gt;
@@ -652,8 +1006,7 @@ Leap.loop(function(frame) {
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;But there’s no firewall ?&lt;/p&gt;
-&lt;p&gt;-No, every machine get its own IP address on the internet&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;-No, every machine get its own IP address on the internet&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;what-i-do-now&#34;&gt;What I do now&lt;/h2&gt;
 &lt;p&gt;Head of R&amp;amp;D&amp;amp;I at &lt;a href=&#34;https://haply.co&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Haply&lt;/a&gt;&lt;/p&gt;
@@ -676,17 +1029,20 @@ Leap.loop(function(frame) {
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_82bc2199ace9ca419899440c64f1e2b9.webp 400w,
-               /en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_400e3259644c909df43b0fd59ed658d6.webp 760w,
-               /en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/haply_huaca0410fda6cf2070fb30da533486a29_4861590_82bc2199ace9ca419899440c64f1e2b9.webp&#34;
+               /en/slides/srl25/haply_hu_309be00eadfcadb9.webp 400w,
+               /en/slides/srl25/haply_hu_e4eb42253cc30710.webp 760w,
+               /en/slides/srl25/haply_hu_6b0f25bac4fbf250.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/srl25/haply_hu_309be00eadfcadb9.webp&#34;
                width=&#34;250&#34;
                height=&#34;250&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;hr&gt;
 &lt;h2 id=&#34;in-short-1&#34;&gt;In Short&lt;/h2&gt;
 
@@ -697,6 +1053,14 @@ Leap.loop(function(frame) {
 &lt;hr&gt;
 &lt;h2 id=&#34;thank-you&#34;&gt;Thank you&lt;/h2&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>System and Method for Wearable Device Contact Force Estimation and Adjustment Feedback</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/cooperstock-system-2023/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/cooperstock-system-2023/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -732,10 +1096,10 @@ Leap.loop(function(frame) {
     </item>
     
     <item>
-      <title>Haply 2diy</title>
-      <link>https://antoine.weill-duflos.fr/en/project/2diy/</link>
-      <pubDate>Mon, 01 Feb 2021 14:55:19 -0400</pubDate>
-      <guid>https://antoine.weill-duflos.fr/en/project/2diy/</guid>
+      <title>3D Printed Tactile Illusions and Demonstrations</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/waite-3-d-2021/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/waite-3-d-2021/</guid>
       <description></description>
     </item>
     
@@ -824,7 +1188,7 @@ Leap.loop(function(frame) {
   &gt;
 
 &lt;h3 id=&#34;evidence-of-sensory-adaptation-to-kinaesthetic-sensations-in-the-human-somatosensory-system&#34;&gt;Evidence of Sensory Adaptation to Kinaesthetic Sensations in the Human Somatosensory System&lt;/h3&gt;
-&lt;h4 id=&#34;a-weill--duflos-s-sakr-s-haliyo-s-régnier&#34;&gt;A. Weill&amp;ndash;Duflos, S. Sakr, S. Haliyo, S. Régnier&lt;/h4&gt;
+&lt;h4 id=&#34;a-weillduflos-s-sakr-s-haliyo-s-régnier&#34;&gt;A. Weill&amp;ndash;Duflos, S. Sakr, S. Haliyo, S. Régnier&lt;/h4&gt;
 &lt;p&gt;McGill University/Sorbonne University&lt;/p&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   
@@ -839,15 +1203,14 @@ Leap.loop(function(frame) {
 
 &lt;h2 id=&#34;sensoryneural-adaptation&#34;&gt;Sensory/Neural Adaptation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;gradual decrease over time in the responsiveness of the sensory system to a constant stimulus.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;gradual decrease over time in the responsiveness of the sensory system to a constant stimulus.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;$~$&lt;/p&gt;
 &lt;p&gt;$~$&lt;/p&gt;
 &lt;p&gt;$~$&lt;/p&gt;
 &lt;p&gt;$~$&lt;/p&gt;
 &lt;p&gt;$~$&lt;/p&gt;
-&lt;p&gt;$~$
-$~$&lt;/p&gt;
+&lt;p&gt;$&lt;del&gt;$
+$&lt;/del&gt;$&lt;/p&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   
 &lt;/aside&gt;
@@ -861,8 +1224,9 @@ $~$&lt;/p&gt;
 
 &lt;h2 id=&#34;sensoryneural-adaptation-1&#34;&gt;Sensory/Neural Adaptation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;gradual decrease over time in the responsiveness of the sensory system to a constant stimulus.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;gradual decrease over time in the responsiveness of the sensory system to a constant stimulus.&lt;/p&gt;&lt;/blockquote&gt;
+
+
 
 
 
@@ -885,6 +1249,7 @@ $~$&lt;/p&gt;
            src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/adaptationlight.gif&#34;
            loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;aside class=&#34;notes&#34;&gt;
   
 &lt;/aside&gt;
@@ -913,17 +1278,20 @@ $~$&lt;/p&gt;
  
  
  
+ 
+ 
  &lt;figure  &gt;
    &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
      &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-                /en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_b8aacc32cf5705028edf18437ab3d0c8.webp 400w,
-                /en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_8aae244ce88eb04e24f538b8169bcebf.webp 760w,
-                /en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-                src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/courses1_hu2f00fc37e971b7ffbf1cd3276363cba4_94548_b8aacc32cf5705028edf18437ab3d0c8.webp&#34;
+                /en/slides/adaptation/courses1_hu_8db7cc580fa58682.webp 400w,
+                /en/slides/adaptation/courses1_hu_54d85509b226ceb7.webp 760w,
+                /en/slides/adaptation/courses1_hu_98a1b33913708546.webp 1200w&#34;
+                src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/courses1_hu_8db7cc580fa58682.webp&#34;
                 width=&#34;500&#34;
                 height=&#34;662&#34;
                 loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
    &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;Yes for vibrotactile&lt;/p&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   
@@ -953,17 +1321,20 @@ $~$&lt;/p&gt;
  
  
  
+ 
+ 
  &lt;figure  &gt;
    &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
      &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-                /en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_495cda7ab652afe8410af96358a88b78.webp 400w,
-                /en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_51fb92f33681a19e399c23115929ef97.webp 760w,
-                /en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-                src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/courses2_hud89f21d1b1385d49eec52b507e6b05fa_195306_495cda7ab652afe8410af96358a88b78.webp&#34;
+                /en/slides/adaptation/courses2_hu_c695ed5e927da9a0.webp 400w,
+                /en/slides/adaptation/courses2_hu_c1c8926c4c501018.webp 760w,
+                /en/slides/adaptation/courses2_hu_ba56fa0249b9b5b0.webp 1200w&#34;
+                src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/courses2_hu_c695ed5e927da9a0.webp&#34;
                 width=&#34;500&#34;
                 height=&#34;662&#34;
                 loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
    &lt;/div&gt;&lt;/figure&gt;
+
 &lt;hr&gt;
 
 &lt;section data-noprocess data-shortcode-slide
@@ -989,17 +1360,20 @@ $~$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_f96fed13cb3495d717923acef32c8913.webp 400w,
-               /en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_a7c3d38d1832297a016ced9db999986d.webp 760w,
-               /en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/interface_hu6339201ec0e3cec58aeb667a8d1f8d9b_285316_f96fed13cb3495d717923acef32c8913.webp&#34;
+               /en/slides/adaptation/interface_hu_e0f266213ed3782d.webp 400w,
+               /en/slides/adaptation/interface_hu_5e0809de36a4ff74.webp 760w,
+               /en/slides/adaptation/interface_hu_44b3995a13303bda.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/interface_hu_e0f266213ed3782d.webp&#34;
                width=&#34;500&#34;
                height=&#34;404&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;Press &amp;ldquo;space&amp;rdquo; when a diminishing force is felt.&lt;/p&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   
@@ -1029,17 +1403,20 @@ $~$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_ac1bb261f66c82f7e02ac1c960be6250.webp 400w,
-               /en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_5935b81e05fd925fced7ddda0a88d50e.webp 760w,
-               /en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/interfacef_hu13b83bba22277ecfe06a12ba85acc760_414101_ac1bb261f66c82f7e02ac1c960be6250.webp&#34;
+               /en/slides/adaptation/interfacef_hu_ac2b81438075671.webp 400w,
+               /en/slides/adaptation/interfacef_hu_ffe4f9e65b84ef21.webp 760w,
+               /en/slides/adaptation/interfacef_hu_d2d63db841831510.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/interfacef_hu_ac2b81438075671.webp&#34;
                width=&#34;500&#34;
                height=&#34;404&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;Press &amp;ldquo;space&amp;rdquo; when a diminishing force is felt.&lt;/p&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   
@@ -1069,17 +1446,20 @@ $~$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_90f9d6b148d93a30486d40fad7c5700f.webp 400w,
-               /en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_2246fa1165375a8ffd8837d8056667df.webp 760w,
-               /en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/stimuli_hua71097fdc5f0d927599d7609c32b2a2c_44870_90f9d6b148d93a30486d40fad7c5700f.webp&#34;
+               /en/slides/adaptation/stimuli_hu_ae6e9b5933833565.webp 400w,
+               /en/slides/adaptation/stimuli_hu_48e63f55b650cb9e.webp 760w,
+               /en/slides/adaptation/stimuli_hu_e9803ea95d0d932c.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/stimuli_hu_ae6e9b5933833565.webp&#34;
                width=&#34;500&#34;
                height=&#34;520&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 $Torque(t)=A\exp\left(\frac{-(t-b)}{\tau}\right)$&lt;/p&gt;
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;Mow, do you think we have the same tactile sensitivity everywhere&lt;/p&gt;
@@ -1129,12 +1509,15 @@ $Torque(t)=A\exp\left(\frac{-(t-b)}{\tau}\right)$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
            src=&#34;https://antoine.weill-duflos.fr/en/slides/adaptation/histoexp1.svg&#34;
            loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;aside class=&#34;notes&#34;&gt;
   
 &lt;/aside&gt;
@@ -1175,7 +1558,7 @@ $Torque(t)=A\exp\left(\frac{-(t-b)}{\tau}\right)$&lt;/p&gt;
   &gt;
 
 &lt;h3 id=&#34;haptic-augmentation-of-audio-and-its-effects-on-speech-perception&#34;&gt;Haptic Augmentation of Audio and its Effects on Speech Perception&lt;/h3&gt;
-&lt;h4 id=&#34;a-weill--duflos-p-fortin-f-al-taha-j-r-cooperstock&#34;&gt;A. Weill&amp;ndash;Duflos, P. Fortin, F. Al Taha, J. R. Cooperstock&lt;/h4&gt;
+&lt;h4 id=&#34;a-weillduflos-p-fortin-f-al-taha-j-r-cooperstock&#34;&gt;A. Weill&amp;ndash;Duflos, P. Fortin, F. Al Taha, J. R. Cooperstock&lt;/h4&gt;
 &lt;img src=&#34;antoine.jpg&#34; width=&#34;100&#34;&gt;
 &lt;img src=&#34;pascal.jpg&#34; width=&#34;100&#34;&gt;
 &lt;img src=&#34;feras.jpg&#34; width=&#34;100&#34;&gt;
@@ -1230,8 +1613,7 @@ $Torque(t)=A\exp\left(\frac{-(t-b)}{\tau}\right)$&lt;/p&gt;
 
 &lt;h2 id=&#34;experiment&#34;&gt;Experiment&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I urge you to vote for me this November&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I urge you to vote for me this November&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;span class=&#34;fragment &#34; &gt;
@@ -1326,14 +1708,6 @@ did not replicate previous findings
       <link>https://antoine.weill-duflos.fr/en/publication/regimbal-single-actuator-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://antoine.weill-duflos.fr/en/publication/regimbal-single-actuator-2020/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ten Little Fingers, Ten Little Toes: Can Toes Match Fingers for Haptic Discrimination?</title>
-      <link>https://antoine.weill-duflos.fr/en/publication/vyas-ten-2020-1/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://antoine.weill-duflos.fr/en/publication/vyas-ten-2020-1/</guid>
       <description></description>
     </item>
     
@@ -1441,17 +1815,20 @@ Haptic feedback
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_4bc8f666e6b0f32d5771e79a26d7a176.webp 400w,
-               /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_acb8c1f81aaedf86d2a2632887d0079a.webp 760w,
-               /en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/tactilereceptors_huc935bc54a0d7734c1763f932ee1df6a6_291499_4bc8f666e6b0f32d5771e79a26d7a176.webp&#34;
+               /en/slides/haptic/tactilereceptors_hu_de5a821376699a00.webp 400w,
+               /en/slides/haptic/tactilereceptors_hu_9adc62d89f83bfe4.webp 760w,
+               /en/slides/haptic/tactilereceptors_hu_46f48a0cce40c9cf.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/tactilereceptors_hu_de5a821376699a00.webp&#34;
                width=&#34;500&#34;
                height=&#34;600&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;Jets give a closer look a tactile receptors.&lt;/p&gt;
 &lt;p&gt;Ruffini corpuscle are sensing skin stretch.&lt;/p&gt;
@@ -1490,17 +1867,20 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_e01a89ce42d359d14dbd7c941693ca01.webp 400w,
-               /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_4e34262c85318cd117b73d392c2f48e4.webp 760w,
-               /en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/homunculus_hu398c722d7ab16f26270e01acb87a613b_584202_e01a89ce42d359d14dbd7c941693ca01.webp&#34;
+               /en/slides/haptic/homunculus_hu_d91402b6014ae55.webp 400w,
+               /en/slides/haptic/homunculus_hu_2823a9d907c6f8f8.webp 760w,
+               /en/slides/haptic/homunculus_hu_73127a8bbf45f9b2.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/homunculus_hu_d91402b6014ae55.webp&#34;
                width=&#34;500&#34;
                height=&#34;757&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;Because we don&amp;rsquo;t have infinite ressources&lt;/p&gt;
 &lt;p&gt;This is a sensory homunculus, it shows the parts of the brain that are processing tactile input from specific inputs of the body.&lt;/p&gt;
@@ -1532,12 +1912,15 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
            src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/spiral.svg&#34;
            loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;I bet you&amp;rsquo;ve all seen an optical illusion before.&lt;/p&gt;
 &lt;p&gt;Here it&amp;rsquo;s circle that looks like a spiral.&lt;/p&gt;
@@ -1547,6 +1930,8 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
 &lt;h2 id=&#34;auditory-illusions&#34;&gt;Auditory illusions&lt;/h2&gt;
 &lt;p&gt;Auditory illusions&lt;/p&gt;
 &lt;p&gt;
+
+
 
 
 
@@ -1608,10 +1993,9 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
 
 &lt;hr&gt;
 &lt;h2 id=&#34;haptic-teleoperation&#34;&gt;Haptic teleoperation&lt;/h2&gt;
-
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/HY4bfnHMdtk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/HY4bfnHMdtk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
 
 &lt;aside class=&#34;notes&#34;&gt;
   This second exemple is a nice reminder of why we need haptic feedback.
@@ -1634,17 +2018,20 @@ Pacinain corpuscle will detect rapid 200-300Hz vibration&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_77d2bce20b5676e6695c34e68c0a3c0f.webp 400w,
-               /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_01d6b52a0f96bc6c8c98c5cbb859983e.webp 760w,
-               /en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/vib_hueb73c73c0b47a8691d133b6a4f895260_16107_77d2bce20b5676e6695c34e68c0a3c0f.webp&#34;
+               /en/slides/haptic/vib_hu_477348d7b14f88d5.webp 400w,
+               /en/slides/haptic/vib_hu_8859ef810dbe7cea.webp 760w,
+               /en/slides/haptic/vib_hu_5fbed19381377074.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/haptic/vib_hu_477348d7b14f88d5.webp&#34;
                width=&#34;500&#34;
                height=&#34;167&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;aside class=&#34;notes&#34;&gt;
   &lt;p&gt;The exemple where not that much about vibrotactile feedback.
 Vibrotactile feedback is probably the type of haptic communication you are the more familiar with, because of smartphones or video game console.&lt;/p&gt;
@@ -1653,10 +2040,9 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 &lt;/aside&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;more-vibrotactile-actuators&#34;&gt;More vibrotactile actuators&lt;/h2&gt;
-
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/UuMfQEZAhyY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/UuMfQEZAhyY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
 
 &lt;aside class=&#34;notes&#34;&gt;
   Taptic engive or high-end haptic devices are actually just carrefully tuned lras.
@@ -1666,10 +2052,9 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 &lt;p&gt;&lt;a href=&#34;https://antoine.weill-duflos.fr/en/courses/haptic/&#34;&gt;Using html5 API&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;recent-work&#34;&gt;Recent work&lt;/h2&gt;
-
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/UFgp7A1IK7o&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/UFgp7A1IK7o?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
 
 &lt;hr&gt;
 &lt;h2 id=&#34;online-ressources&#34;&gt;Online ressources&lt;/h2&gt;
@@ -1716,10 +2101,13 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/Shared-Reality-Lab/Haptic-Illusions/master/images/teaser.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;vibroadcast&#34;&gt;Vibroadcast&lt;/h2&gt;
@@ -1741,17 +2129,20 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_7fb54d95af3f4a9747c4ba69d3a2b640.webp 400w,
-               /en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_ed6d2379a27d305eb81e55594f45e548.webp 760w,
-               /en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_1200x1200_fit_q90_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/vibcast_hub0bb520fec4b99b4f6ba5228d24253fb_124123_7fb54d95af3f4a9747c4ba69d3a2b640.webp&#34;
+               /en/slides/montrealhaptic2020/vibcast_hu_77f393100ff4e4d5.webp 400w,
+               /en/slides/montrealhaptic2020/vibcast_hu_10857d05486ac65.webp 760w,
+               /en/slides/montrealhaptic2020/vibcast_hu_797376bb9da73232.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/vibcast_hu_77f393100ff4e4d5.webp&#34;
                width=&#34;500&#34;
                height=&#34;411&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;barrywhaptics&#34;&gt;BarryWhaptics&lt;/h2&gt;
@@ -1773,17 +2164,20 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_8de85d99fdc687dbd5fb0c5031135301.webp 400w,
-               /en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_281014a00f13439d841b43fb50212a62.webp 760w,
-               /en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/bw_hu53efe2d3dd57e6c48d364e9813ee4cf5_21317_8de85d99fdc687dbd5fb0c5031135301.webp&#34;
+               /en/slides/montrealhaptic2020/bw_hu_91268661b65e74a2.webp 400w,
+               /en/slides/montrealhaptic2020/bw_hu_7619f11d8430ba94.webp 760w,
+               /en/slides/montrealhaptic2020/bw_hu_28f70e3a37045ab.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/bw_hu_91268661b65e74a2.webp&#34;
                width=&#34;500&#34;
                height=&#34;363&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;shoes-for-xr&#34;&gt;Shoes for XR&lt;/h2&gt;
@@ -1808,17 +2202,20 @@ Vibrotactile feedback is probably the type of haptic communication you are the m
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_f4a85458f53451062a6d34601ee50a71.webp 400w,
-               /en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_aca136d3674064dc5c032649121257c2.webp 760w,
-               /en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_1200x1200_fit_q90_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/shoes_hu5add40732b31c8b12e3b24a9611558cb_264876_f4a85458f53451062a6d34601ee50a71.webp&#34;
+               /en/slides/montrealhaptic2020/shoes_hu_84f2342d4c2a147f.webp 400w,
+               /en/slides/montrealhaptic2020/shoes_hu_c08ba244f415b3af.webp 760w,
+               /en/slides/montrealhaptic2020/shoes_hu_fbe266effa00e554.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/slides/montrealhaptic2020/shoes_hu_84f2342d4c2a147f.webp&#34;
                width=&#34;500&#34;
                height=&#34;500&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

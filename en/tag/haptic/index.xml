@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>haptic | Antoine Weill--Duflos</title>
+    <title>Haptic | Antoine Weill--Duflos</title>
     <link>https://antoine.weill-duflos.fr/en/tag/haptic/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/tag/haptic/index.xml" rel="self" type="application/rss+xml" />
-    <description>haptic</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2021 14:55:19 -0400</lastBuildDate>
+    <description>Haptic</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
-      <title>haptic</title>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Haptic</title>
       <link>https://antoine.weill-duflos.fr/en/tag/haptic/</link>
     </image>
     
     <item>
+      <title>Haply Inverse3</title>
+      <link>https://antoine.weill-duflos.fr/en/project/inverse3/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/project/inverse3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Haply 2diy</title>
       <link>https://antoine.weill-duflos.fr/en/project/2diy/</link>
-      <pubDate>Mon, 01 Feb 2021 14:55:19 -0400</pubDate>
+      <pubDate>Sun, 31 Dec 2023 14:55:19 -0400</pubDate>
       <guid>https://antoine.weill-duflos.fr/en/project/2diy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haptic Braking Device and Parallel Hybrid Actuator System Using Same</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/weill-duflos-haptic-2023/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/weill-duflos-haptic-2023/</guid>
       <description></description>
     </item>
     

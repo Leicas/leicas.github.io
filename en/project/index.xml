@@ -5,17 +5,25 @@
     <link>https://antoine.weill-duflos.fr/en/project/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2021 14:55:19 -0400</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://antoine.weill-duflos.fr/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
       <title>Projects</title>
       <link>https://antoine.weill-duflos.fr/en/project/</link>
     </image>
     
     <item>
+      <title>Haply Inverse3</title>
+      <link>https://antoine.weill-duflos.fr/en/project/inverse3/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/project/inverse3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Haply 2diy</title>
       <link>https://antoine.weill-duflos.fr/en/project/2diy/</link>
-      <pubDate>Mon, 01 Feb 2021 14:55:19 -0400</pubDate>
+      <pubDate>Sun, 31 Dec 2023 14:55:19 -0400</pubDate>
       <guid>https://antoine.weill-duflos.fr/en/project/2diy/</guid>
       <description></description>
     </item>
