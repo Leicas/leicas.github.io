@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speech Processing | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/en/tag/speech-processing/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/tag/speech-processing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Speech Processing</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Speech Processing</title>
+      <link>https://antoine.weill-duflos.fr/en/tag/speech-processing/</link>
+    </image>
+    
+    <item>
+      <title>Training to Understand Complex Haptic Phrases: A Longitudinal Investigation</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/vargas-training-2023/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/vargas-training-2023/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

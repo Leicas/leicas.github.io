@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patent | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/fr/publication-type/patent/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/publication-type/patent/index.xml" rel="self" type="application/rss+xml" />
+    <description>Patent</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>fr-fr</language><lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Patent</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication-type/patent/</link>
+    </image>
+    
+    <item>
+      <title>Haptic Braking Device and Parallel Hybrid Actuator System Using Same</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-haptic-2023/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/weill-duflos-haptic-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apparatus and Method for Tracking Motion and Providing Haptic Feedback</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/gallacher-apparatus-2023/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/gallacher-apparatus-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Capstan Drive Transmission Self-Tensioning Apparatus and Method</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/desourdy-capstan-2023/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/desourdy-capstan-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods and Systems for Controlling a Haptic Display</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cooperstock-methods-2023/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cooperstock-methods-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System and Method for Wearable Device Contact Force Estimation and Adjustment Feedback</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cooperstock-system-2023/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cooperstock-system-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apparatus and Method for Tracking Motion and Providing Haptic Feedback</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/gallacher-apparatus-2022/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/gallacher-apparatus-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods and Systems for Controlling a Haptic Display</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/cooperstock-methods-2021/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/cooperstock-methods-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interface Haptique à Adaptation de Perception</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/2018-br-4668/</link>
+      <pubDate>Tue, 16 Jan 2018 11:04:55 -0400</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/2018-br-4668/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Capteur de force sans raideur mécanique</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/2018-br-4560/</link>
+      <pubDate>Mon, 01 Jan 2018 11:05:09 -0400</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/2018-br-4560/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>High Fidelity Haptic Device</title>
+      <link>https://antoine.weill-duflos.fr/fr/publication/hayward-high-fidelity-2017/</link>
+      <pubDate>Sun, 04 Jun 2017 11:04:39 -0400</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/publication/hayward-high-fidelity-2017/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Along | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/en/tag/along/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/tag/along/index.xml" rel="self" type="application/rss+xml" />
+    <description>Along</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Along</title>
+      <link>https://antoine.weill-duflos.fr/en/tag/along/</link>
+    </image>
+    
+    <item>
+      <title>Capstan Drive Transmission Self-Tensioning Apparatus and Method</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/desourdy-capstan-2023/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/desourdy-capstan-2023/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

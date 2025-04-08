@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: 7 avril 2025 --><html lang="fr-fr" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Antoine Weill--Duflos" />
+
+
+
+
+
+  
+
+<meta name="description" content="Guide complet sur les concepts de livraison d&#39;e-mails, incluant le protocole SMTP, les méthodes d&#39;authentification, la configuration DNS et les bonnes pratiques pour gérer plusieurs domaines." />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://antoine.weill-duflos.fr/en/post/emails/" />
+
+<link rel="alternate" hreflang="fr-fr" href="https://antoine.weill-duflos.fr/fr/post/emails/" />
+<link rel="canonical" href="https://antoine.weill-duflos.fr/fr/post/emails/" />
+
+
+
+  <link rel="manifest" href="/fr/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_2311fe1a408f47c1.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_4eb7679362359773.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@ntoidewd" />
+  <meta property="twitter:creator" content="@ntoidewd" />
+<meta property="twitter:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Antoine Weill--Duflos" />
+<meta property="og:url" content="https://antoine.weill-duflos.fr/fr/post/emails/" />
+<meta property="og:title" content="Comprendre la livraison d&#39;e-mails : guide complet | Antoine Weill--Duflos" />
+<meta property="og:description" content="Guide complet sur les concepts de livraison d&#39;e-mails, incluant le protocole SMTP, les méthodes d&#39;authentification, la configuration DNS et les bonnes pratiques pour gérer plusieurs domaines." /><meta property="og:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" /><meta property="og:locale" content="fr-fr" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-04-07T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-04-07T21:16:14-04:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antoine.weill-duflos.fr/fr/post/emails/"
+  },
+  "headline": "Comprendre la livraison d'e-mails : guide complet",
+  
+  "datePublished": "2025-04-07T00:00:00Z",
+  "dateModified": "2025-04-07T21:16:14-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Antoine Weill--Duflos"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Antoine Weill--Duflos",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://antoine.weill-duflos.fr/media/icon_hu_f7eee4fa97025c42.png"
+    }
+  },
+  "description": "Guide complet sur les concepts de livraison d'e-mails, incluant le protocole SMTP, les méthodes d'authentification, la configuration DNS et les bonnes pratiques pour gérer plusieurs domaines."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Comprendre la livraison d&#39;e-mails : guide complet | Antoine Weill--Duflos</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <link rel="me" href="https://hci.social/@antoine" />
+      
+    
+  
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="9494f508fd078f4bb420ac68a7135d83" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Rechercher</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Fermer"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Recherche..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Recherche...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/fr/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Ouvrir la barre de navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/fr/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/fr/#about"><span>Accueil</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/fr/#projects"><span>Projets</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/fr/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/fr/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/fr/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Rechercher"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Préférences d&#39;affichage">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Clair</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Sombre</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatique</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Langues">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>Français</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://antoine.weill-duflos.fr/en/post/emails/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Comprendre la livraison d&#39;e-mails : guide complet</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Dernière mise à jour le
+      
+    
+    avr. 7, 2025
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min. de lecture
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/fr/category/guides-techniques/">Guides Techniques</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="introduction">Introduction</h2>
+<p>La livraison d&rsquo;e-mails est un aspect complexe mais essentiel de l&rsquo;infrastructure moderne de communication. Que vous gériez des e-mails pour une petite entreprise ou une grande organisation, comprendre ces concepts fondamentaux vous aidera à améliorer la délivrabilité, la sécurité et les performances générales.</p>
+<p>Ce guide couvre les aspects essentiels de la livraison des e-mails, du protocole SMTP basique aux méthodes avancées d’authentification et aux stratégies de gestion de réputation. Des analogies simples vous aideront à comprendre des concepts complexes, accompagnées de recommandations pratiques.</p>
+<h2 id="principes-du-protocole-smtp">Principes du protocole SMTP</h2>
+<p>Le protocole SMTP (Simple Mail Transfer Protocol) constitue la base de l&rsquo;envoi des e-mails. C’est un protocole de communication pour la transmission du courrier électronique, fonctionnant comme un service postal d’internet.</p>
+<p>Lorsque vous envoyez un e-mail, votre client de messagerie se connecte à un serveur SMTP via le port TCP 25, 587 ou 465 (SSL/TLS). Le client fournit à ce serveur l’expéditeur, le destinataire et le contenu du message.</p>
+<p>Le serveur SMTP décide ensuite comment acheminer le message, en consultant les enregistrements MX (Mail Exchange) du domaine destinataire via DNS.</p>
+<h3 id="commandes-smtp-essentielles-">Commandes SMTP essentielles :</h3>
+<ul>
+<li><strong>HELO/EHLO</strong> : identifie le serveur envoyeur</li>
+<li><strong>MAIL FROM</strong> : indique l’adresse de l’expéditeur</li>
+<li><strong>RCPT TO</strong> : indique l’adresse du destinataire</li>
+<li><strong>DATA</strong> : commence l’envoi du contenu</li>
+<li><strong>QUIT</strong> : termine la session</li>
+</ul>
+<h2 id="authentification-des-e-mails">Authentification des e-mails</h2>
+<p>Les protocoles d’authentification aident à vérifier l’identité des expéditeurs et à protéger contre l’usurpation et le phishing. Voici les trois méthodes principales illustrées avec l’analogie classique d’« Alice et Bob ».</p>
+<h3 id="spf-sender-policy-framework">SPF (Sender Policy Framework)</h3>
+<p>Le SPF est comme une liste d&rsquo;invités autorisés pour envoyer des mails au nom de votre domaine.</p>
+<p><strong>Fonctionnement :</strong> le propriétaire du domaine publie une liste des serveurs autorisés via un enregistrement TXT DNS.</p>
+<p><strong>Avantages :</strong></p>
+<ul>
+<li>Facilité d&rsquo;implémentation</li>
+<li>Empêche l&rsquo;usurpation directe</li>
+<li>Large compatibilité</li>
+</ul>
+<p><strong>Inconvénients :</strong></p>
+<ul>
+<li>Ne vérifie pas le contenu</li>
+<li>Problème lors du transfert</li>
+<li>Pas de rapport détaillé</li>
+</ul>
+<h3 id="dkim-domainkeys-identified-mail">DKIM (DomainKeys Identified Mail)</h3>
+<p>Le DKIM est comparable à un sceau numérique sur une enveloppe, permettant de vérifier l&rsquo;intégrité du message avec une clé publique DNS.</p>
+<p><strong>Fonctionnement :</strong> une signature numérique ajoutée à l’entête du mail est vérifiée par le serveur destinataire via DNS.</p>
+<p><strong>Avantages :</strong></p>
+<ul>
+<li>Vérifie l&rsquo;intégrité du contenu</li>
+<li>Résiste au transfert</li>
+<li>Sécurité cryptographique</li>
+</ul>
+<p><strong>Inconvénients :</strong></p>
+<ul>
+<li>Complexe à implémenter</li>
+<li>Pas de rapport intégré</li>
+<li>Ne protège pas totalement contre l’usurpation</li>
+</ul>
+<h3 id="dmarc-domain-based-message-authentication-reporting--conformance">DMARC (Domain-based Message Authentication, Reporting &amp; Conformance)</h3>
+<p>DMARC relie SPF et DKIM en précisant comment agir en cas d’échec d’authentification, tout en offrant un système de reporting.</p>
+<p><strong>Fonctionnement :</strong> précise les actions en cas d’échec SPF ou DKIM, avec rapports.</p>
+<p><strong>Avantages :</strong></p>
+<ul>
+<li>Reporting intégré</li>
+<li>Application claire des règles</li>
+<li>Combine SPF et DKIM</li>
+</ul>
+<p><strong>Inconvénients :</strong></p>
+<ul>
+<li>Nécessite SPF et DKIM configurés</li>
+<li>Complexité supplémentaire</li>
+<li>Surveillance continue</li>
+</ul>
+<h3 id="pourquoi-utiliser-les-trois-">Pourquoi utiliser les trois ?</h3>
+<ul>
+<li>SPF vérifie les serveurs autorisés.</li>
+<li>DKIM assure intégrité et authenticité.</li>
+<li>DMARC applique les politiques et rapporte.</li>
+</ul>
+<p>Ensemble, ils renforcent considérablement la sécurité et la délivrabilité.</p>
+<h2 id="dns-et-hiérarchie-de-domaine">DNS et hiérarchie de domaine</h2>
+<p>Le DNS (Domain Name System) est crucial, agissant comme un annuaire internet traduisant les noms de domaine en adresses IP.</p>
+<h3 id="hiérarchie-dns-droite-vers-gauche-">Hiérarchie DNS (droite vers gauche) :</h3>
+<ul>
+<li><strong>Racine :</strong> &ldquo;.&rdquo;</li>
+<li><strong>TLD :</strong> .com, .org, .net</li>
+<li><strong>ccTLD :</strong> .ca, .uk</li>
+<li><strong>Domaines secondaires :</strong> example.co</li>
+<li><strong>Sous-domaines :</strong> mail.example.co</li>
+</ul>
+<h3 id="enregistrements-dns-pour-e-mails-">Enregistrements DNS pour e-mails :</h3>
+<ul>
+<li><strong>MX :</strong> serveurs mails du domaine</li>
+<li><strong>TXT :</strong> SPF, DKIM, DMARC</li>
+<li><strong>A/AAAA :</strong> associe noms et adresses IP</li>
+<li><strong>PTR :</strong> DNS inversé (IP vers nom d&rsquo;hôte)</li>
+</ul>
+<p>Ces enregistrements garantissent routage et authentification corrects.</p>
+<h2 id="types-de-mails">Types d’e-mails</h2>
+<p>Différents types d’e-mails nécessitent des stratégies variées :</p>
+<h3 id="e-mails-transactionnels">E-mails transactionnels</h3>
+<ul>
+<li>Déclenchés par actions spécifiques</li>
+<li>Priorité élevée</li>
+<li>Attendus par les destinataires (ex.: confirmations d’achat)</li>
+</ul>
+<h3 id="e-mails-de-notification">E-mails de notification</h3>
+<ul>
+<li>Notifications modérées</li>
+<li>Semi-attendus (ex.: notifications de tâches)</li>
+</ul>
+<h3 id="e-mails-marketing">E-mails marketing</h3>
+<ul>
+<li>Contenu promotionnel</li>
+<li>Envoyés en masse</li>
+<li>Moins prioritaires (ex.: newsletters)</li>
+</ul>
+<h3 id="e-mails-daffaires-courants">E-mails d&rsquo;affaires courants</h3>
+<ul>
+<li>Communication quotidienne</li>
+<li>Personnalisés et conversationnels (ex.: échanges clients)</li>
+</ul>
+<h2 id="stratégie-de-séparation-des-domaines">Stratégie de séparation des domaines</h2>
+<p>Utilisez des domaines séparés pour préserver votre réputation principale :</p>
+<ul>
+<li><strong>Domaine principal (example.co) :</strong> affaires courantes, e-mails transactionnels</li>
+<li><strong>Domaine secondaire (marketing.example.com) :</strong> marketing, newsletters</li>
+</ul>
+<h2 id="réputation-du-serveur">Réputation du serveur</h2>
+<p>La réputation du serveur influence fortement la délivrabilité, comme un « score de crédit » pour l&rsquo;IP et le domaine.</p>
+<h3 id="facteurs-clés-">Facteurs clés :</h3>
+<ul>
+<li>Plaintes spam</li>
+<li>Taux de rebond</li>
+<li>Présence sur liste noire</li>
+</ul>
+<p>Une mauvaise réputation affecte la délivrabilité globale.</p>
+<h2 id="recommandations-dimplémentation">Recommandations d’implémentation</h2>
+<ul>
+<li>Configurez SPF, DKIM et DMARC sur votre domaine principal.</li>
+<li>Utilisez un service d’e-mails en masse (Mailjet, SendGrid) pour notifications et marketing.</li>
+<li>Séparez les domaines.</li>
+<li>Authentifiez tous les domaines.</li>
+<li>Surveillez les rapports DMARC.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>La livraison d&rsquo;e-mails, bien que complexe, est maîtrisable en comprenant SMTP, authentification, DNS et gestion de réputation. Une stratégie claire améliore sécurité et délivrabilité.</p>
+<p>La maintenance et la surveillance continues sont indispensables pour s&rsquo;adapter aux standards et menaces émergentes.</p>
+<h2 id="lectures-complémentaires">Lectures complémentaires</h2>
+<ul>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc5321" target="_blank" rel="noopener">RFC 5321 – Protocole SMTP</a></li>
+<li><a href="https://mailtrap.io/blog/smtp/" target="_blank" rel="noopener">Guide SMTP expliqué</a></li>
+<li><a href="https://www.uriports.com/blog/spf-dkim-dmarc-best-practices/" target="_blank" rel="noopener">Meilleures pratiques SPF, DKIM, DMARC</a></li>
+<li><a href="https://aws.amazon.com/blogs/messaging-and-targeting/the-four-pillars-of-email-reputation/" target="_blank" rel="noopener">Gestion réputation serveur</a></li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/fr/tag/email/">Email</a>
+  
+  <a class="badge badge-light" href="/fr/tag/smtp/">SMTP</a>
+  
+  <a class="badge badge-light" href="/fr/tag/spf/">SPF</a>
+  
+  <a class="badge badge-light" href="/fr/tag/dkim/">DKIM</a>
+  
+  <a class="badge badge-light" href="/fr/tag/dmarc/">DMARC</a>
+  
+  <a class="badge badge-light" href="/fr/tag/dns/">DNS</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Ffr%2Fpost%2Femails%2F&amp;text=Comprendre&#43;la&#43;livraison&#43;d%27e-mails&#43;%3A&#43;guide&#43;complet" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fantoine.weill-duflos.fr%2Ffr%2Fpost%2Femails%2F&amp;t=Comprendre&#43;la&#43;livraison&#43;d%27e-mails&#43;%3A&#43;guide&#43;complet" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Comprendre%20la%20livraison%20d%27e-mails%20%3A%20guide%20complet&amp;body=https%3A%2F%2Fantoine.weill-duflos.fr%2Ffr%2Fpost%2Femails%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Ffr%2Fpost%2Femails%2F&amp;title=Comprendre&#43;la&#43;livraison&#43;d%27e-mails&#43;%3A&#43;guide&#43;complet" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Comprendre&#43;la&#43;livraison&#43;d%27e-mails&#43;%3A&#43;guide&#43;complet%20https%3A%2F%2Fantoine.weill-duflos.fr%2Ffr%2Fpost%2Femails%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Ffr%2Fpost%2Femails%2F&amp;title=Comprendre&#43;la&#43;livraison&#43;d%27e-mails&#43;%3A&#43;guide&#43;complet" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://antoine.weill-duflos.fr/"><img class="avatar mr-3 avatar-circle" src="/fr/author/antoine-weill--duflos/avatar_hu_2f14c2477d4f6f8f.jpg" alt="Antoine Weill--Duflos"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://antoine.weill-duflos.fr/">Antoine Weill--Duflos</a></h5>
+      <h6 class="card-subtitle">Responsable Technologie et Applications</h6>
+      <p class="card-text">Je m&rsquo;intéresse à l&rsquo;haptique, la mécatronique, la micro-robotique&hellip;</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/fr/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ntoineWD" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://hci.social/@antoine" target="_blank" rel="noopener">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=gxcCHJoAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/Leicas" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Publié avec <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — le générateur <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">libre</a> de site web gratuit permetant aux créateurs de s&rsquo;épanouir.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.5faf09821dbe513ca103e87bafd52766.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/fr/js/wowchemy.min.7b80b55c623f600a4e25768e79775ac4.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Citation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copier
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Télécharger
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

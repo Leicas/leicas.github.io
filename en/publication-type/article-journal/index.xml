@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Article-Journal | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/en/publication-type/article-journal/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/publication-type/article-journal/index.xml" rel="self" type="application/rss+xml" />
+    <description>Article-Journal</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Article-Journal</title>
+      <link>https://antoine.weill-duflos.fr/en/publication-type/article-journal/</link>
+    </image>
+    
+    <item>
+      <title>Haptic Interactions Subject to Variable Latency</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/hutchison-haptic-2024/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/hutchison-haptic-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Speaking Haptically: From Phonemes to Phrases with a Mobile Haptic Communication System</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/de-vargas-speaking-2021/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/de-vargas-speaking-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ten Little Fingers, Ten Little Toes: Can Toes Match Fingers for Haptic Discrimination?</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/vyas-ten-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/vyas-ten-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modeling and Experimental Characterization of an Active MEMS Based Force Sensor</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/cailliez-modeling-2019/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/cailliez-modeling-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Getting Your Hands Dirty Outside the Lab: A Practical Primer for Conducting Wearable Vibrotactile Haptics Research</title>
+      <link>https://antoine.weill-duflos.fr/en/publication/blum-getting-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/publication/blum-getting-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

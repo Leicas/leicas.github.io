@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNS | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/en/tag/dns/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/tag/dns/index.xml" rel="self" type="application/rss+xml" />
+    <description>DNS</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>DNS</title>
+      <link>https://antoine.weill-duflos.fr/en/tag/dns/</link>
+    </image>
+    
+    <item>
+      <title>Understanding Email Delivery: A Comprehensive Guide</title>
+      <link>https://antoine.weill-duflos.fr/en/post/emails/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/post/emails/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Email delivery is a complex but essential aspect of modern communication infrastructure. Whether you&amp;rsquo;re managing emails for a small business or a large organization, understanding the underlying concepts can help you improve deliverability, security, and overall email performance.&lt;/p&gt;
+&lt;p&gt;This guide covers the fundamental aspects of email delivery, from the basic SMTP protocol to advanced authentication methods and reputation management strategies. We&amp;rsquo;ll use simple analogies to explain complex concepts and provide practical recommendations for implementation.&lt;/p&gt;
+&lt;h2 id=&#34;smtp-protocol-basics&#34;&gt;SMTP Protocol Basics&lt;/h2&gt;
+&lt;p&gt;Simple Mail Transfer Protocol (SMTP) is the foundation of email delivery. It&amp;rsquo;s a communication protocol for electronic mail transmission, working like a postal service for the internet.&lt;/p&gt;
+&lt;p&gt;When you send an email, your email client connects to an SMTP server using TCP port 25, 587, or 465 (for SSL/TLS). The client provides the sender, recipient, and message content to the server.&lt;/p&gt;
+&lt;p&gt;The SMTP server then determines how to route the message, looking up the recipient&amp;rsquo;s domain MX (Mail Exchange) records through DNS to find the receiving mail server.&lt;/p&gt;
+&lt;h3 id=&#34;key-smtp-commands&#34;&gt;Key SMTP Commands:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HELO/EHLO&lt;/strong&gt;: Identifies the sending mail server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAIL FROM&lt;/strong&gt;: Specifies the sender&amp;rsquo;s address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RCPT TO&lt;/strong&gt;: Specifies the recipient&amp;rsquo;s address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DATA&lt;/strong&gt;: Begins the transfer of the message content&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QUIT&lt;/strong&gt;: Ends the session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;email-authentication&#34;&gt;Email Authentication&lt;/h2&gt;
+&lt;p&gt;Email authentication protocols help verify the identity of senders and protect against spoofing and phishing. Let&amp;rsquo;s explore the three main authentication methods using the classic &amp;ldquo;Alice and Bob&amp;rdquo; analogy.&lt;/p&gt;
+&lt;h3 id=&#34;spf-sender-policy-framework&#34;&gt;SPF (Sender Policy Framework)&lt;/h3&gt;
+&lt;p&gt;Think of SPF as a guest list for your domain&amp;rsquo;s mailroom. It specifies which mail servers are authorized to send emails on behalf of your domain.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: The domain owner publishes a list of authorized sending servers in a DNS TXT record.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy to implement&lt;/li&gt;
+&lt;li&gt;Prevents direct domain spoofing&lt;/li&gt;
+&lt;li&gt;Widely supported&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Doesn&amp;rsquo;t verify email content&lt;/li&gt;
+&lt;li&gt;Breaks with forwarding&lt;/li&gt;
+&lt;li&gt;No reporting mechanism&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dkim-domainkeys-identified-mail&#34;&gt;DKIM (DomainKeys Identified Mail)&lt;/h3&gt;
+&lt;p&gt;DKIM is like a wax seal on an envelope. It adds a digital signature to emails that can be verified using a public key published in DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: The sending server adds a digital signature to the email header, which receiving servers can verify using the public key in DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Verifies email content integrity&lt;/li&gt;
+&lt;li&gt;Survives forwarding&lt;/li&gt;
+&lt;li&gt;Cryptographically secure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex to implement&lt;/li&gt;
+&lt;li&gt;No reporting mechanism&lt;/li&gt;
+&lt;li&gt;Doesn&amp;rsquo;t prevent all spoofing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dmarc-domain-based-message-authentication-reporting--conformance&#34;&gt;DMARC (Domain-based Message Authentication, Reporting &amp;amp; Conformance)&lt;/h3&gt;
+&lt;p&gt;DMARC ties SPF and DKIM together, providing instructions on what to do when authentication fails and offering reporting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: DMARC specifies what to do when SPF or DKIM checks fail and provides a reporting mechanism.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strengths&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provides reporting&lt;/li&gt;
+&lt;li&gt;Clear policy enforcement&lt;/li&gt;
+&lt;li&gt;Combines SPF and DKIM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Weaknesses&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires SPF and DKIM to be set up first&lt;/li&gt;
+&lt;li&gt;More complex to implement&lt;/li&gt;
+&lt;li&gt;Requires ongoing monitoring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;why-use-all-three&#34;&gt;Why Use All Three?&lt;/h3&gt;
+&lt;p&gt;Each protocol addresses different aspects of email authentication:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SPF verifies the sending server is authorized&lt;/li&gt;
+&lt;li&gt;DKIM ensures message integrity and authenticity&lt;/li&gt;
+&lt;li&gt;DMARC provides policy enforcement and reporting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Together, they create a comprehensive authentication system that significantly improves email security and deliverability.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Real-World Scenario&lt;/strong&gt;: If you only implement SPF, attackers can still forge emails that appear to come from your domain by manipulating the &amp;ldquo;From&amp;rdquo; header. DKIM helps prevent this by signing the headers, and DMARC ties everything together with clear policies on what to do when authentication fails.&lt;/p&gt;
+&lt;h2 id=&#34;dns-and-domain-hierarchy&#34;&gt;DNS and Domain Hierarchy&lt;/h2&gt;
+&lt;p&gt;The Domain Name System (DNS) is crucial for email delivery, acting as the internet&amp;rsquo;s phone book that translates domain names to IP addresses.&lt;/p&gt;
+&lt;h3 id=&#34;domain-hierarchy-read-right-to-left&#34;&gt;Domain Hierarchy (read right to left):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Root Domain&lt;/strong&gt;: The invisible &amp;ldquo;.&amp;rdquo; at the end of all domains&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLDs (Top-Level Domains)&lt;/strong&gt;: .com, .org, .net, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ccTLDs (Country Code TLDs)&lt;/strong&gt;: .ca (Canada), .uk (United Kingdom), etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Second-Level Domains&lt;/strong&gt;: example.co, example.ca, example.com&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Subdomains&lt;/strong&gt;: mail.example.co, support.example.co&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you control a domain like example.co, you can create subdomains and set DNS records that affect email delivery and authentication.&lt;/p&gt;
+&lt;h3 id=&#34;dns-records-for-email&#34;&gt;DNS Records for Email:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MX Records&lt;/strong&gt;: Specify which mail servers accept email for your domain and their priority.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.co. 3600 IN MX 10 aspmx.l.google.com.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TXT Records&lt;/strong&gt;: Store SPF, DKIM, and DMARC policies as text.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.co. 3600 IN TXT &amp;quot;v=spf1 include:_spf.google.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;A/AAAA Records&lt;/strong&gt;: Map hostnames to IP addresses (IPv4/IPv6).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mail.example.co. 3600 IN A 192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PTR Records&lt;/strong&gt;: Reverse DNS lookup (IP to hostname).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.1.168.192.in-addr.arpa. PTR mail.example.co.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These records work together to ensure proper email routing and authentication.&lt;/p&gt;
+&lt;h3 id=&#34;dns-and-spf-example-for-multiple-domains&#34;&gt;DNS and SPF Example for Multiple Domains:&lt;/h3&gt;
+&lt;p&gt;For organizations with multiple domains, each domain needs its own DNS records:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For main domain with Google Workspace&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.co TXT &amp;quot;v=spf1 include:_spf.google.com include:spf.mailjet.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;For secondary domain&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;example.ca TXT &amp;quot;v=spf1 include:_spf.google.com include:spf.mailjet.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;For marketing domain&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;marketing.example.com TXT &amp;quot;v=spf1 include:spf.mailjet.com ~all&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;email-types&#34;&gt;Email Types&lt;/h2&gt;
+&lt;p&gt;Different types of emails serve different purposes and may require different delivery strategies.&lt;/p&gt;
+&lt;h3 id=&#34;transactional-emails&#34;&gt;Transactional Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Triggered by specific actions or events&lt;/li&gt;
+&lt;li&gt;Time-sensitive&lt;/li&gt;
+&lt;li&gt;Expected by recipients&lt;/li&gt;
+&lt;li&gt;High priority&lt;/li&gt;
+&lt;li&gt;Usually sent to individuals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Printer sending scan results to users&lt;/li&gt;
+&lt;li&gt;Password reset emails&lt;/li&gt;
+&lt;li&gt;Order confirmations&lt;/li&gt;
+&lt;li&gt;Account verification emails&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send transactional emails from your main domain using your primary email provider for highest deliverability and trust.&lt;/p&gt;
+&lt;h3 id=&#34;notification-emails&#34;&gt;Notification Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inform users about updates or required actions&lt;/li&gt;
+&lt;li&gt;Moderate priority&lt;/li&gt;
+&lt;li&gt;Often automated&lt;/li&gt;
+&lt;li&gt;Semi-expected by recipients&lt;/li&gt;
+&lt;li&gt;Can be sent to individuals or groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Task notifications&lt;/li&gt;
+&lt;li&gt;Signature requests&lt;/li&gt;
+&lt;li&gt;Quote notifications to customers&lt;/li&gt;
+&lt;li&gt;Project status updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send notifications using a consistent sender address (e.g., &lt;a href=&#34;mailto:notifications@example.co&#34;&gt;notifications@example.co&lt;/a&gt;) to help recipients recognize and filter these emails.&lt;/p&gt;
+&lt;h3 id=&#34;marketing-emails&#34;&gt;Marketing Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Promotional content&lt;/li&gt;
+&lt;li&gt;Sent in bulk to multiple recipients&lt;/li&gt;
+&lt;li&gt;Lower priority&lt;/li&gt;
+&lt;li&gt;Not specifically expected by recipients&lt;/li&gt;
+&lt;li&gt;Often part of campaigns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newsletter announcements&lt;/li&gt;
+&lt;li&gt;Product updates&lt;/li&gt;
+&lt;li&gt;Special offers&lt;/li&gt;
+&lt;li&gt;Event invitations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send marketing emails from a separate domain (e.g., marketing.example.com) to protect your main domain&amp;rsquo;s reputation. Always include unsubscribe options and honor opt-out requests promptly.&lt;/p&gt;
+&lt;h3 id=&#34;regular-business-emails&#34;&gt;Regular Business Emails&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Day-to-day communication&lt;/li&gt;
+&lt;li&gt;Personalized&lt;/li&gt;
+&lt;li&gt;Conversational&lt;/li&gt;
+&lt;li&gt;Varying priority&lt;/li&gt;
+&lt;li&gt;Usually sent to individuals or small groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Communications with partners&lt;/li&gt;
+&lt;li&gt;Customer support emails&lt;/li&gt;
+&lt;li&gt;Internal team communications&lt;/li&gt;
+&lt;li&gt;Vendor communications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;: Send regular business emails from your main domain using your primary email provider with proper signatures and branding for consistency and professionalism.&lt;/p&gt;
+&lt;h2 id=&#34;domain-separation-strategy&#34;&gt;Domain Separation Strategy&lt;/h2&gt;
+&lt;p&gt;For organizations with multiple domains, implement a strategic separation:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Main Domain (example.co)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt;: Primary email provider (e.g., Google Workspace)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use for&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Regular business emails&lt;/li&gt;
+&lt;li&gt;Transactional emails&lt;/li&gt;
+&lt;li&gt;Critical communications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Secondary Domain (marketing.example.com or example.ca)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt;: Bulk email service (e.g., Mailjet, SendGrid)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use for&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Marketing emails&lt;/li&gt;
+&lt;li&gt;Mass notifications&lt;/li&gt;
+&lt;li&gt;Newsletters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This separation helps protect your main domain&amp;rsquo;s reputation while still maintaining brand consistency across all communications.&lt;/p&gt;
+&lt;p&gt;Implement proper authentication (SPF, DKIM, DMARC) across all domains regardless of their use to ensure maximum deliverability and security.&lt;/p&gt;
+&lt;h2 id=&#34;server-reputation-factors&#34;&gt;Server Reputation Factors&lt;/h2&gt;
+&lt;p&gt;Your email server&amp;rsquo;s reputation significantly impacts deliverability. It&amp;rsquo;s like a credit score for your sending IP and domain.&lt;/p&gt;
+&lt;h3 id=&#34;ip-reputation-factors&#34;&gt;IP Reputation Factors:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spam complaints&lt;/li&gt;
+&lt;li&gt;Bounce rates&lt;/li&gt;
+&lt;li&gt;Spam trap hits&lt;/li&gt;
+&lt;li&gt;Volume consistency&lt;/li&gt;
+&lt;li&gt;Blacklist presence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;domain-reputation-factors&#34;&gt;Domain Reputation Factors:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentication setup&lt;/li&gt;
+&lt;li&gt;Domain age&lt;/li&gt;
+&lt;li&gt;Content quality&lt;/li&gt;
+&lt;li&gt;Engagement metrics&lt;/li&gt;
+&lt;li&gt;Sending history&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Why Reputation Matters&lt;/strong&gt;: Email providers like Gmail, Outlook, and Yahoo use reputation scores to determine whether your emails reach the inbox or get filtered to spam. A poor reputation can significantly impact deliverability across all your communications.&lt;/p&gt;
+&lt;h2 id=&#34;implementation-recommendations&#34;&gt;Implementation Recommendations&lt;/h2&gt;
+&lt;h3 id=&#34;recommended-setup&#34;&gt;Recommended Setup:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Primary Email Provider Configuration&lt;/strong&gt;: Configure SPF, DKIM, and DMARC for your main domain&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bulk Email Service Integration&lt;/strong&gt;: Set up a service like Mailjet or SendGrid for notifications and marketing emails&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domain Separation&lt;/strong&gt;: Use a separate domain for mass emails&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Authentication Across All Domains&lt;/strong&gt;: Implement SPF, DKIM, and DMARC for each domain&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Monitoring&lt;/strong&gt;: Set up DMARC reporting to monitor authentication results&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;benefits&#34;&gt;Benefits:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved deliverability for all email types&lt;/li&gt;
+&lt;li&gt;Protection against spoofing and phishing&lt;/li&gt;
+&lt;li&gt;Preserved reputation for your main domain&lt;/li&gt;
+&lt;li&gt;Better visibility into email performance&lt;/li&gt;
+&lt;li&gt;Reduced risk of blacklisting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Email delivery is a complex but manageable aspect of modern business infrastructure. By understanding the fundamental concepts of SMTP, authentication protocols, DNS configuration, and reputation management, you can significantly improve your email deliverability and security.&lt;/p&gt;
+&lt;p&gt;Implementing a strategic approach to different email types and using domain separation can help protect your main domain&amp;rsquo;s reputation while ensuring all your communications reach their intended recipients.&lt;/p&gt;
+&lt;p&gt;Remember that email authentication is not a one-time setup but requires ongoing monitoring and maintenance to adapt to changing email security standards and threats.&lt;/p&gt;
+&lt;h2 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h2&gt;
+&lt;h3 id=&#34;smtp-protocol-and-standards&#34;&gt;SMTP Protocol and Standards&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc5321&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RFC 5321 - Simple Mail Transfer Protocol&lt;/a&gt; - The official IETF specification for SMTP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailtrap.io/blog/smtp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simple Mail Transfer Protocol Explained&lt;/a&gt; - A comprehensive guide to understanding SMTP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.fastmail.help/hc/en-us/articles/1500000278382-Email-standards&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Email Standards&lt;/a&gt; - Overview of email-related RFCs and standards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;email-authentication-1&#34;&gt;Email Authentication&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.uriports.com/blog/spf-dkim-dmarc-best-practices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SPF, DKIM, and DMARC Best Practices&lt;/a&gt; - Comprehensive guide to implementing authentication protocols&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.higherlogic.com/blog/spf-dkim-dmarc-email-authentication/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The 3 Pillars of Email Authentication&lt;/a&gt; - Understanding how SPF, DKIM, and DMARC work together&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dmarc.org/2016/03/best-practices-for-email-senders/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Best Authentication Practices for Email Senders&lt;/a&gt; - Official recommendations from DMARC.org&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dmarcly.com/blog/how-to-implement-dmarc-dkim-spf-to-stop-email-spoofing-phishing-the-definitive-guide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Implement DMARC/DKIM/SPF&lt;/a&gt; - Step-by-step implementation guide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;server-reputation-management&#34;&gt;Server Reputation Management&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/messaging-and-targeting/the-four-pillars-of-email-reputation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Four Pillars of Managing Email Reputation&lt;/a&gt; - AWS guide to email reputation management&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.litmus.com/blog/how-to-fix-email-reputation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Fix Email Reputation and Improve Deliverability&lt;/a&gt; - Practical steps to improve sender reputation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sendgrid.com/en-us/blog/8-best-practices-to-improve-your-email-deliverability&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Best Practices to Improve Your Email Deliverability&lt;/a&gt; - SendGrid&amp;rsquo;s recommendations for better deliverability&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: April 7, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Antoine Weill-Duflos" />
+
+
+
+
+
+  
+
+<meta name="description" content="A comprehensive guide to email delivery concepts, including SMTP protocol, authentication methods, DNS configuration, and best practices for managing multiple domains." />
+
+
+
+  <link rel="alternate" hreflang="fr" href="https://antoine.weill-duflos.fr/fr/post/emails/" />
+
+<link rel="alternate" hreflang="en-us" href="https://antoine.weill-duflos.fr/en/post/emails/" />
+<link rel="canonical" href="https://antoine.weill-duflos.fr/en/post/emails/" />
+
+
+
+  <link rel="manifest" href="/en/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_2311fe1a408f47c1.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_4eb7679362359773.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@ntoidewd" />
+  <meta property="twitter:creator" content="@ntoidewd" />
+<meta property="twitter:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Antoine Weill--Duflos" />
+<meta property="og:url" content="https://antoine.weill-duflos.fr/en/post/emails/" />
+<meta property="og:title" content="Understanding Email Delivery: A Comprehensive Guide | Antoine Weill--Duflos" />
+<meta property="og:description" content="A comprehensive guide to email delivery concepts, including SMTP protocol, authentication methods, DNS configuration, and best practices for managing multiple domains." /><meta property="og:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-04-07T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-04-07T21:16:14-04:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antoine.weill-duflos.fr/en/post/emails/"
+  },
+  "headline": "Understanding Email Delivery: A Comprehensive Guide",
+  
+  "datePublished": "2025-04-07T00:00:00Z",
+  "dateModified": "2025-04-07T21:16:14-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Antoine Weill-Duflos"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Antoine Weill--Duflos",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://antoine.weill-duflos.fr/media/icon_hu_f7eee4fa97025c42.png"
+    }
+  },
+  "description": "A comprehensive guide to email delivery concepts, including SMTP protocol, authentication methods, DNS configuration, and best practices for managing multiple domains."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Understanding Email Delivery: A Comprehensive Guide | Antoine Weill--Duflos</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <link rel="me" href="https://hci.social/@antoine" />
+      
+    
+  
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="9494f508fd078f4bb420ac68a7135d83" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/courses/"><span>Courses</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#talk"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/en/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://antoine.weill-duflos.fr/fr/post/emails/">
+              <span>Français</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Understanding Email Delivery: A Comprehensive Guide</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Apr 7, 2025
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/en/category/technical-guides/">Technical Guides</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="introduction">Introduction</h2>
+<p>Email delivery is a complex but essential aspect of modern communication infrastructure. Whether you&rsquo;re managing emails for a small business or a large organization, understanding the underlying concepts can help you improve deliverability, security, and overall email performance.</p>
+<p>This guide covers the fundamental aspects of email delivery, from the basic SMTP protocol to advanced authentication methods and reputation management strategies. We&rsquo;ll use simple analogies to explain complex concepts and provide practical recommendations for implementation.</p>
+<h2 id="smtp-protocol-basics">SMTP Protocol Basics</h2>
+<p>Simple Mail Transfer Protocol (SMTP) is the foundation of email delivery. It&rsquo;s a communication protocol for electronic mail transmission, working like a postal service for the internet.</p>
+<p>When you send an email, your email client connects to an SMTP server using TCP port 25, 587, or 465 (for SSL/TLS). The client provides the sender, recipient, and message content to the server.</p>
+<p>The SMTP server then determines how to route the message, looking up the recipient&rsquo;s domain MX (Mail Exchange) records through DNS to find the receiving mail server.</p>
+<h3 id="key-smtp-commands">Key SMTP Commands:</h3>
+<ul>
+<li><strong>HELO/EHLO</strong>: Identifies the sending mail server</li>
+<li><strong>MAIL FROM</strong>: Specifies the sender&rsquo;s address</li>
+<li><strong>RCPT TO</strong>: Specifies the recipient&rsquo;s address</li>
+<li><strong>DATA</strong>: Begins the transfer of the message content</li>
+<li><strong>QUIT</strong>: Ends the session</li>
+</ul>
+<h2 id="email-authentication">Email Authentication</h2>
+<p>Email authentication protocols help verify the identity of senders and protect against spoofing and phishing. Let&rsquo;s explore the three main authentication methods using the classic &ldquo;Alice and Bob&rdquo; analogy.</p>
+<h3 id="spf-sender-policy-framework">SPF (Sender Policy Framework)</h3>
+<p>Think of SPF as a guest list for your domain&rsquo;s mailroom. It specifies which mail servers are authorized to send emails on behalf of your domain.</p>
+<p><strong>How it works</strong>: The domain owner publishes a list of authorized sending servers in a DNS TXT record.</p>
+<p><strong>Strengths</strong>:</p>
+<ul>
+<li>Easy to implement</li>
+<li>Prevents direct domain spoofing</li>
+<li>Widely supported</li>
+</ul>
+<p><strong>Weaknesses</strong>:</p>
+<ul>
+<li>Doesn&rsquo;t verify email content</li>
+<li>Breaks with forwarding</li>
+<li>No reporting mechanism</li>
+</ul>
+<h3 id="dkim-domainkeys-identified-mail">DKIM (DomainKeys Identified Mail)</h3>
+<p>DKIM is like a wax seal on an envelope. It adds a digital signature to emails that can be verified using a public key published in DNS.</p>
+<p><strong>How it works</strong>: The sending server adds a digital signature to the email header, which receiving servers can verify using the public key in DNS.</p>
+<p><strong>Strengths</strong>:</p>
+<ul>
+<li>Verifies email content integrity</li>
+<li>Survives forwarding</li>
+<li>Cryptographically secure</li>
+</ul>
+<p><strong>Weaknesses</strong>:</p>
+<ul>
+<li>Complex to implement</li>
+<li>No reporting mechanism</li>
+<li>Doesn&rsquo;t prevent all spoofing</li>
+</ul>
+<h3 id="dmarc-domain-based-message-authentication-reporting--conformance">DMARC (Domain-based Message Authentication, Reporting &amp; Conformance)</h3>
+<p>DMARC ties SPF and DKIM together, providing instructions on what to do when authentication fails and offering reporting.</p>
+<p><strong>How it works</strong>: DMARC specifies what to do when SPF or DKIM checks fail and provides a reporting mechanism.</p>
+<p><strong>Strengths</strong>:</p>
+<ul>
+<li>Provides reporting</li>
+<li>Clear policy enforcement</li>
+<li>Combines SPF and DKIM</li>
+</ul>
+<p><strong>Weaknesses</strong>:</p>
+<ul>
+<li>Requires SPF and DKIM to be set up first</li>
+<li>More complex to implement</li>
+<li>Requires ongoing monitoring</li>
+</ul>
+<h3 id="why-use-all-three">Why Use All Three?</h3>
+<p>Each protocol addresses different aspects of email authentication:</p>
+<ul>
+<li>SPF verifies the sending server is authorized</li>
+<li>DKIM ensures message integrity and authenticity</li>
+<li>DMARC provides policy enforcement and reporting</li>
+</ul>
+<p>Together, they create a comprehensive authentication system that significantly improves email security and deliverability.</p>
+<p><strong>Real-World Scenario</strong>: If you only implement SPF, attackers can still forge emails that appear to come from your domain by manipulating the &ldquo;From&rdquo; header. DKIM helps prevent this by signing the headers, and DMARC ties everything together with clear policies on what to do when authentication fails.</p>
+<h2 id="dns-and-domain-hierarchy">DNS and Domain Hierarchy</h2>
+<p>The Domain Name System (DNS) is crucial for email delivery, acting as the internet&rsquo;s phone book that translates domain names to IP addresses.</p>
+<h3 id="domain-hierarchy-read-right-to-left">Domain Hierarchy (read right to left):</h3>
+<ul>
+<li><strong>Root Domain</strong>: The invisible &ldquo;.&rdquo; at the end of all domains</li>
+<li><strong>TLDs (Top-Level Domains)</strong>: .com, .org, .net, etc.</li>
+<li><strong>ccTLDs (Country Code TLDs)</strong>: .ca (Canada), .uk (United Kingdom), etc.</li>
+<li><strong>Second-Level Domains</strong>: example.co, example.ca, example.com</li>
+<li><strong>Subdomains</strong>: mail.example.co, support.example.co</li>
+</ul>
+<p>When you control a domain like example.co, you can create subdomains and set DNS records that affect email delivery and authentication.</p>
+<h3 id="dns-records-for-email">DNS Records for Email:</h3>
+<ul>
+<li>
+<p><strong>MX Records</strong>: Specify which mail servers accept email for your domain and their priority.</p>
+<pre><code>example.co. 3600 IN MX 10 aspmx.l.google.com.
+</code></pre>
+</li>
+<li>
+<p><strong>TXT Records</strong>: Store SPF, DKIM, and DMARC policies as text.</p>
+<pre><code>example.co. 3600 IN TXT &quot;v=spf1 include:_spf.google.com ~all&quot;
+</code></pre>
+</li>
+<li>
+<p><strong>A/AAAA Records</strong>: Map hostnames to IP addresses (IPv4/IPv6).</p>
+<pre><code>mail.example.co. 3600 IN A 192.168.1.1
+</code></pre>
+</li>
+<li>
+<p><strong>PTR Records</strong>: Reverse DNS lookup (IP to hostname).</p>
+<pre><code>1.1.168.192.in-addr.arpa. PTR mail.example.co.
+</code></pre>
+</li>
+</ul>
+<p>These records work together to ensure proper email routing and authentication.</p>
+<h3 id="dns-and-spf-example-for-multiple-domains">DNS and SPF Example for Multiple Domains:</h3>
+<p>For organizations with multiple domains, each domain needs its own DNS records:</p>
+<p><strong>For main domain with Google Workspace</strong>:</p>
+<pre><code>example.co TXT &quot;v=spf1 include:_spf.google.com include:spf.mailjet.com ~all&quot;
+</code></pre>
+<p><strong>For secondary domain</strong>:</p>
+<pre><code>example.ca TXT &quot;v=spf1 include:_spf.google.com include:spf.mailjet.com ~all&quot;
+</code></pre>
+<p><strong>For marketing domain</strong>:</p>
+<pre><code>marketing.example.com TXT &quot;v=spf1 include:spf.mailjet.com ~all&quot;
+</code></pre>
+<h2 id="email-types">Email Types</h2>
+<p>Different types of emails serve different purposes and may require different delivery strategies.</p>
+<h3 id="transactional-emails">Transactional Emails</h3>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Triggered by specific actions or events</li>
+<li>Time-sensitive</li>
+<li>Expected by recipients</li>
+<li>High priority</li>
+<li>Usually sent to individuals</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Printer sending scan results to users</li>
+<li>Password reset emails</li>
+<li>Order confirmations</li>
+<li>Account verification emails</li>
+</ul>
+<p><strong>Best Practice</strong>: Send transactional emails from your main domain using your primary email provider for highest deliverability and trust.</p>
+<h3 id="notification-emails">Notification Emails</h3>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Inform users about updates or required actions</li>
+<li>Moderate priority</li>
+<li>Often automated</li>
+<li>Semi-expected by recipients</li>
+<li>Can be sent to individuals or groups</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Task notifications</li>
+<li>Signature requests</li>
+<li>Quote notifications to customers</li>
+<li>Project status updates</li>
+</ul>
+<p><strong>Best Practice</strong>: Send notifications using a consistent sender address (e.g., <a href="mailto:notifications@example.co">notifications@example.co</a>) to help recipients recognize and filter these emails.</p>
+<h3 id="marketing-emails">Marketing Emails</h3>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Promotional content</li>
+<li>Sent in bulk to multiple recipients</li>
+<li>Lower priority</li>
+<li>Not specifically expected by recipients</li>
+<li>Often part of campaigns</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Newsletter announcements</li>
+<li>Product updates</li>
+<li>Special offers</li>
+<li>Event invitations</li>
+</ul>
+<p><strong>Best Practice</strong>: Send marketing emails from a separate domain (e.g., marketing.example.com) to protect your main domain&rsquo;s reputation. Always include unsubscribe options and honor opt-out requests promptly.</p>
+<h3 id="regular-business-emails">Regular Business Emails</h3>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Day-to-day communication</li>
+<li>Personalized</li>
+<li>Conversational</li>
+<li>Varying priority</li>
+<li>Usually sent to individuals or small groups</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Communications with partners</li>
+<li>Customer support emails</li>
+<li>Internal team communications</li>
+<li>Vendor communications</li>
+</ul>
+<p><strong>Best Practice</strong>: Send regular business emails from your main domain using your primary email provider with proper signatures and branding for consistency and professionalism.</p>
+<h2 id="domain-separation-strategy">Domain Separation Strategy</h2>
+<p>For organizations with multiple domains, implement a strategic separation:</p>
+<p><strong>Main Domain (example.co)</strong>:</p>
+<ul>
+<li><strong>Provider</strong>: Primary email provider (e.g., Google Workspace)</li>
+<li><strong>Use for</strong>:
+<ul>
+<li>Regular business emails</li>
+<li>Transactional emails</li>
+<li>Critical communications</li>
+</ul>
+</li>
+</ul>
+<p><strong>Secondary Domain (marketing.example.com or example.ca)</strong>:</p>
+<ul>
+<li><strong>Provider</strong>: Bulk email service (e.g., Mailjet, SendGrid)</li>
+<li><strong>Use for</strong>:
+<ul>
+<li>Marketing emails</li>
+<li>Mass notifications</li>
+<li>Newsletters</li>
+</ul>
+</li>
+</ul>
+<p>This separation helps protect your main domain&rsquo;s reputation while still maintaining brand consistency across all communications.</p>
+<p>Implement proper authentication (SPF, DKIM, DMARC) across all domains regardless of their use to ensure maximum deliverability and security.</p>
+<h2 id="server-reputation-factors">Server Reputation Factors</h2>
+<p>Your email server&rsquo;s reputation significantly impacts deliverability. It&rsquo;s like a credit score for your sending IP and domain.</p>
+<h3 id="ip-reputation-factors">IP Reputation Factors:</h3>
+<ul>
+<li>Spam complaints</li>
+<li>Bounce rates</li>
+<li>Spam trap hits</li>
+<li>Volume consistency</li>
+<li>Blacklist presence</li>
+</ul>
+<h3 id="domain-reputation-factors">Domain Reputation Factors:</h3>
+<ul>
+<li>Authentication setup</li>
+<li>Domain age</li>
+<li>Content quality</li>
+<li>Engagement metrics</li>
+<li>Sending history</li>
+</ul>
+<p><strong>Why Reputation Matters</strong>: Email providers like Gmail, Outlook, and Yahoo use reputation scores to determine whether your emails reach the inbox or get filtered to spam. A poor reputation can significantly impact deliverability across all your communications.</p>
+<h2 id="implementation-recommendations">Implementation Recommendations</h2>
+<h3 id="recommended-setup">Recommended Setup:</h3>
+<ol>
+<li><strong>Primary Email Provider Configuration</strong>: Configure SPF, DKIM, and DMARC for your main domain</li>
+<li><strong>Bulk Email Service Integration</strong>: Set up a service like Mailjet or SendGrid for notifications and marketing emails</li>
+<li><strong>Domain Separation</strong>: Use a separate domain for mass emails</li>
+<li><strong>Authentication Across All Domains</strong>: Implement SPF, DKIM, and DMARC for each domain</li>
+<li><strong>Monitoring</strong>: Set up DMARC reporting to monitor authentication results</li>
+</ol>
+<h3 id="benefits">Benefits:</h3>
+<ul>
+<li>Improved deliverability for all email types</li>
+<li>Protection against spoofing and phishing</li>
+<li>Preserved reputation for your main domain</li>
+<li>Better visibility into email performance</li>
+<li>Reduced risk of blacklisting</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Email delivery is a complex but manageable aspect of modern business infrastructure. By understanding the fundamental concepts of SMTP, authentication protocols, DNS configuration, and reputation management, you can significantly improve your email deliverability and security.</p>
+<p>Implementing a strategic approach to different email types and using domain separation can help protect your main domain&rsquo;s reputation while ensuring all your communications reach their intended recipients.</p>
+<p>Remember that email authentication is not a one-time setup but requires ongoing monitoring and maintenance to adapt to changing email security standards and threats.</p>
+<h2 id="further-reading">Further Reading</h2>
+<h3 id="smtp-protocol-and-standards">SMTP Protocol and Standards</h3>
+<ul>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc5321" target="_blank" rel="noopener">RFC 5321 - Simple Mail Transfer Protocol</a> - The official IETF specification for SMTP</li>
+<li><a href="https://mailtrap.io/blog/smtp/" target="_blank" rel="noopener">Simple Mail Transfer Protocol Explained</a> - A comprehensive guide to understanding SMTP</li>
+<li><a href="https://www.fastmail.help/hc/en-us/articles/1500000278382-Email-standards" target="_blank" rel="noopener">Email Standards</a> - Overview of email-related RFCs and standards</li>
+</ul>
+<h3 id="email-authentication-1">Email Authentication</h3>
+<ul>
+<li><a href="https://www.uriports.com/blog/spf-dkim-dmarc-best-practices/" target="_blank" rel="noopener">SPF, DKIM, and DMARC Best Practices</a> - Comprehensive guide to implementing authentication protocols</li>
+<li><a href="https://www.higherlogic.com/blog/spf-dkim-dmarc-email-authentication/" target="_blank" rel="noopener">The 3 Pillars of Email Authentication</a> - Understanding how SPF, DKIM, and DMARC work together</li>
+<li><a href="https://dmarc.org/2016/03/best-practices-for-email-senders/" target="_blank" rel="noopener">Best Authentication Practices for Email Senders</a> - Official recommendations from DMARC.org</li>
+<li><a href="https://dmarcly.com/blog/how-to-implement-dmarc-dkim-spf-to-stop-email-spoofing-phishing-the-definitive-guide" target="_blank" rel="noopener">How to Implement DMARC/DKIM/SPF</a> - Step-by-step implementation guide</li>
+</ul>
+<h3 id="server-reputation-management">Server Reputation Management</h3>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/messaging-and-targeting/the-four-pillars-of-email-reputation/" target="_blank" rel="noopener">The Four Pillars of Managing Email Reputation</a> - AWS guide to email reputation management</li>
+<li><a href="https://www.litmus.com/blog/how-to-fix-email-reputation" target="_blank" rel="noopener">How to Fix Email Reputation and Improve Deliverability</a> - Practical steps to improve sender reputation</li>
+<li><a href="https://sendgrid.com/en-us/blog/8-best-practices-to-improve-your-email-deliverability" target="_blank" rel="noopener">Best Practices to Improve Your Email Deliverability</a> - SendGrid&rsquo;s recommendations for better deliverability</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/en/tag/email/">Email</a>
+  
+  <a class="badge badge-light" href="/en/tag/smtp/">SMTP</a>
+  
+  <a class="badge badge-light" href="/en/tag/spf/">SPF</a>
+  
+  <a class="badge badge-light" href="/en/tag/dkim/">DKIM</a>
+  
+  <a class="badge badge-light" href="/en/tag/dmarc/">DMARC</a>
+  
+  <a class="badge badge-light" href="/en/tag/dns/">DNS</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Femails%2F&amp;text=Understanding&#43;Email&#43;Delivery%3A&#43;A&#43;Comprehensive&#43;Guide" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Femails%2F&amp;t=Understanding&#43;Email&#43;Delivery%3A&#43;A&#43;Comprehensive&#43;Guide" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Understanding%20Email%20Delivery%3A%20A%20Comprehensive%20Guide&amp;body=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Femails%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Femails%2F&amp;title=Understanding&#43;Email&#43;Delivery%3A&#43;A&#43;Comprehensive&#43;Guide" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Understanding&#43;Email&#43;Delivery%3A&#43;A&#43;Comprehensive&#43;Guide%20https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Femails%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Femails%2F&amp;title=Understanding&#43;Email&#43;Delivery%3A&#43;A&#43;Comprehensive&#43;Guide" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://antoine.weill-duflos.fr/"><img class="avatar mr-3 avatar-circle" src="/en/author/antoine-weill-duflos/avatar_hu_2f14c2477d4f6f8f.jpg" alt="Antoine Weill-Duflos"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://antoine.weill-duflos.fr/">Antoine Weill-Duflos</a></h5>
+      <h6 class="card-subtitle">Head of Technology and Applications</h6>
+      <p class="card-text">My research interests include haptic, mechatronics, micro-robotic and hci.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/en/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ntoineWD" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://hci.social/@antoine" target="_blank" rel="noopener">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=gxcCHJoAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/Leicas" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.5faf09821dbe513ca103e87bafd52766.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.20495e7d56dd1098dabc5f3dc75d9d30.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

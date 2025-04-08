@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides Techniques | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/fr/category/guides-techniques/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/fr/category/guides-techniques/index.xml" rel="self" type="application/rss+xml" />
+    <description>Guides Techniques</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>fr-fr</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Guides Techniques</title>
+      <link>https://antoine.weill-duflos.fr/fr/category/guides-techniques/</link>
+    </image>
+    
+    <item>
+      <title>Comprendre la livraison d&#39;e-mails : guide complet</title>
+      <link>https://antoine.weill-duflos.fr/fr/post/emails/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/fr/post/emails/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;La livraison d&amp;rsquo;e-mails est un aspect complexe mais essentiel de l&amp;rsquo;infrastructure moderne de communication. Que vous gériez des e-mails pour une petite entreprise ou une grande organisation, comprendre ces concepts fondamentaux vous aidera à améliorer la délivrabilité, la sécurité et les performances générales.&lt;/p&gt;
+&lt;p&gt;Ce guide couvre les aspects essentiels de la livraison des e-mails, du protocole SMTP basique aux méthodes avancées d’authentification et aux stratégies de gestion de réputation. Des analogies simples vous aideront à comprendre des concepts complexes, accompagnées de recommandations pratiques.&lt;/p&gt;
+&lt;h2 id=&#34;principes-du-protocole-smtp&#34;&gt;Principes du protocole SMTP&lt;/h2&gt;
+&lt;p&gt;Le protocole SMTP (Simple Mail Transfer Protocol) constitue la base de l&amp;rsquo;envoi des e-mails. C’est un protocole de communication pour la transmission du courrier électronique, fonctionnant comme un service postal d’internet.&lt;/p&gt;
+&lt;p&gt;Lorsque vous envoyez un e-mail, votre client de messagerie se connecte à un serveur SMTP via le port TCP 25, 587 ou 465 (SSL/TLS). Le client fournit à ce serveur l’expéditeur, le destinataire et le contenu du message.&lt;/p&gt;
+&lt;p&gt;Le serveur SMTP décide ensuite comment acheminer le message, en consultant les enregistrements MX (Mail Exchange) du domaine destinataire via DNS.&lt;/p&gt;
+&lt;h3 id=&#34;commandes-smtp-essentielles-&#34;&gt;Commandes SMTP essentielles :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HELO/EHLO&lt;/strong&gt; : identifie le serveur envoyeur&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAIL FROM&lt;/strong&gt; : indique l’adresse de l’expéditeur&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RCPT TO&lt;/strong&gt; : indique l’adresse du destinataire&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DATA&lt;/strong&gt; : commence l’envoi du contenu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QUIT&lt;/strong&gt; : termine la session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;authentification-des-e-mails&#34;&gt;Authentification des e-mails&lt;/h2&gt;
+&lt;p&gt;Les protocoles d’authentification aident à vérifier l’identité des expéditeurs et à protéger contre l’usurpation et le phishing. Voici les trois méthodes principales illustrées avec l’analogie classique d’« Alice et Bob ».&lt;/p&gt;
+&lt;h3 id=&#34;spf-sender-policy-framework&#34;&gt;SPF (Sender Policy Framework)&lt;/h3&gt;
+&lt;p&gt;Le SPF est comme une liste d&amp;rsquo;invités autorisés pour envoyer des mails au nom de votre domaine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fonctionnement :&lt;/strong&gt; le propriétaire du domaine publie une liste des serveurs autorisés via un enregistrement TXT DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Avantages :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Facilité d&amp;rsquo;implémentation&lt;/li&gt;
+&lt;li&gt;Empêche l&amp;rsquo;usurpation directe&lt;/li&gt;
+&lt;li&gt;Large compatibilité&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Inconvénients :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ne vérifie pas le contenu&lt;/li&gt;
+&lt;li&gt;Problème lors du transfert&lt;/li&gt;
+&lt;li&gt;Pas de rapport détaillé&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dkim-domainkeys-identified-mail&#34;&gt;DKIM (DomainKeys Identified Mail)&lt;/h3&gt;
+&lt;p&gt;Le DKIM est comparable à un sceau numérique sur une enveloppe, permettant de vérifier l&amp;rsquo;intégrité du message avec une clé publique DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fonctionnement :&lt;/strong&gt; une signature numérique ajoutée à l’entête du mail est vérifiée par le serveur destinataire via DNS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Avantages :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vérifie l&amp;rsquo;intégrité du contenu&lt;/li&gt;
+&lt;li&gt;Résiste au transfert&lt;/li&gt;
+&lt;li&gt;Sécurité cryptographique&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Inconvénients :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complexe à implémenter&lt;/li&gt;
+&lt;li&gt;Pas de rapport intégré&lt;/li&gt;
+&lt;li&gt;Ne protège pas totalement contre l’usurpation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dmarc-domain-based-message-authentication-reporting--conformance&#34;&gt;DMARC (Domain-based Message Authentication, Reporting &amp;amp; Conformance)&lt;/h3&gt;
+&lt;p&gt;DMARC relie SPF et DKIM en précisant comment agir en cas d’échec d’authentification, tout en offrant un système de reporting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fonctionnement :&lt;/strong&gt; précise les actions en cas d’échec SPF ou DKIM, avec rapports.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Avantages :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reporting intégré&lt;/li&gt;
+&lt;li&gt;Application claire des règles&lt;/li&gt;
+&lt;li&gt;Combine SPF et DKIM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Inconvénients :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nécessite SPF et DKIM configurés&lt;/li&gt;
+&lt;li&gt;Complexité supplémentaire&lt;/li&gt;
+&lt;li&gt;Surveillance continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pourquoi-utiliser-les-trois-&#34;&gt;Pourquoi utiliser les trois ?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SPF vérifie les serveurs autorisés.&lt;/li&gt;
+&lt;li&gt;DKIM assure intégrité et authenticité.&lt;/li&gt;
+&lt;li&gt;DMARC applique les politiques et rapporte.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ensemble, ils renforcent considérablement la sécurité et la délivrabilité.&lt;/p&gt;
+&lt;h2 id=&#34;dns-et-hiérarchie-de-domaine&#34;&gt;DNS et hiérarchie de domaine&lt;/h2&gt;
+&lt;p&gt;Le DNS (Domain Name System) est crucial, agissant comme un annuaire internet traduisant les noms de domaine en adresses IP.&lt;/p&gt;
+&lt;h3 id=&#34;hiérarchie-dns-droite-vers-gauche-&#34;&gt;Hiérarchie DNS (droite vers gauche) :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Racine :&lt;/strong&gt; &amp;ldquo;.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLD :&lt;/strong&gt; .com, .org, .net&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ccTLD :&lt;/strong&gt; .ca, .uk&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domaines secondaires :&lt;/strong&gt; example.co&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sous-domaines :&lt;/strong&gt; mail.example.co&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;enregistrements-dns-pour-e-mails-&#34;&gt;Enregistrements DNS pour e-mails :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MX :&lt;/strong&gt; serveurs mails du domaine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TXT :&lt;/strong&gt; SPF, DKIM, DMARC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A/AAAA :&lt;/strong&gt; associe noms et adresses IP&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PTR :&lt;/strong&gt; DNS inversé (IP vers nom d&amp;rsquo;hôte)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ces enregistrements garantissent routage et authentification corrects.&lt;/p&gt;
+&lt;h2 id=&#34;types-de-mails&#34;&gt;Types d’e-mails&lt;/h2&gt;
+&lt;p&gt;Différents types d’e-mails nécessitent des stratégies variées :&lt;/p&gt;
+&lt;h3 id=&#34;e-mails-transactionnels&#34;&gt;E-mails transactionnels&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Déclenchés par actions spécifiques&lt;/li&gt;
+&lt;li&gt;Priorité élevée&lt;/li&gt;
+&lt;li&gt;Attendus par les destinataires (ex.: confirmations d’achat)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;e-mails-de-notification&#34;&gt;E-mails de notification&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Notifications modérées&lt;/li&gt;
+&lt;li&gt;Semi-attendus (ex.: notifications de tâches)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;e-mails-marketing&#34;&gt;E-mails marketing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Contenu promotionnel&lt;/li&gt;
+&lt;li&gt;Envoyés en masse&lt;/li&gt;
+&lt;li&gt;Moins prioritaires (ex.: newsletters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;e-mails-daffaires-courants&#34;&gt;E-mails d&amp;rsquo;affaires courants&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Communication quotidienne&lt;/li&gt;
+&lt;li&gt;Personnalisés et conversationnels (ex.: échanges clients)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;stratégie-de-séparation-des-domaines&#34;&gt;Stratégie de séparation des domaines&lt;/h2&gt;
+&lt;p&gt;Utilisez des domaines séparés pour préserver votre réputation principale :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Domaine principal (example.co) :&lt;/strong&gt; affaires courantes, e-mails transactionnels&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domaine secondaire (marketing.example.com) :&lt;/strong&gt; marketing, newsletters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;réputation-du-serveur&#34;&gt;Réputation du serveur&lt;/h2&gt;
+&lt;p&gt;La réputation du serveur influence fortement la délivrabilité, comme un « score de crédit » pour l&amp;rsquo;IP et le domaine.&lt;/p&gt;
+&lt;h3 id=&#34;facteurs-clés-&#34;&gt;Facteurs clés :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Plaintes spam&lt;/li&gt;
+&lt;li&gt;Taux de rebond&lt;/li&gt;
+&lt;li&gt;Présence sur liste noire&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Une mauvaise réputation affecte la délivrabilité globale.&lt;/p&gt;
+&lt;h2 id=&#34;recommandations-dimplémentation&#34;&gt;Recommandations d’implémentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configurez SPF, DKIM et DMARC sur votre domaine principal.&lt;/li&gt;
+&lt;li&gt;Utilisez un service d’e-mails en masse (Mailjet, SendGrid) pour notifications et marketing.&lt;/li&gt;
+&lt;li&gt;Séparez les domaines.&lt;/li&gt;
+&lt;li&gt;Authentifiez tous les domaines.&lt;/li&gt;
+&lt;li&gt;Surveillez les rapports DMARC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;La livraison d&amp;rsquo;e-mails, bien que complexe, est maîtrisable en comprenant SMTP, authentification, DNS et gestion de réputation. Une stratégie claire améliore sécurité et délivrabilité.&lt;/p&gt;
+&lt;p&gt;La maintenance et la surveillance continues sont indispensables pour s&amp;rsquo;adapter aux standards et menaces émergentes.&lt;/p&gt;
+&lt;h2 id=&#34;lectures-complémentaires&#34;&gt;Lectures complémentaires&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc5321&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RFC 5321 – Protocole SMTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailtrap.io/blog/smtp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Guide SMTP expliqué&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.uriports.com/blog/spf-dkim-dmarc-best-practices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Meilleures pratiques SPF, DKIM, DMARC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/messaging-and-targeting/the-four-pillars-of-email-reputation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gestion réputation serveur&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
