@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxmox | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/en/tag/proxmox/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/tag/proxmox/index.xml" rel="self" type="application/rss+xml" />
+    <description>Proxmox</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Proxmox</title>
+      <link>https://antoine.weill-duflos.fr/en/tag/proxmox/</link>
+    </image>
+    
+    <item>
+      <title>CI/CD for Hardware-Heavy Companies: Why It Matters and How to Use GitLab Runners</title>
+      <link>https://antoine.weill-duflos.fr/en/post/cicd/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/post/cicd/</guid>
+      <description>&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;Even if your company’s main products are physical hardware, chances are you have a lot of software behind the scenes. In fact, in today’s digital world &lt;em&gt;“every company is a software business, irrespective of the industry it is in”&lt;/em&gt; (&lt;a href=&#34;https://www.opsera.io/blog/ci-cd-business-benefits#:~:text=In%20the%20present,the%20products%20you%20are%20creating&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;12 Business Benefits of CI/CD | A CI/CD Overview&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;This means hardware-focused organizations also need to deliver software updates (for firmware, internal tools, user applications, etc.) quickly and reliably. That’s where &lt;strong&gt;CI/CD (Continuous Integration / Continuous Deployment)&lt;/strong&gt; comes in. CI/CD is a set of practices and tools that automate the software build, test, and release process, helping teams integrate and ship code changes more frequently and reliably.&lt;/p&gt;
+&lt;p&gt;In this post, we’ll explore how CI/CD benefits even hardware-heavy companies, and how we set up a cross-platform GitLab CI/CD pipeline (with Linux, macOS, and Windows runners) to speed up development and standardize our delivery process.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-cicd-and-why-should-hardware-companies-care&#34;&gt;What is CI/CD and Why Should Hardware Companies Care?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Continuous Integration&lt;/strong&gt; (CI) is the practice of frequently merging code changes into a shared repository, running automated builds and tests to catch issues early.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Continuous Deployment&lt;/strong&gt; (CD) automates releasing those validated changes to environments or end-users. Together, CI/CD forms an automated pipeline that takes code from commit to production with minimal human intervention. The key idea is automation: as code changes progress through development, CI/CD ensures that every change is built, tested, and delivered in a consistent way.&lt;/p&gt;
+&lt;p&gt;Why does this matter for a hardware-centric company? Simply put, &lt;strong&gt;reliable software processes improve everything&lt;/strong&gt;. Even if you build physical devices, you likely have supporting software (device firmware, control software, manufacturing tools, customer apps) that needs constant updates. Adopting CI/CD brings the same advantages that software companies enjoy to your hardware company’s software development.&lt;/p&gt;
+&lt;p&gt;The bottom line: modern hardware products often live or die by the quality and speed of their software updates, so a robust CI/CD pipeline is a huge asset.&lt;/p&gt;
+&lt;h2 id=&#34;benefits-of-cicd-speed-reliability-and-standardized-delivery&#34;&gt;Benefits of CI/CD: Speed, Reliability, and Standardized Delivery&lt;/h2&gt;
+&lt;p&gt;Implementing CI/CD can transform your development cycle. Some key benefits include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Improved Reliability:&lt;/strong&gt; Automation reduces the chance of human error. Every code change goes through the same tested process, which means fewer “it works on my machine” problems. Issues are caught earlier through automated tests, so by the time something is delivered, it’s far more stable. This rigorous approach leads to more reliable software releases (and by extension, more reliable hardware behavior when that software controls devices).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Faster Development Cycles:&lt;/strong&gt; With CI/CD, builds and tests run automatically on each commit, giving developers quick feedback. Instead of waiting days for a manual build or a tester to verify a change, you get results in hours or minutes. Parallelization allows multiple jobs to run on different platforms simultaneously, accelerating overall build times. For example, our team saw significantly faster build times for our Python-based tools once we enabled caching in the pipeline – tasks that used to be slow (like installing dependencies or compiling parts of the code) are now much quicker (also thanks to using clever tools such as &lt;a href=&#34;https://github.com/astral-sh/uv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;uv&lt;/a&gt;. Faster feedback and shorter build times mean developers can iterate rapidly and try out improvements without long delays.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Standardized Delivery:&lt;/strong&gt; CI/CD enforces a repeatable process for packaging and delivering software. Whether the target is a Linux server, a Mac application, or a Windows executable (and in all flavors of x86 to ARM64…), the pipeline uses version-controlled scripts to build and package it in a consistent manner. This standardization means every release follows the same steps and quality checks. It becomes easier to support multiple platforms because you’re not crafting one-off build procedures for each; the CI/CD pipeline orchestrates all of them with the same high-level workflow. In turn, customers or end-users get a uniform experience (e.g. a consistent version numbering and quality across platforms).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cross-platform-ci-pipeline-with-gitlab-runners-linux-macos-windows&#34;&gt;Cross-Platform CI Pipeline with GitLab Runners (Linux, macOS, Windows)&lt;/h2&gt;
+&lt;p&gt;One big challenge for us was ensuring our software builds and runs on &lt;strong&gt;multiple operating systems&lt;/strong&gt;. We support Linux, macOS, and Windows environments. With GitLab CI/CD, we solved this by using &lt;strong&gt;self-hosted GitLab runners&lt;/strong&gt; on each platform. GitLab’s architecture separates the CI/CD coordination (handled by the GitLab server) from the execution (handled by &lt;em&gt;runners&lt;/em&gt;). GitLab uses “runners” to execute CI jobs, and you can install runners on any machine or VM you want to use for builds. Each runner registers with the GitLab CI server and is assigned a tag (or multiple tags) to identify its platform or purpose. In our setup, we configured runners for all three major OS platforms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Linux runners&lt;/strong&gt; – running inside LXC containers on a Proxmox virtualization server. We use Proxmox (an open-source hypervisor) to host lightweight LXC containers that act as isolated Linux build agents. This allows us to easily spin up clean Linux environments for CI jobs. The Linux runner is tagged &lt;code&gt;linux&lt;/code&gt; in GitLab, so any job that needs a Linux environment will run in one of these containers. Using containers gives us reproducible Linux environments and easy scalability (we can launch multiple container runners if we need parallel Linux jobs).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;macOS runners&lt;/strong&gt; – running on a dedicated Mac Mini. Since macOS requires Apple hardware, we have a Mac Mini in-house that serves as our macOS build machine. We installed the GitLab Runner agent on this Mac Mini and tagged it as &lt;code&gt;macos&lt;/code&gt;. This runner picks up jobs that require Mac-specific building or testing (for example, building a .app bundle or running unit tests that use macOS frameworks). Having a macOS runner ensures our pipeline can build and verify Mac software artifacts just like it does for Linux, using the same GitLab CI definitions. (As an alternative, one could use cloud Mac runners, but an on-premise Mac Mini is cost-effective for us and keeps everything in-house.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Windows runners&lt;/strong&gt; – running on a dedicated Windows machine. We also set up a Windows 11 (could also be a Windows Server) machine with the GitLab Runner installed, tagged as &lt;code&gt;windows&lt;/code&gt;. This machine performs CI jobs that need a Windows environment, such as building a Windows installer or running tests that depend on Windows-only libraries. The runner uses the shell executor on Windows to run batch scripts or PowerShell commands as defined in the CI jobs. By having a dedicated Windows runner, our pipeline covers the last major platform in our support matrix, ensuring we don’t treat Windows builds as a manual afterthought.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With this infrastructure, every commit triggers a pipeline that includes jobs for Linux, macOS, and Windows. GitLab will route each job to the appropriate runner based on the tags. For instance, a job tagged with &lt;code&gt;windows&lt;/code&gt; will only run on our Windows runner, and so on. All three platforms run in parallel, so we get build/test results roughly at the same time. This setup has dramatically improved our confidence that a change won’t break platform-specific functionality—if something fails on Windows but passes on Linux, the pipeline will immediately flag it so we can fix the issue before merging.&lt;/p&gt;
+&lt;h2 id=&#34;example-gitlab-ci-configuration-for-multiple-platforms&#34;&gt;Example GitLab CI Configuration for Multiple Platforms&lt;/h2&gt;
+&lt;p&gt;So, how does one configure a single pipeline to build for all these platforms? GitLab CI allows you to specify multiple jobs (even in the same stage) and use tags to pin them to certain runners. Here’s a simplified example of a &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; snippet that illustrates a cross-platform pipeline:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;stages:
+  - build
+
+# Job for Linux
+build_linux:
+  stage: build
+  tags: [ &amp;quot;linux&amp;quot; ]        # will run on runner tagged &#39;linux&#39;
+  script:
+    - echo &amp;quot;Building on Linux...&amp;quot;
+    # Place Linux build commands here (e.g., make, docker build, etc.)
+
+# Job for macOS
+build_macos:
+  stage: build
+  tags: [ &amp;quot;macos&amp;quot; ]        # will run on runner tagged &#39;macos&#39;
+  script:
+    - echo &amp;quot;Building on macOS...&amp;quot;
+    # Place macOS build commands here (e.g., xcodebuild, pkgbuild, etc.)
+
+# Job for Windows
+build_windows:
+  stage: build
+  tags: [ &amp;quot;windows&amp;quot; ]      # will run on runner tagged &#39;windows&#39;
+  script:
+    - echo &amp;quot;Building on Windows...&amp;quot;
+    # Place Windows build commands here (e.g., MSBuild, npm install, etc.)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this example, we define three jobs (&lt;code&gt;build_linux&lt;/code&gt;, &lt;code&gt;build_macos&lt;/code&gt;, and &lt;code&gt;build_windows&lt;/code&gt;), all in the &lt;strong&gt;build&lt;/strong&gt; stage. Since they share the stage, GitLab will run them in parallel (assuming runners are available). Each job uses a &lt;code&gt;tags&lt;/code&gt; attribute to ensure it runs on the correct runner: for instance, &lt;code&gt;build_macos&lt;/code&gt; will only run on a runner that has the tag &amp;ldquo;macos&amp;rdquo; (which we assigned to our Mac Mini runner during registration). The &lt;code&gt;script&lt;/code&gt; section of each job contains the platform-specific build steps. In a real pipeline, you could add subsequent stages like testing or deployment, and similarly have jobs per platform if needed (e.g., platform-specific tests). The key takeaway is that one &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; can orchestrate all your multi-OS builds in one go, giving you a unified pipeline for multiple environments.&lt;/p&gt;
+&lt;h2 id=&#34;putting-it-all-together-ci-pipeline-architecture&#34;&gt;Putting It All Together: CI Pipeline Architecture&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;cicd pipeline&#34; srcset=&#34;
+               /en/post/cicd/cicd_hu_2e42f924d9f9073c.webp 400w,
+               /en/post/cicd/cicd_hu_6bdd7447d5108ab5.webp 760w,
+               /en/post/cicd/cicd_hu_8ef1902a8d9b5a40.webp 1200w&#34;
+               src=&#34;https://antoine.weill-duflos.fr/en/post/cicd/cicd_hu_2e42f924d9f9073c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;240&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;CI/CD pipeline architecture (GitLab self-hosted example):&lt;/em&gt; The diagram above illustrates how our GitLab CI/CD server coordinates jobs across multiple self-hosted runners on Linux, macOS, and Windows. When a developer pushes code to the repository, the GitLab server (CI coordinator) triggers the pipeline and distributes jobs to the appropriate runners. Each runner, running on its native platform (Linux in a Proxmox LXC container, macOS on a Mac Mini, Windows on a PC), executes the tasks for that platform (build, test, etc.) and reports the results back to the GitLab server. Because the jobs run in parallel on all three platforms, the team gets a consolidated feedback report—usually within minutes—showing the status of the build and tests on Linux, macOS, and Windows. This architecture not only speeds up our build/test cycle (by doing everything at once) but also guarantees that our delivery process is consistent and synchronized across different operating systems.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Adopting CI/CD has been a game-changer, even in our hardware-heavy context. It enabled us to deliver software updates with greater speed and confidence across all the platforms we support. By leveraging GitLab CI/CD with self-hosted runners, we’ve achieved automated builds and tests on Linux, macOS, and Windows – all from a single unified pipeline. The benefits are clear: more reliable releases (thanks to catching issues early), faster development iterations (no more waiting on slow manual processes), and a standardized delivery process (every build follows the same steps, no matter the platform). In an era where &lt;strong&gt;every company is also a software company&lt;/strong&gt;, even hardware-focused teams can reap the rewards of CI/CD. Embracing these practices leads to happier developers, more predictable schedules, and ultimately, better products for your customers. So if you haven’t already, give CI/CD a try in your organization’s workflow – your hardware and software teams will thank you!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

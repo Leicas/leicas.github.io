@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: April 8, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Antoine Weill-Duflos" />
+
+
+
+
+
+  
+
+<meta name="description" content="Even if your company builds physical products, modern software delivery matters. Here&#39;s how we use GitLab CI/CD with local runners across Linux, macOS, and Windows to ship faster, more reliably, and for every platform." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://antoine.weill-duflos.fr/en/post/cicd/" />
+<link rel="canonical" href="https://antoine.weill-duflos.fr/en/post/cicd/" />
+
+
+
+  <link rel="manifest" href="/en/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_2311fe1a408f47c1.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_4eb7679362359773.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@ntoidewd" />
+  <meta property="twitter:creator" content="@ntoidewd" />
+<meta property="twitter:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Antoine Weill--Duflos" />
+<meta property="og:url" content="https://antoine.weill-duflos.fr/en/post/cicd/" />
+<meta property="og:title" content="CI/CD for Hardware-Heavy Companies: Why It Matters and How to Use GitLab Runners | Antoine Weill--Duflos" />
+<meta property="og:description" content="Even if your company builds physical products, modern software delivery matters. Here&#39;s how we use GitLab CI/CD with local runners across Linux, macOS, and Windows to ship faster, more reliably, and for every platform." /><meta property="og:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-04-08T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-04-08T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antoine.weill-duflos.fr/en/post/cicd/"
+  },
+  "headline": "CI/CD for Hardware-Heavy Companies: Why It Matters and How to Use GitLab Runners",
+  
+  "datePublished": "2025-04-08T00:00:00Z",
+  "dateModified": "2025-04-08T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Antoine Weill-Duflos"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Antoine Weill--Duflos",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://antoine.weill-duflos.fr/media/icon_hu_f7eee4fa97025c42.png"
+    }
+  },
+  "description": "Even if your company builds physical products, modern software delivery matters. Here's how we use GitLab CI/CD with local runners across Linux, macOS, and Windows to ship faster, more reliably, and for every platform."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>CI/CD for Hardware-Heavy Companies: Why It Matters and How to Use GitLab Runners | Antoine Weill--Duflos</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <link rel="me" href="https://hci.social/@antoine" />
+      
+    
+  
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d23958c0df134f9065c52677f1e67429" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/courses/"><span>Courses</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#talk"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/en/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>CI/CD for Hardware-Heavy Companies: Why It Matters and How to Use GitLab Runners</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 8, 2025
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/en/category/software-engineering/">Software Engineering</a>, <a href="/en/category/devops/">DevOps</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1></h1>
+<p>Even if your company’s main products are physical hardware, chances are you have a lot of software behind the scenes. In fact, in today’s digital world <em>“every company is a software business, irrespective of the industry it is in”</em> (<a href="https://www.opsera.io/blog/ci-cd-business-benefits#:~:text=In%20the%20present,the%20products%20you%20are%20creating" target="_blank" rel="noopener">12 Business Benefits of CI/CD | A CI/CD Overview</a>).</p>
+<p>This means hardware-focused organizations also need to deliver software updates (for firmware, internal tools, user applications, etc.) quickly and reliably. That’s where <strong>CI/CD (Continuous Integration / Continuous Deployment)</strong> comes in. CI/CD is a set of practices and tools that automate the software build, test, and release process, helping teams integrate and ship code changes more frequently and reliably.</p>
+<p>In this post, we’ll explore how CI/CD benefits even hardware-heavy companies, and how we set up a cross-platform GitLab CI/CD pipeline (with Linux, macOS, and Windows runners) to speed up development and standardize our delivery process.</p>
+<h2 id="what-is-cicd-and-why-should-hardware-companies-care">What is CI/CD and Why Should Hardware Companies Care?</h2>
+<p><strong>Continuous Integration</strong> (CI) is the practice of frequently merging code changes into a shared repository, running automated builds and tests to catch issues early.</p>
+<p><strong>Continuous Deployment</strong> (CD) automates releasing those validated changes to environments or end-users. Together, CI/CD forms an automated pipeline that takes code from commit to production with minimal human intervention. The key idea is automation: as code changes progress through development, CI/CD ensures that every change is built, tested, and delivered in a consistent way.</p>
+<p>Why does this matter for a hardware-centric company? Simply put, <strong>reliable software processes improve everything</strong>. Even if you build physical devices, you likely have supporting software (device firmware, control software, manufacturing tools, customer apps) that needs constant updates. Adopting CI/CD brings the same advantages that software companies enjoy to your hardware company’s software development.</p>
+<p>The bottom line: modern hardware products often live or die by the quality and speed of their software updates, so a robust CI/CD pipeline is a huge asset.</p>
+<h2 id="benefits-of-cicd-speed-reliability-and-standardized-delivery">Benefits of CI/CD: Speed, Reliability, and Standardized Delivery</h2>
+<p>Implementing CI/CD can transform your development cycle. Some key benefits include:</p>
+<ul>
+<li>
+<p><strong>Improved Reliability:</strong> Automation reduces the chance of human error. Every code change goes through the same tested process, which means fewer “it works on my machine” problems. Issues are caught earlier through automated tests, so by the time something is delivered, it’s far more stable. This rigorous approach leads to more reliable software releases (and by extension, more reliable hardware behavior when that software controls devices).</p>
+</li>
+<li>
+<p><strong>Faster Development Cycles:</strong> With CI/CD, builds and tests run automatically on each commit, giving developers quick feedback. Instead of waiting days for a manual build or a tester to verify a change, you get results in hours or minutes. Parallelization allows multiple jobs to run on different platforms simultaneously, accelerating overall build times. For example, our team saw significantly faster build times for our Python-based tools once we enabled caching in the pipeline – tasks that used to be slow (like installing dependencies or compiling parts of the code) are now much quicker (also thanks to using clever tools such as <a href="https://github.com/astral-sh/uv/" target="_blank" rel="noopener">uv</a>. Faster feedback and shorter build times mean developers can iterate rapidly and try out improvements without long delays.</p>
+</li>
+<li>
+<p><strong>Standardized Delivery:</strong> CI/CD enforces a repeatable process for packaging and delivering software. Whether the target is a Linux server, a Mac application, or a Windows executable (and in all flavors of x86 to ARM64…), the pipeline uses version-controlled scripts to build and package it in a consistent manner. This standardization means every release follows the same steps and quality checks. It becomes easier to support multiple platforms because you’re not crafting one-off build procedures for each; the CI/CD pipeline orchestrates all of them with the same high-level workflow. In turn, customers or end-users get a uniform experience (e.g. a consistent version numbering and quality across platforms).</p>
+</li>
+</ul>
+<h2 id="cross-platform-ci-pipeline-with-gitlab-runners-linux-macos-windows">Cross-Platform CI Pipeline with GitLab Runners (Linux, macOS, Windows)</h2>
+<p>One big challenge for us was ensuring our software builds and runs on <strong>multiple operating systems</strong>. We support Linux, macOS, and Windows environments. With GitLab CI/CD, we solved this by using <strong>self-hosted GitLab runners</strong> on each platform. GitLab’s architecture separates the CI/CD coordination (handled by the GitLab server) from the execution (handled by <em>runners</em>). GitLab uses “runners” to execute CI jobs, and you can install runners on any machine or VM you want to use for builds. Each runner registers with the GitLab CI server and is assigned a tag (or multiple tags) to identify its platform or purpose. In our setup, we configured runners for all three major OS platforms:</p>
+<ul>
+<li>
+<p><strong>Linux runners</strong> – running inside LXC containers on a Proxmox virtualization server. We use Proxmox (an open-source hypervisor) to host lightweight LXC containers that act as isolated Linux build agents. This allows us to easily spin up clean Linux environments for CI jobs. The Linux runner is tagged <code>linux</code> in GitLab, so any job that needs a Linux environment will run in one of these containers. Using containers gives us reproducible Linux environments and easy scalability (we can launch multiple container runners if we need parallel Linux jobs).</p>
+</li>
+<li>
+<p><strong>macOS runners</strong> – running on a dedicated Mac Mini. Since macOS requires Apple hardware, we have a Mac Mini in-house that serves as our macOS build machine. We installed the GitLab Runner agent on this Mac Mini and tagged it as <code>macos</code>. This runner picks up jobs that require Mac-specific building or testing (for example, building a .app bundle or running unit tests that use macOS frameworks). Having a macOS runner ensures our pipeline can build and verify Mac software artifacts just like it does for Linux, using the same GitLab CI definitions. (As an alternative, one could use cloud Mac runners, but an on-premise Mac Mini is cost-effective for us and keeps everything in-house.)</p>
+</li>
+<li>
+<p><strong>Windows runners</strong> – running on a dedicated Windows machine. We also set up a Windows 11 (could also be a Windows Server) machine with the GitLab Runner installed, tagged as <code>windows</code>. This machine performs CI jobs that need a Windows environment, such as building a Windows installer or running tests that depend on Windows-only libraries. The runner uses the shell executor on Windows to run batch scripts or PowerShell commands as defined in the CI jobs. By having a dedicated Windows runner, our pipeline covers the last major platform in our support matrix, ensuring we don’t treat Windows builds as a manual afterthought.</p>
+</li>
+</ul>
+<p>With this infrastructure, every commit triggers a pipeline that includes jobs for Linux, macOS, and Windows. GitLab will route each job to the appropriate runner based on the tags. For instance, a job tagged with <code>windows</code> will only run on our Windows runner, and so on. All three platforms run in parallel, so we get build/test results roughly at the same time. This setup has dramatically improved our confidence that a change won’t break platform-specific functionality—if something fails on Windows but passes on Linux, the pipeline will immediately flag it so we can fix the issue before merging.</p>
+<h2 id="example-gitlab-ci-configuration-for-multiple-platforms">Example GitLab CI Configuration for Multiple Platforms</h2>
+<p>So, how does one configure a single pipeline to build for all these platforms? GitLab CI allows you to specify multiple jobs (even in the same stage) and use tags to pin them to certain runners. Here’s a simplified example of a <code>.gitlab-ci.yml</code> snippet that illustrates a cross-platform pipeline:</p>
+<pre><code class="language-yaml">stages:
+  - build
+
+# Job for Linux
+build_linux:
+  stage: build
+  tags: [ &quot;linux&quot; ]        # will run on runner tagged 'linux'
+  script:
+    - echo &quot;Building on Linux...&quot;
+    # Place Linux build commands here (e.g., make, docker build, etc.)
+
+# Job for macOS
+build_macos:
+  stage: build
+  tags: [ &quot;macos&quot; ]        # will run on runner tagged 'macos'
+  script:
+    - echo &quot;Building on macOS...&quot;
+    # Place macOS build commands here (e.g., xcodebuild, pkgbuild, etc.)
+
+# Job for Windows
+build_windows:
+  stage: build
+  tags: [ &quot;windows&quot; ]      # will run on runner tagged 'windows'
+  script:
+    - echo &quot;Building on Windows...&quot;
+    # Place Windows build commands here (e.g., MSBuild, npm install, etc.)
+</code></pre>
+<p>In this example, we define three jobs (<code>build_linux</code>, <code>build_macos</code>, and <code>build_windows</code>), all in the <strong>build</strong> stage. Since they share the stage, GitLab will run them in parallel (assuming runners are available). Each job uses a <code>tags</code> attribute to ensure it runs on the correct runner: for instance, <code>build_macos</code> will only run on a runner that has the tag &ldquo;macos&rdquo; (which we assigned to our Mac Mini runner during registration). The <code>script</code> section of each job contains the platform-specific build steps. In a real pipeline, you could add subsequent stages like testing or deployment, and similarly have jobs per platform if needed (e.g., platform-specific tests). The key takeaway is that one <code>.gitlab-ci.yml</code> can orchestrate all your multi-OS builds in one go, giving you a unified pipeline for multiple environments.</p>
+<h2 id="putting-it-all-together-ci-pipeline-architecture">Putting It All Together: CI Pipeline Architecture</h2>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="cicd pipeline" srcset="
+               /en/post/cicd/cicd_hu_2e42f924d9f9073c.webp 400w,
+               /en/post/cicd/cicd_hu_6bdd7447d5108ab5.webp 760w,
+               /en/post/cicd/cicd_hu_8ef1902a8d9b5a40.webp 1200w"
+               src="/en/post/cicd/cicd_hu_2e42f924d9f9073c.webp"
+               width="760"
+               height="240"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+<em>CI/CD pipeline architecture (GitLab self-hosted example):</em> The diagram above illustrates how our GitLab CI/CD server coordinates jobs across multiple self-hosted runners on Linux, macOS, and Windows. When a developer pushes code to the repository, the GitLab server (CI coordinator) triggers the pipeline and distributes jobs to the appropriate runners. Each runner, running on its native platform (Linux in a Proxmox LXC container, macOS on a Mac Mini, Windows on a PC), executes the tasks for that platform (build, test, etc.) and reports the results back to the GitLab server. Because the jobs run in parallel on all three platforms, the team gets a consolidated feedback report—usually within minutes—showing the status of the build and tests on Linux, macOS, and Windows. This architecture not only speeds up our build/test cycle (by doing everything at once) but also guarantees that our delivery process is consistent and synchronized across different operating systems.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Adopting CI/CD has been a game-changer, even in our hardware-heavy context. It enabled us to deliver software updates with greater speed and confidence across all the platforms we support. By leveraging GitLab CI/CD with self-hosted runners, we’ve achieved automated builds and tests on Linux, macOS, and Windows – all from a single unified pipeline. The benefits are clear: more reliable releases (thanks to catching issues early), faster development iterations (no more waiting on slow manual processes), and a standardized delivery process (every build follows the same steps, no matter the platform). In an era where <strong>every company is also a software company</strong>, even hardware-focused teams can reap the rewards of CI/CD. Embracing these practices leads to happier developers, more predictable schedules, and ultimately, better products for your customers. So if you haven’t already, give CI/CD a try in your organization’s workflow – your hardware and software teams will thank you!</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/en/tag/ci/cd/">CI/CD</a>
+  
+  <a class="badge badge-light" href="/en/tag/gitlab/">GitLab</a>
+  
+  <a class="badge badge-light" href="/en/tag/automation/">Automation</a>
+  
+  <a class="badge badge-light" href="/en/tag/devops/">DevOps</a>
+  
+  <a class="badge badge-light" href="/en/tag/multi-platform/">Multi-Platform</a>
+  
+  <a class="badge badge-light" href="/en/tag/proxmox/">Proxmox</a>
+  
+  <a class="badge badge-light" href="/en/tag/macos/">MacOS</a>
+  
+  <a class="badge badge-light" href="/en/tag/windows/">Windows</a>
+  
+  <a class="badge badge-light" href="/en/tag/python/">Python</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Fcicd%2F&amp;text=CI%2FCD&#43;for&#43;Hardware-Heavy&#43;Companies%3A&#43;Why&#43;It&#43;Matters&#43;and&#43;How&#43;to&#43;Use&#43;GitLab&#43;Runners" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Fcicd%2F&amp;t=CI%2FCD&#43;for&#43;Hardware-Heavy&#43;Companies%3A&#43;Why&#43;It&#43;Matters&#43;and&#43;How&#43;to&#43;Use&#43;GitLab&#43;Runners" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=CI%2FCD%20for%20Hardware-Heavy%20Companies%3A%20Why%20It%20Matters%20and%20How%20to%20Use%20GitLab%20Runners&amp;body=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Fcicd%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Fcicd%2F&amp;title=CI%2FCD&#43;for&#43;Hardware-Heavy&#43;Companies%3A&#43;Why&#43;It&#43;Matters&#43;and&#43;How&#43;to&#43;Use&#43;GitLab&#43;Runners" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=CI%2FCD&#43;for&#43;Hardware-Heavy&#43;Companies%3A&#43;Why&#43;It&#43;Matters&#43;and&#43;How&#43;to&#43;Use&#43;GitLab&#43;Runners%20https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Fcicd%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fantoine.weill-duflos.fr%2Fen%2Fpost%2Fcicd%2F&amp;title=CI%2FCD&#43;for&#43;Hardware-Heavy&#43;Companies%3A&#43;Why&#43;It&#43;Matters&#43;and&#43;How&#43;to&#43;Use&#43;GitLab&#43;Runners" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://antoine.weill-duflos.fr/"><img class="avatar mr-3 avatar-circle" src="/en/author/antoine-weill-duflos/avatar_hu_2f14c2477d4f6f8f.jpg" alt="Antoine Weill-Duflos"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://antoine.weill-duflos.fr/">Antoine Weill-Duflos</a></h5>
+      <h6 class="card-subtitle">Head of Technology and Applications</h6>
+      <p class="card-text">My research interests include haptic, mechatronics, micro-robotic and hci.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/en/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ntoineWD" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://hci.social/@antoine" target="_blank" rel="noopener">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=gxcCHJoAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/Leicas" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.5faf09821dbe513ca103e87bafd52766.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.20495e7d56dd1098dabc5f3dc75d9d30.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
