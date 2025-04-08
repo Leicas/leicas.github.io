@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contrôle De Version | Antoine Weill--Duflos</title>
+    <link>http://localhost:1313/en/tag/contr%C3%B4le-de-version/</link>
+      <atom:link href="http://localhost:1313/en/tag/contr%C3%B4le-de-version/index.xml" rel="self" type="application/rss+xml" />
+    <description>Contrôle De Version</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Contrôle De Version</title>
+      <link>http://localhost:1313/en/tag/contr%C3%B4le-de-version/</link>
+    </image>
+    
+    <item>
+      <title>Pratique Git : branches et rebase</title>
+      <link>http://localhost:1313/en/courses/git/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/courses/git/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Git est un outil incontournable pour gérer les versions d’un projet informatique. Maîtriser les branches et l’utilisation de la commande &lt;code&gt;rebase&lt;/code&gt; permet d’améliorer nettement la gestion de l’historique des versions et facilite le travail collaboratif.&lt;/p&gt;
+&lt;p&gt;Ce cours structuré vous guidera à travers ces concepts fondamentaux de façon claire et pratique.&lt;/p&gt;
+&lt;h2 id=&#34;concepts-fondamentaux-git&#34;&gt;Concepts fondamentaux Git&lt;/h2&gt;
+&lt;h3 id=&#34;objectifs-pédagogiques-&#34;&gt;Objectifs pédagogiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Comprendre le rôle des branches dans Git&lt;/li&gt;
+&lt;li&gt;Identifier les bonnes pratiques d’utilisation des branches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;contenu-&#34;&gt;Contenu :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Qu’est-ce qu’un commit ?&lt;/li&gt;
+&lt;li&gt;Fonctionnement et gestion des branches Git&lt;/li&gt;
+&lt;li&gt;Cas d’usage typiques&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exercices-pratiques-&#34;&gt;Exercices pratiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Créer une branche, basculer entre branches&lt;/li&gt;
+&lt;li&gt;Fusionner des branches avec &lt;code&gt;merge&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;le-rebase-git&#34;&gt;Le rebase Git&lt;/h2&gt;
+&lt;h3 id=&#34;objectifs-pédagogiques--1&#34;&gt;Objectifs pédagogiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Apprendre à utiliser &lt;code&gt;rebase&lt;/code&gt; pour maintenir un historique linéaire&lt;/li&gt;
+&lt;li&gt;Distinguer les avantages et limites du &lt;code&gt;rebase&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;contenu--1&#34;&gt;Contenu :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Définition et exemples visuels du &lt;code&gt;rebase&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Comparaison entre &lt;code&gt;merge&lt;/code&gt; et &lt;code&gt;rebase&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Utilisation pratique simple du rebase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exercices-pratiques--1&#34;&gt;Exercices pratiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Créer une branche et effectuer un rebase simple&lt;/li&gt;
+&lt;li&gt;Comparer les résultats du rebase avec un merge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rebase-interactif&#34;&gt;Rebase interactif&lt;/h2&gt;
+&lt;h3 id=&#34;objectifs-pédagogiques--2&#34;&gt;Objectifs pédagogiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maîtriser le rebase interactif pour organiser clairement l’historique&lt;/li&gt;
+&lt;li&gt;Comprendre les commandes du rebase interactif (&lt;code&gt;pick&lt;/code&gt;, &lt;code&gt;edit&lt;/code&gt;, &lt;code&gt;squash&lt;/code&gt;, &lt;code&gt;fixup&lt;/code&gt;, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;contenu--2&#34;&gt;Contenu :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Présentation détaillée du rebase interactif&lt;/li&gt;
+&lt;li&gt;Explication des commandes disponibles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exercices-pratiques--2&#34;&gt;Exercices pratiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fusionner plusieurs commits avec un rebase interactif&lt;/li&gt;
+&lt;li&gt;Réorganiser et éditer l’historique de commits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gestion-des-conflits-avec-rebase&#34;&gt;Gestion des conflits avec rebase&lt;/h2&gt;
+&lt;h3 id=&#34;objectifs-pédagogiques--3&#34;&gt;Objectifs pédagogiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Identifier et résoudre efficacement les conflits pendant un rebase&lt;/li&gt;
+&lt;li&gt;Connaître les commandes utiles en cas de conflit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;contenu--3&#34;&gt;Contenu :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Identifier les conflits générés par un rebase&lt;/li&gt;
+&lt;li&gt;Étapes pour résoudre les conflits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exercices-pratiques--3&#34;&gt;Exercices pratiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Simuler un conflit durant un rebase&lt;/li&gt;
+&lt;li&gt;Résoudre le conflit et compléter le rebase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bonnes-pratiques-pour-branches-et-rebase&#34;&gt;Bonnes pratiques pour branches et rebase&lt;/h2&gt;
+&lt;h3 id=&#34;objectifs-pédagogiques--4&#34;&gt;Objectifs pédagogiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Comprendre et adopter les meilleures pratiques dans l’usage de Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;contenu--4&#34;&gt;Contenu :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Conseils pratiques pour la gestion des branches&lt;/li&gt;
+&lt;li&gt;Quand et comment effectuer des rebases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;exercices-pratiques--4&#34;&gt;Exercices pratiques :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mettre en pratique les bonnes pratiques dans un projet exemple&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Maîtriser les branches et le rebase permet de clarifier l’historique de votre projet et améliore la collaboration en équipe. Ces techniques pratiques facilitent la maintenance à long terme et améliorent la qualité générale du projet.&lt;/p&gt;
+&lt;h2 id=&#34;ressources-complémentaires&#34;&gt;Ressources complémentaires&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Branches-en-bref&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Branches Git – Documentation officielle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rebase interactif – Tutoriel Atlassian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: April 7, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Antoine Weill-Duflos" />
+
+
+
+
+
+  
+
+<meta name="description" content="Git Fundamentals
+Git is a distributed version control system that tracks changes to files over time. Unlike centralized version control systems, Git gives every developer a complete copy of the repository, including its full history.
+Key Concepts
+Repository (Repo): A collection of files and their complete history.
+# Initialize a new repository
+git init
+
+# Clone an existing repository
+git clone https://github.com/username/repository.git
+
+Commit: A snapshot of your files at a specific point in time." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://antoine.weill-duflos.fr/en/courses/git/basic/" />
+<link rel="canonical" href="https://antoine.weill-duflos.fr/en/courses/git/basic/" />
+
+
+
+  <link rel="manifest" href="/en/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_2311fe1a408f47c1.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_4eb7679362359773.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@ntoidewd" />
+  <meta property="twitter:creator" content="@ntoidewd" />
+<meta property="twitter:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Antoine Weill--Duflos" />
+<meta property="og:url" content="https://antoine.weill-duflos.fr/en/courses/git/basic/" />
+<meta property="og:title" content="Git Fundamentals and Remotes | Antoine Weill--Duflos" />
+<meta property="og:description" content="Git Fundamentals
+Git is a distributed version control system that tracks changes to files over time. Unlike centralized version control systems, Git gives every developer a complete copy of the repository, including its full history.
+Key Concepts
+Repository (Repo): A collection of files and their complete history.
+# Initialize a new repository
+git init
+
+# Clone an existing repository
+git clone https://github.com/username/repository.git
+
+Commit: A snapshot of your files at a specific point in time." /><meta property="og:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-04-08T00:00:00&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-04-08T00:00:00&#43;01:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Git Fundamentals and Remotes | Antoine Weill--Duflos</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <link rel="me" href="https://hci.social/@antoine" />
+      
+    
+  
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="62e8e9674613dcfdfa87a1457381feed" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/en/courses/"><span>Courses</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#talk"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+        
+          Overview
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/en/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/en/courses/git/">Overview</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/en/courses/git/basic/">Git Fundamentals and Remotes</a></li>
+
+
+
+  <li class=""><a href="/en/courses/git/branches/">Branches and Integration</a></li>
+
+
+
+  <li class=""><a href="/en/courses/git/workflow/">Feature Development Workflow</a></li>
+
+
+
+  <li class=""><a href="/en/courses/git/exercise/">Activity</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#git-fundamentals">Git Fundamentals</a>
+      <ul>
+        <li><a href="#key-concepts">Key Concepts</a></li>
+      </ul>
+    </li>
+    <li><a href="#working-with-remotes">Working with Remotes</a>
+      <ul>
+        <li><a href="#github-vs-gitlab">GitHub vs GitLab</a></li>
+        <li><a href="#managing-remotes">Managing Remotes</a></li>
+        <li><a href="#syncing-with-remotes">Syncing with Remotes</a></li>
+        <li><a href="#best-practices-for-remotes">Best Practices for Remotes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+        
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
+        
+        <h1>Git Fundamentals and Remotes</h1>
+
+        <article class="article-style">
+
+          
+          
+
+          <h2 id="git-fundamentals">Git Fundamentals</h2>
+<p>Git is a distributed version control system that tracks changes to files over time. Unlike centralized version control systems, Git gives every developer a complete copy of the repository, including its full history.</p>
+<h3 id="key-concepts">Key Concepts</h3>
+<p><strong>Repository (Repo)</strong>: A collection of files and their complete history.</p>
+<pre><code class="language-bash"># Initialize a new repository
+git init
+
+# Clone an existing repository
+git clone https://github.com/username/repository.git
+</code></pre>
+<p><strong>Commit</strong>: A snapshot of your files at a specific point in time.</p>
+<pre><code class="language-bash"># Stage changes for commit
+git add filename.txt
+
+# Stage all changes
+git add .
+
+# Commit staged changes
+git commit -m &quot;Descriptive message about changes&quot;
+</code></pre>
+<p><strong>Staging Area</strong>: A middle ground between your working directory and the repository.</p>
+<pre><code class="language-bash"># Check status of working directory and staging area
+git status
+
+# See differences between working directory and staging area
+git diff
+
+# See differences between staging area and last commit
+git diff --staged
+</code></pre>
+<h2 id="working-with-remotes">Working with Remotes</h2>
+<p>Remotes are versions of your repository hosted on a server, enabling collaboration with other developers.</p>
+<h3 id="github-vs-gitlab">GitHub vs GitLab</h3>
+<p>Both GitHub and GitLab are platforms for hosting Git repositories, but they have some differences:</p>
+<p><strong>GitHub</strong>:</p>
+<ul>
+<li>World&rsquo;s largest code hosting platform</li>
+<li>Strong open-source community</li>
+<li>Acquired by Microsoft in 2018</li>
+<li>Features: Actions (CI/CD), Codespaces, Copilot</li>
+</ul>
+<p><strong>GitLab</strong>:</p>
+<ul>
+<li>Complete DevOps platform</li>
+<li>Available as self-hosted or cloud-hosted</li>
+<li>Integrated CI/CD pipeline</li>
+<li>Features: Built-in issue tracking, wiki, container registry</li>
+</ul>
+<h3 id="managing-remotes">Managing Remotes</h3>
+<pre><code class="language-bash"># List all remote repositories
+git remote -v
+
+# Add a new remote
+git remote add origin https://github.com/username/repository.git
+
+# Change remote URL
+git remote set-url origin https://github.com/username/new-repository.git
+
+# Add multiple remotes (e.g., GitHub and GitLab)
+git remote add github https://github.com/username/repository.git
+git remote add gitlab https://gitlab.com/username/repository.git
+</code></pre>
+<h3 id="syncing-with-remotes">Syncing with Remotes</h3>
+<pre><code class="language-bash"># Download changes from remote without integrating them
+git fetch origin
+
+# Download and integrate changes from remote
+git pull origin main
+
+# Upload local changes to remote
+git push origin main
+</code></pre>
+<h3 id="best-practices-for-remotes">Best Practices for Remotes</h3>
+<ol>
+<li>
+<p><strong>Use SSH keys</strong> for secure authentication:</p>
+<pre><code class="language-bash"># Generate SSH key
+ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+
+# Add to GitHub/GitLab account
+cat ~/.ssh/id_ed25519.pub
+</code></pre>
+</li>
+<li>
+<p><strong>Set up multiple remotes</strong> for backup and flexibility:</p>
+<pre><code class="language-bash"># Push to multiple remotes
+git push github main
+git push gitlab main
+</code></pre>
+</li>
+<li>
+<p><strong>Use remote tracking branches</strong> to simplify commands:</p>
+<pre><code class="language-bash"># Set up tracking
+git branch --set-upstream-to=origin/main main
+
+# Now you can use simplified commands
+git pull
+git push
+</code></pre>
+</li>
+<li>
+<p><strong>Keep remote references clean</strong>:</p>
+<pre><code class="language-bash"># Prune deleted remote branches
+git fetch --prune
+</code></pre>
+</li>
+</ol>
+
+
+        </article>
+
+        
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
+          
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/en/courses/git/branches/" rel="prev">Branches and Integration</a>
+  </div>
+  
+</div>
+
+        </div>
+        
+      </div>
+
+      <div class="body-footer">
+        <p>Last updated on Apr 8, 2025</p>
+
+        
+
+
+
+
+        
+
+
+
+
+        
+
+
+      </div>
+
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.5faf09821dbe513ca103e87bafd52766.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.20495e7d56dd1098dabc5f3dc75d9d30.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

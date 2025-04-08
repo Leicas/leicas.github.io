@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git | Antoine Weill--Duflos</title>
+    <link>http://localhost:1313/en/tag/git/</link>
+      <atom:link href="http://localhost:1313/en/tag/git/index.xml" rel="self" type="application/rss+xml" />
+    <description>Git</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Git</title>
+      <link>http://localhost:1313/en/tag/git/</link>
+    </image>
+    
+    <item>
+      <title>Pratique Git : maîtriser les branches et le rebase</title>
+      <link>http://localhost:1313/en/courses/git/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/courses/git/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Git est un outil incontournable pour gérer le versionnage de projets informatiques. Bien comprendre les branches et la commande &lt;code&gt;rebase&lt;/code&gt; permet de garder un historique clair et facilite le travail collaboratif.&lt;/p&gt;
+&lt;p&gt;Ce cours pratique couvre les concepts fondamentaux des branches Git, l’utilisation optimale du &lt;code&gt;rebase&lt;/code&gt;, ainsi que des exercices pratiques pour consolider ces notions.&lt;/p&gt;
+&lt;h2 id=&#34;rappels-fondamentaux-sur-git&#34;&gt;Rappels fondamentaux sur Git&lt;/h2&gt;
+&lt;p&gt;Git est un système distribué de gestion de versions permettant le suivi des modifications apportées à un projet.&lt;/p&gt;
+&lt;h3 id=&#34;concepts-essentiels-&#34;&gt;Concepts essentiels :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Commit&lt;/strong&gt; : sauvegarde des modifications apportées au projet.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Branche&lt;/strong&gt; : ligne de développement indépendante.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HEAD&lt;/strong&gt; : pointe vers le commit actuellement actif.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Merge&lt;/strong&gt; : fusionne une branche dans une autre.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rebase&lt;/strong&gt; : réorganise les commits d&amp;rsquo;une branche au-dessus d&amp;rsquo;une autre.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;branches-git--utilisation-efficace&#34;&gt;Branches Git : utilisation efficace&lt;/h2&gt;
+&lt;p&gt;Les branches permettent de travailler simultanément sur plusieurs fonctionnalités sans interférences.&lt;/p&gt;
+&lt;h3 id=&#34;créer-et-basculer-entre-branches&#34;&gt;Créer et basculer entre branches&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch ma-branche    # crée une branche nommée &amp;quot;ma-branche&amp;quot;
+git checkout ma-branche  # bascule sur la branche créée
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ou en une commande :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b ma-branche
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fusionner-une-branche-merge&#34;&gt;Fusionner une branche (merge)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout main
+git merge ma-branche
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Cas d&amp;rsquo;utilisation&lt;/strong&gt; :&lt;br&gt;
+Utiliser un merge lorsque l’on souhaite préserver explicitement l’historique du développement sous forme de branches parallèles.&lt;/p&gt;
+&lt;h2 id=&#34;le-rebase-git-expliqué-simplement&#34;&gt;Le rebase Git expliqué simplement&lt;/h2&gt;
+&lt;p&gt;Le &lt;code&gt;rebase&lt;/code&gt; permet de réécrire l’historique en appliquant vos commits sur une autre branche, donnant une apparence linéaire à l&amp;rsquo;historique.&lt;/p&gt;
+&lt;h3 id=&#34;exemple-visuel-&#34;&gt;Exemple visuel :&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Avant le rebase&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A---B---C (main)
+     \
+      D---E (feature)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Après &lt;code&gt;git rebase main&lt;/code&gt; depuis feature&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A---B---C (main)
+          \
+           D&#39;---E&#39; (feature)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;effectuer-un-rebase-simple&#34;&gt;Effectuer un rebase simple&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout feature
+git rebase main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;avantages-du-rebase-&#34;&gt;Avantages du rebase :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Historique clair et linéaire.&lt;/li&gt;
+&lt;li&gt;Facilite la lecture des modifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;inconvénients-du-rebase-&#34;&gt;Inconvénients du rebase :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Risque de conflits répétés.&lt;/li&gt;
+&lt;li&gt;Nécessite de comprendre comment résoudre les conflits correctement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;le-rebase-interactif-interactive-rebase&#34;&gt;Le rebase interactif (Interactive rebase)&lt;/h2&gt;
+&lt;p&gt;Le rebase interactif vous permet de modifier précisément vos commits existants (fusionner, éditer, supprimer, réordonner).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rebase -i HEAD~3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;actions-disponibles-&#34;&gt;Actions disponibles :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pick&lt;/code&gt; : garde le commit (par défaut).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;edit&lt;/code&gt; : modifie le commit.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;squash&lt;/code&gt; : fusionne avec le commit précédent.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fixup&lt;/code&gt; : fusionne et supprime le message du commit.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reorder&lt;/code&gt; : modifie l&amp;rsquo;ordre des commits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gestion-des-conflits-lors-dun-rebase&#34;&gt;Gestion des conflits lors d&amp;rsquo;un rebase&lt;/h2&gt;
+&lt;p&gt;En cas de conflit, Git vous signale les fichiers concernés.&lt;/p&gt;
+&lt;h3 id=&#34;étapes-de-résolution-&#34;&gt;Étapes de résolution :&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Corrigez manuellement les conflits dans les fichiers.&lt;/li&gt;
+&lt;li&gt;Ajoutez les corrections avec &lt;code&gt;git add&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Poursuivez le rebase avec :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rebase --continue
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Si nécessaire, vous pouvez annuler le rebase :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rebase --abort
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;exercices-pratiques&#34;&gt;Exercices pratiques&lt;/h2&gt;
+&lt;p&gt;Pratiquez les concepts avec ces exercices :&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exercice 1 : créer et fusionner une branche&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Créez une branche &lt;code&gt;feature-login&lt;/code&gt; depuis &lt;code&gt;main&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Effectuez quelques commits.&lt;/li&gt;
+&lt;li&gt;Revenez sur &lt;code&gt;main&lt;/code&gt; et fusionnez la branche.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Exercice 2 : rebase simple&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Depuis une nouvelle branche &lt;code&gt;feature-ui&lt;/code&gt;, faites quelques commits.&lt;/li&gt;
+&lt;li&gt;Revenez sur &lt;code&gt;main&lt;/code&gt;, faites des commits supplémentaires.&lt;/li&gt;
+&lt;li&gt;Rebasculez sur &lt;code&gt;feature-ui&lt;/code&gt; et faites un &lt;code&gt;rebase&lt;/code&gt; sur &lt;code&gt;main&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Exercice 3 : rebase interactif&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faites plusieurs petits commits sur une branche &lt;code&gt;feature-api&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Utilisez le rebase interactif pour fusionner ces commits en un seul commit clair avec un bon message descriptif.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bonnes-pratiques-pour-branches-et-rebase&#34;&gt;Bonnes pratiques pour branches et rebase&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rebase sur la branche principale souvent&lt;/strong&gt; : évitez d&amp;rsquo;accumuler trop de divergences.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Petits commits clairs&lt;/strong&gt; : plus faciles à rebaser et relire.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Éviter le rebase sur des branches publiques&lt;/strong&gt; déjà partagées (cela force à réécrire l’historique de vos collègues).&lt;/li&gt;
+&lt;li&gt;Utiliser un rebase interactif avant de fusionner pour nettoyer vos commits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;En maîtrisant les branches et le rebase, vous obtiendrez un historique clair, précis et professionnel, facilitant ainsi la collaboration en équipe. L’utilisation régulière de ces techniques améliore significativement la qualité et la maintenabilité du projet.&lt;/p&gt;
+&lt;p&gt;Continuez à pratiquer régulièrement et n&amp;rsquo;hésitez pas à expérimenter dans un environnement de test.&lt;/p&gt;
+&lt;h2 id=&#34;lectures-complémentaires&#34;&gt;Lectures complémentaires&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Branches-en-bref&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation officielle Git sur les branches&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Rebaser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rebase Git expliqué&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tutoriel avancé sur le rebase interactif&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Understanding Git for Collaborative Development | Antoine Weill--Duflos</title>
+    <link>https://antoine.weill-duflos.fr/en/courses/git/</link>
+      <atom:link href="https://antoine.weill-duflos.fr/en/courses/git/index.xml" rel="self" type="application/rss+xml" />
+    <description>Understanding Git for Collaborative Development</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
+      <title>Understanding Git for Collaborative Development</title>
+      <link>https://antoine.weill-duflos.fr/en/courses/git/</link>
+    </image>
+    
+    <item>
+      <title>Git Fundamentals and Remotes</title>
+      <link>https://antoine.weill-duflos.fr/en/courses/git/basic/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/courses/git/basic/</guid>
+      <description>&lt;h2 id=&#34;git-fundamentals&#34;&gt;Git Fundamentals&lt;/h2&gt;
+&lt;p&gt;Git is a distributed version control system that tracks changes to files over time. Unlike centralized version control systems, Git gives every developer a complete copy of the repository, including its full history.&lt;/p&gt;
+&lt;h3 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Repository (Repo)&lt;/strong&gt;: A collection of files and their complete history.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Initialize a new repository
+git init
+
+# Clone an existing repository
+git clone https://github.com/username/repository.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Commit&lt;/strong&gt;: A snapshot of your files at a specific point in time.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Stage changes for commit
+git add filename.txt
+
+# Stage all changes
+git add .
+
+# Commit staged changes
+git commit -m &amp;quot;Descriptive message about changes&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Staging Area&lt;/strong&gt;: A middle ground between your working directory and the repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Check status of working directory and staging area
+git status
+
+# See differences between working directory and staging area
+git diff
+
+# See differences between staging area and last commit
+git diff --staged
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;working-with-remotes&#34;&gt;Working with Remotes&lt;/h2&gt;
+&lt;p&gt;Remotes are versions of your repository hosted on a server, enabling collaboration with other developers.&lt;/p&gt;
+&lt;h3 id=&#34;github-vs-gitlab&#34;&gt;GitHub vs GitLab&lt;/h3&gt;
+&lt;p&gt;Both GitHub and GitLab are platforms for hosting Git repositories, but they have some differences:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;World&amp;rsquo;s largest code hosting platform&lt;/li&gt;
+&lt;li&gt;Strong open-source community&lt;/li&gt;
+&lt;li&gt;Acquired by Microsoft in 2018&lt;/li&gt;
+&lt;li&gt;Features: Actions (CI/CD), Codespaces, Copilot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;GitLab&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete DevOps platform&lt;/li&gt;
+&lt;li&gt;Available as self-hosted or cloud-hosted&lt;/li&gt;
+&lt;li&gt;Integrated CI/CD pipeline&lt;/li&gt;
+&lt;li&gt;Features: Built-in issue tracking, wiki, container registry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;managing-remotes&#34;&gt;Managing Remotes&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# List all remote repositories
+git remote -v
+
+# Add a new remote
+git remote add origin https://github.com/username/repository.git
+
+# Change remote URL
+git remote set-url origin https://github.com/username/new-repository.git
+
+# Add multiple remotes (e.g., GitHub and GitLab)
+git remote add github https://github.com/username/repository.git
+git remote add gitlab https://gitlab.com/username/repository.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;syncing-with-remotes&#34;&gt;Syncing with Remotes&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Download changes from remote without integrating them
+git fetch origin
+
+# Download and integrate changes from remote
+git pull origin main
+
+# Upload local changes to remote
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;best-practices-for-remotes&#34;&gt;Best Practices for Remotes&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Use SSH keys&lt;/strong&gt; for secure authentication:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Generate SSH key
+ssh-keygen -t ed25519 -C &amp;quot;your_email@example.com&amp;quot;
+
+# Add to GitHub/GitLab account
+cat ~/.ssh/id_ed25519.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Set up multiple remotes&lt;/strong&gt; for backup and flexibility:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Push to multiple remotes
+git push github main
+git push gitlab main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Use remote tracking branches&lt;/strong&gt; to simplify commands:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Set up tracking
+git branch --set-upstream-to=origin/main main
+
+# Now you can use simplified commands
+git pull
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Keep remote references clean&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Prune deleted remote branches
+git fetch --prune
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Branches and Integration</title>
+      <link>https://antoine.weill-duflos.fr/en/courses/git/branches/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/courses/git/branches/</guid>
+      <description>&lt;h2 id=&#34;understanding-branches&#34;&gt;Understanding Branches&lt;/h2&gt;
+&lt;p&gt;Branches are one of Git&amp;rsquo;s most powerful features, allowing developers to work on different features or fixes simultaneously without interfering with each other.&lt;/p&gt;
+&lt;h3 id=&#34;branch-basics&#34;&gt;Branch Basics&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# List all branches (* indicates current branch)
+git branch
+
+# Create a new branch
+git branch feature-name
+
+# Create and switch to a new branch
+git checkout -b feature-name
+
+# Switch to an existing branch
+git checkout feature-name
+
+# Delete a branch (after merging)
+git branch -d feature-name
+
+# Force delete a branch (even if not merged)
+git branch -D feature-name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;branch-visualization&#34;&gt;Branch Visualization&lt;/h3&gt;
+&lt;p&gt;Branches in Git can be visualized as separate lines of development that can later be integrated:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;          A---B---C feature-branch
+         /
+    D---E---F---G main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;integrating-changes-merge-vs-rebase&#34;&gt;Integrating Changes: Merge vs. Rebase&lt;/h2&gt;
+&lt;p&gt;There are two primary ways to integrate changes from one branch into another: merging and rebasing. Each has its advantages and appropriate use cases.&lt;/p&gt;
+&lt;h3 id=&#34;merging&#34;&gt;Merging&lt;/h3&gt;
+&lt;p&gt;Merging creates a new &amp;ldquo;merge commit&amp;rdquo; that combines the changes from both branches.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Switch to the target branch (e.g., main)
+git checkout main
+
+# Merge changes from feature branch
+git merge feature-branch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Result of merging:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;          A---B---C feature-branch
+         /         \
+    D---E---F---G---H main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Advantages of Merging:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preserves complete history and chronological order&lt;/li&gt;
+&lt;li&gt;Non-destructive operation (doesn&amp;rsquo;t change existing commits)&lt;/li&gt;
+&lt;li&gt;Clearly shows when and how features were integrated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best for:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Public/shared branches&lt;/li&gt;
+&lt;li&gt;When the branch history is important to preserve&lt;/li&gt;
+&lt;li&gt;When you want to see exactly when a feature was merged&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rebasing&#34;&gt;Rebasing&lt;/h3&gt;
+&lt;p&gt;Rebasing moves or &amp;ldquo;replays&amp;rdquo; your branch commits onto the tip of another branch, creating a linear history.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Switch to the feature branch
+git checkout feature-branch
+
+# Rebase onto main
+git rebase main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Before rebase:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;          A---B---C feature-branch
+         /
+    D---E---F---G main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;After rebase:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;                  A&#39;--B&#39;--C&#39; feature-branch
+                 /
+    D---E---F---G main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Advantages of Rebasing:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates a cleaner, linear project history&lt;/li&gt;
+&lt;li&gt;Eliminates unnecessary merge commits&lt;/li&gt;
+&lt;li&gt;Makes it easier to find bugs with tools like &lt;code&gt;git bisect&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Best for:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Local/private branches before sharing&lt;/li&gt;
+&lt;li&gt;Keeping feature branches up-to-date with main&lt;/li&gt;
+&lt;li&gt;When you want a clean, linear history&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;choosing-between-merge-and-rebase&#34;&gt;Choosing Between Merge and Rebase&lt;/h3&gt;
+&lt;p&gt;A good rule of thumb:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rebase&lt;/strong&gt; your private/local branches to keep them updated with the main branch&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Merge&lt;/strong&gt; your feature branches back into the main branch when they&amp;rsquo;re complete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-golden-rule-of-rebasing&#34;&gt;The Golden Rule of Rebasing&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Never rebase branches that others are working on or that have been pushed to a public repository.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Rebasing changes commit history, which can cause serious problems for collaborators if they&amp;rsquo;ve based work on those commits.&lt;/p&gt;
+&lt;h2 id=&#34;advanced-branch-operations&#34;&gt;Advanced Branch Operations&lt;/h2&gt;
+&lt;h3 id=&#34;cherry-picking&#34;&gt;Cherry-picking&lt;/h3&gt;
+&lt;p&gt;Cherry-picking allows you to apply specific commits from one branch to another.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Apply a specific commit to current branch
+git cherry-pick commit-hash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;interactive-rebasing&#34;&gt;Interactive Rebasing&lt;/h3&gt;
+&lt;p&gt;Interactive rebasing gives you fine-grained control over your commit history.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Start an interactive rebase for the last 3 commits
+git rebase -i HEAD~3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This opens an editor where you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reorder commits&lt;/li&gt;
+&lt;li&gt;Edit commit messages&lt;/li&gt;
+&lt;li&gt;Combine (squash) commits&lt;/li&gt;
+&lt;li&gt;Split commits&lt;/li&gt;
+&lt;li&gt;Delete commits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stashing-changes&#34;&gt;Stashing Changes&lt;/h3&gt;
+&lt;p&gt;Stashing allows you to temporarily save changes without committing them.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Stash current changes
+git stash
+
+# List stashes
+git stash list
+
+# Apply most recent stash
+git stash apply
+
+# Apply specific stash
+git stash apply stash@{2}
+
+# Remove most recent stash after applying
+git stash pop
+
+# Clear all stashes
+git stash clear
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Development Workflow</title>
+      <link>https://antoine.weill-duflos.fr/en/courses/git/workflow/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/courses/git/workflow/</guid>
+      <description>&lt;h2 id=&#34;feature-branch-workflow&#34;&gt;Feature Branch Workflow&lt;/h2&gt;
+&lt;p&gt;The feature branch workflow is a Git workflow that promotes collaboration while ensuring the main branch always contains production-quality code.&lt;/p&gt;
+&lt;h3 id=&#34;core-principles&#34;&gt;Core Principles&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Main branch is always deployable&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The main branch (often called &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;master&lt;/code&gt;) should always contain stable, production-ready code&lt;/li&gt;
+&lt;li&gt;Never commit directly to main in a collaborative environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature development happens in dedicated branches&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each new feature or bugfix gets its own branch&lt;/li&gt;
+&lt;li&gt;Branches are created from the latest main branch&lt;/li&gt;
+&lt;li&gt;Work is isolated until the feature is complete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Integration through merge/pull requests&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Changes are integrated back to main through merge requests (GitLab) or pull requests (GitHub)&lt;/li&gt;
+&lt;li&gt;This enables code review and discussion before integration&lt;/li&gt;
+&lt;li&gt;Automated tests can be run before merging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;workflow-steps&#34;&gt;Workflow Steps&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;main branch: ----o----o----o----o----o----o----o----
+                  \                      /
+feature branch:    o----o----o----o----o
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Update main branch&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout main
+git pull origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a feature branch&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b feature/user-authentication
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Work on the feature&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Make changes, then commit
+git add .
+git commit -m &amp;quot;Add user login form&amp;quot;
+
+# Make more changes
+git add .
+git commit -m &amp;quot;Add password validation&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Keep your feature branch updated&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Option 1: Merge (safer)
+git checkout feature/user-authentication
+git merge main
+
+# Option 2: Rebase (cleaner history)
+git checkout feature/user-authentication
+git rebase main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Push your feature branch&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin feature/user-authentication
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a merge/pull request&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Done through the GitLab/GitHub web interface&lt;/li&gt;
+&lt;li&gt;Assign reviewers&lt;/li&gt;
+&lt;li&gt;Add description of changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Address review feedback&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Make requested changes
+git add .
+git commit -m &amp;quot;Address review feedback&amp;quot;
+git push origin feature/user-authentication
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Merge into main&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;After approval, merge through the web interface&lt;/li&gt;
+&lt;li&gt;Or use command line:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout main
+git merge feature/user-authentication
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Delete the feature branch&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Delete local branch
+git branch -d feature/user-authentication
+
+# Delete remote branch
+git push origin --delete feature/user-authentication
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;mergepull-requests-best-practices&#34;&gt;Merge/Pull Requests Best Practices&lt;/h2&gt;
+&lt;p&gt;Merge requests (GitLab) and pull requests (GitHub) are powerful collaboration tools that facilitate code review and discussion before changes are integrated.&lt;/p&gt;
+&lt;h3 id=&#34;creating-effective-merge-requests&#34;&gt;Creating Effective Merge Requests&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Keep changes focused and small&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Smaller changes are easier to review&lt;/li&gt;
+&lt;li&gt;Aim for less than 400 lines of code per request&lt;/li&gt;
+&lt;li&gt;Each merge request should address a single concern&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Write descriptive titles and descriptions&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title: Brief summary of what the change does&lt;/li&gt;
+&lt;li&gt;Description: Explain the why, not just the what&lt;/li&gt;
+&lt;li&gt;Include links to related issues or requirements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Add appropriate labels and assignees&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use labels to categorize the request (bug, feature, etc.)&lt;/li&gt;
+&lt;li&gt;Assign to appropriate reviewers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Include tests and documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add tests that verify your changes&lt;/li&gt;
+&lt;li&gt;Update documentation if necessary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;example-merge-request-template&#34;&gt;Example Merge Request Template&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;## Description
+Brief description of the changes
+
+## Related Issues
+- #123 Feature request
+- #456 Bug report
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Breaking change
+- [ ] Documentation update
+
+## How Has This Been Tested?
+Describe the tests you ran
+
+## Checklist
+- [ ] My code follows the project&#39;s style guidelines
+- [ ] I have added tests that prove my fix/feature works
+- [ ] New and existing tests pass
+- [ ] Documentation has been updated
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;reviewing-code&#34;&gt;Reviewing Code&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Be thorough but respectful&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Focus on the code, not the person&lt;/li&gt;
+&lt;li&gt;Ask questions rather than making demands&lt;/li&gt;
+&lt;li&gt;Provide constructive feedback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Check for:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Functionality: Does it work as expected?&lt;/li&gt;
+&lt;li&gt;Code quality: Is it maintainable and readable?&lt;/li&gt;
+&lt;li&gt;Tests: Are there sufficient tests?&lt;/li&gt;
+&lt;li&gt;Security: Are there any vulnerabilities?&lt;/li&gt;
+&lt;li&gt;Performance: Will it cause performance issues?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Use inline comments for specific issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Be specific about what needs to change&lt;/li&gt;
+&lt;li&gt;Explain why the change is needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;advanced-workflow-concepts&#34;&gt;Advanced Workflow Concepts&lt;/h2&gt;
+&lt;h3 id=&#34;continuous-integration-ci&#34;&gt;Continuous Integration (CI)&lt;/h3&gt;
+&lt;p&gt;Set up CI pipelines to automatically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run tests&lt;/li&gt;
+&lt;li&gt;Check code style&lt;/li&gt;
+&lt;li&gt;Build the application&lt;/li&gt;
+&lt;li&gt;Deploy to staging environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;# Example .gitlab-ci.yml
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm test
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  script:
+    - deploy-script.sh
+  only:
+    - main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;protected-branches&#34;&gt;Protected Branches&lt;/h3&gt;
+&lt;p&gt;Configure protected branches in GitLab/GitHub to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent direct pushes to important branches&lt;/li&gt;
+&lt;li&gt;Require merge requests for all changes&lt;/li&gt;
+&lt;li&gt;Enforce code review approvals&lt;/li&gt;
+&lt;li&gt;Require CI pipeline to pass before merging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;release-workflow&#34;&gt;Release Workflow&lt;/h3&gt;
+&lt;p&gt;For more structured releases:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Maintain a develop branch&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature branches merge into develop&lt;/li&gt;
+&lt;li&gt;Develop contains the latest development changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create release branches&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout develop
+git checkout -b release/v1.2.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stabilize the release&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only bugfixes go into release branches&lt;/li&gt;
+&lt;li&gt;No new features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Merge to main and tag&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout main
+git merge release/v1.2.0
+git tag -a v1.2.0 -m &amp;quot;Version 1.2.0&amp;quot;
+git push origin main --tags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Merge back to develop&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout develop
+git merge release/v1.2.0
+git push origin develop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Activity</title>
+      <link>https://antoine.weill-duflos.fr/en/courses/git/exercise/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0100</pubDate>
+      <guid>https://antoine.weill-duflos.fr/en/courses/git/exercise/</guid>
+      <description>&lt;h2 id=&#34;hands-on-git-exercises&#34;&gt;Hands-on Git Exercises&lt;/h2&gt;
+&lt;p&gt;Practice these exercises to reinforce your understanding of Git workflows and collaboration.&lt;/p&gt;
+&lt;h3 id=&#34;exercise-1-setting-up-a-repository-with-multiple-remotes&#34;&gt;Exercise 1: Setting Up a Repository with Multiple Remotes&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new repository on both GitHub and GitLab&lt;/li&gt;
+&lt;li&gt;Initialize a local repository and add both remotes&lt;/li&gt;
+&lt;li&gt;Create a README.md file and push it to both remotes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Start with this template:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Initialize local repository
+mkdir git-practice
+cd git-practice
+git init
+
+# Create README file
+echo &amp;quot;# Git Practice Repository&amp;quot; &amp;gt; README.md
+git add README.md
+git commit -m &amp;quot;Initial commit&amp;quot;
+
+# Add remotes (replace with your own URLs)
+git remote add github https://github.com/username/git-practice.git
+git remote add gitlab https://gitlab.com/username/git-practice.git
+
+# Push to both remotes
+git push github main
+git push gitlab main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;exercise-2-feature-branch-development&#34;&gt;Exercise 2: Feature Branch Development&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a feature branch from main&lt;/li&gt;
+&lt;li&gt;Make several commits to the feature branch&lt;/li&gt;
+&lt;li&gt;Keep your feature branch updated with changes from main&lt;/li&gt;
+&lt;li&gt;Create a merge request&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Follow these steps:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Make sure you&#39;re on main and it&#39;s up to date
+git checkout main
+git pull origin main
+
+# Create and switch to a feature branch
+git checkout -b feature/add-documentation
+
+# Make changes and commit
+echo &amp;quot;## Installation&amp;quot; &amp;gt;&amp;gt; README.md
+echo &amp;quot;Run \`npm install\` to install dependencies.&amp;quot; &amp;gt;&amp;gt; README.md
+git add README.md
+git commit -m &amp;quot;Add installation instructions&amp;quot;
+
+# Make more changes
+echo &amp;quot;## Usage&amp;quot; &amp;gt;&amp;gt; README.md
+echo &amp;quot;Run \`npm start\` to start the application.&amp;quot; &amp;gt;&amp;gt; README.md
+git add README.md
+git commit -m &amp;quot;Add usage instructions&amp;quot;
+
+# Update feature branch with changes from main (if any)
+git checkout main
+git pull origin main
+git checkout feature/add-documentation
+git rebase main
+
+# Push feature branch to remote
+git push origin feature/add-documentation
+
+# Now create a merge request through the GitHub/GitLab web interface
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;exercise-3-resolving-merge-conflicts&#34;&gt;Exercise 3: Resolving Merge Conflicts&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create two branches that modify the same file&lt;/li&gt;
+&lt;li&gt;Merge one branch into main&lt;/li&gt;
+&lt;li&gt;Try to merge the second branch and resolve the conflicts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Try this scenario:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Start from main
+git checkout main
+
+# Create first feature branch
+git checkout -b feature/add-contributing
+echo &amp;quot;## Contributing&amp;quot; &amp;gt;&amp;gt; README.md
+echo &amp;quot;Please follow the code style guidelines.&amp;quot; &amp;gt;&amp;gt; README.md
+git add README.md
+git commit -m &amp;quot;Add contributing guidelines&amp;quot;
+git checkout main
+git merge feature/add-contributing
+git push origin main
+
+# Create second feature branch (from earlier main state)
+git checkout -b feature/add-license
+echo &amp;quot;## License&amp;quot; &amp;gt;&amp;gt; README.md
+echo &amp;quot;This project is licensed under MIT.&amp;quot; &amp;gt;&amp;gt; README.md
+git add README.md
+git commit -m &amp;quot;Add license information&amp;quot;
+
+# Try to merge - this will cause a conflict
+git checkout main
+git merge feature/add-license
+
+# Resolve the conflict manually, then
+git add README.md
+git commit -m &amp;quot;Merge feature/add-license, resolve conflicts&amp;quot;
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;exercise-4-interactive-rebasing&#34;&gt;Exercise 4: Interactive Rebasing&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a feature branch with several small commits&lt;/li&gt;
+&lt;li&gt;Use interactive rebasing to clean up the commit history&lt;/li&gt;
+&lt;li&gt;Push the cleaned-up branch&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Follow these steps:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Create a feature branch
+git checkout -b feature/api-integration
+
+# Make several small commits
+echo &amp;quot;function fetchData() {&amp;quot; &amp;gt; api.js
+echo &amp;quot;  // TODO: Implement&amp;quot; &amp;gt;&amp;gt; api.js
+echo &amp;quot;}&amp;quot; &amp;gt;&amp;gt; api.js
+git add api.js
+git commit -m &amp;quot;Add fetchData function skeleton&amp;quot;
+
+echo &amp;quot;function fetchData() {&amp;quot; &amp;gt; api.js
+echo &amp;quot;  return fetch(&#39;https://api.example.com/data&#39;)&amp;quot; &amp;gt;&amp;gt; api.js
+echo &amp;quot;    .then(response =&amp;gt; response.json());&amp;quot; &amp;gt;&amp;gt; api.js
+echo &amp;quot;}&amp;quot; &amp;gt;&amp;gt; api.js
+git add api.js
+git commit -m &amp;quot;Implement fetchData function&amp;quot;
+
+echo &amp;quot;function fetchData() {&amp;quot; &amp;gt; api.js
+echo &amp;quot;  return fetch(&#39;https://api.example.com/data&#39;)&amp;quot; &amp;gt;&amp;gt; api.js
+echo &amp;quot;    .then(response =&amp;gt; response.json())&amp;quot; &amp;gt;&amp;gt; api.js
+echo &amp;quot;    .catch(error =&amp;gt; console.error(&#39;Error fetching data:&#39;, error));&amp;quot; &amp;gt;&amp;gt; api.js
+echo &amp;quot;}&amp;quot; &amp;gt;&amp;gt; api.js
+git add api.js
+git commit -m &amp;quot;Add error handling to fetchData&amp;quot;
+
+# Use interactive rebase to clean up commits
+git rebase -i HEAD~3
+
+# In the editor, change the second and third commits from &amp;quot;pick&amp;quot; to &amp;quot;squash&amp;quot;
+# Save and close, then edit the commit message
+# After rebasing, force push (only for private branches!)
+git push origin feature/api-integration --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;exercise-5-creating-a-complete-pull-request&#34;&gt;Exercise 5: Creating a Complete Pull Request&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Identify a small improvement for an open-source project&lt;/li&gt;
+&lt;li&gt;Fork the repository&lt;/li&gt;
+&lt;li&gt;Create a feature branch with your improvement&lt;/li&gt;
+&lt;li&gt;Submit a pull request with proper documentation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This exercise should be done on a real GitHub/GitLab repository:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Fork the repository through the GitHub/GitLab interface
+
+# Clone your fork
+git clone https://github.com/your-username/project.git
+cd project
+
+# Create a feature branch
+git checkout -b fix/update-readme
+
+# Make your changes
+# Edit files as needed
+
+# Commit your changes
+git add .
+git commit -m &amp;quot;Update README with clearer installation instructions&amp;quot;
+
+# Push to your fork
+git push origin fix/update-readme
+
+# Create a pull request through the GitHub/GitLab interface
+# Include a detailed description of your changes
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

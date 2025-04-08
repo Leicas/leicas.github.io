@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Getting started | Antoine Weill--Duflos</title>
+    <title>How to create Interaction with the LeapMotion | Antoine Weill--Duflos</title>
     <link>https://antoine.weill-duflos.fr/en/courses/leapmotion/</link>
       <atom:link href="https://antoine.weill-duflos.fr/en/courses/leapmotion/index.xml" rel="self" type="application/rss+xml" />
-    <description>Getting started</description>
+    <description>How to create Interaction with the LeapMotion</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png</url>
-      <title>Getting started</title>
+      <title>How to create Interaction with the LeapMotion</title>
       <link>https://antoine.weill-duflos.fr/en/courses/leapmotion/</link>
     </image>
     

@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: April 7, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Antoine Weill-Duflos" />
+
+
+
+
+
+  
+
+<meta name="description" content="Feature Branch Workflow
+The feature branch workflow is a Git workflow that promotes collaboration while ensuring the main branch always contains production-quality code.
+Core Principles
+
+
+Main branch is always deployable
+
+The main branch (often called main or master) should always contain stable, production-ready code
+Never commit directly to main in a collaborative environment
+
+
+
+Feature development happens in dedicated branches
+
+Each new feature or bugfix gets its own branch
+Branches are created from the latest main branch
+Work is isolated until the feature is complete
+
+
+
+Integration through merge/pull requests" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://antoine.weill-duflos.fr/en/courses/git/workflow/" />
+<link rel="canonical" href="https://antoine.weill-duflos.fr/en/courses/git/workflow/" />
+
+
+
+  <link rel="manifest" href="/en/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_2311fe1a408f47c1.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_4eb7679362359773.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@ntoidewd" />
+  <meta property="twitter:creator" content="@ntoidewd" />
+<meta property="twitter:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Antoine Weill--Duflos" />
+<meta property="og:url" content="https://antoine.weill-duflos.fr/en/courses/git/workflow/" />
+<meta property="og:title" content="Feature Development Workflow | Antoine Weill--Duflos" />
+<meta property="og:description" content="Feature Branch Workflow
+The feature branch workflow is a Git workflow that promotes collaboration while ensuring the main branch always contains production-quality code.
+Core Principles
+
+
+Main branch is always deployable
+
+The main branch (often called main or master) should always contain stable, production-ready code
+Never commit directly to main in a collaborative environment
+
+
+
+Feature development happens in dedicated branches
+
+Each new feature or bugfix gets its own branch
+Branches are created from the latest main branch
+Work is isolated until the feature is complete
+
+
+
+Integration through merge/pull requests" /><meta property="og:image" content="https://antoine.weill-duflos.fr/media/icon_hu_7613a4a452ac7087.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-04-08T00:00:00&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-04-08T00:00:00&#43;01:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Feature Development Workflow | Antoine Weill--Duflos</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <link rel="me" href="https://hci.social/@antoine" />
+      
+    
+  
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a8d89dc032690144c76b613fd3ffb0e3" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/en/">Antoine Weill--Duflos</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/en/courses/"><span>Courses</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#talk"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/en/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+        
+          Overview
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/en/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/en/courses/git/">Overview</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/en/courses/git/basic/">Git Fundamentals and Remotes</a></li>
+
+
+
+  <li class=""><a href="/en/courses/git/branches/">Branches and Integration</a></li>
+
+
+
+  <li class="active"><a href="/en/courses/git/workflow/">Feature Development Workflow</a></li>
+
+
+
+  <li class=""><a href="/en/courses/git/exercise/">Activity</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#feature-branch-workflow">Feature Branch Workflow</a>
+      <ul>
+        <li><a href="#core-principles">Core Principles</a></li>
+        <li><a href="#workflow-steps">Workflow Steps</a></li>
+      </ul>
+    </li>
+    <li><a href="#mergepull-requests-best-practices">Merge/Pull Requests Best Practices</a>
+      <ul>
+        <li><a href="#creating-effective-merge-requests">Creating Effective Merge Requests</a></li>
+        <li><a href="#example-merge-request-template">Example Merge Request Template</a></li>
+        <li><a href="#reviewing-code">Reviewing Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#advanced-workflow-concepts">Advanced Workflow Concepts</a>
+      <ul>
+        <li><a href="#continuous-integration-ci">Continuous Integration (CI)</a></li>
+        <li><a href="#protected-branches">Protected Branches</a></li>
+        <li><a href="#release-workflow">Release Workflow</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+        
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
+        
+        <h1>Feature Development Workflow</h1>
+
+        <article class="article-style">
+
+          
+          
+
+          <h2 id="feature-branch-workflow">Feature Branch Workflow</h2>
+<p>The feature branch workflow is a Git workflow that promotes collaboration while ensuring the main branch always contains production-quality code.</p>
+<h3 id="core-principles">Core Principles</h3>
+<ol>
+<li>
+<p><strong>Main branch is always deployable</strong></p>
+<ul>
+<li>The main branch (often called <code>main</code> or <code>master</code>) should always contain stable, production-ready code</li>
+<li>Never commit directly to main in a collaborative environment</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature development happens in dedicated branches</strong></p>
+<ul>
+<li>Each new feature or bugfix gets its own branch</li>
+<li>Branches are created from the latest main branch</li>
+<li>Work is isolated until the feature is complete</li>
+</ul>
+</li>
+<li>
+<p><strong>Integration through merge/pull requests</strong></p>
+<ul>
+<li>Changes are integrated back to main through merge requests (GitLab) or pull requests (GitHub)</li>
+<li>This enables code review and discussion before integration</li>
+<li>Automated tests can be run before merging</li>
+</ul>
+</li>
+</ol>
+<h3 id="workflow-steps">Workflow Steps</h3>
+<pre><code>main branch: ----o----o----o----o----o----o----o----
+                  \                      /
+feature branch:    o----o----o----o----o
+</code></pre>
+<ol>
+<li>
+<p><strong>Update main branch</strong></p>
+<pre><code class="language-bash">git checkout main
+git pull origin main
+</code></pre>
+</li>
+<li>
+<p><strong>Create a feature branch</strong></p>
+<pre><code class="language-bash">git checkout -b feature/user-authentication
+</code></pre>
+</li>
+<li>
+<p><strong>Work on the feature</strong></p>
+<pre><code class="language-bash"># Make changes, then commit
+git add .
+git commit -m &quot;Add user login form&quot;
+
+# Make more changes
+git add .
+git commit -m &quot;Add password validation&quot;
+</code></pre>
+</li>
+<li>
+<p><strong>Keep your feature branch updated</strong></p>
+<pre><code class="language-bash"># Option 1: Merge (safer)
+git checkout feature/user-authentication
+git merge main
+
+# Option 2: Rebase (cleaner history)
+git checkout feature/user-authentication
+git rebase main
+</code></pre>
+</li>
+<li>
+<p><strong>Push your feature branch</strong></p>
+<pre><code class="language-bash">git push origin feature/user-authentication
+</code></pre>
+</li>
+<li>
+<p><strong>Create a merge/pull request</strong></p>
+<ul>
+<li>Done through the GitLab/GitHub web interface</li>
+<li>Assign reviewers</li>
+<li>Add description of changes</li>
+</ul>
+</li>
+<li>
+<p><strong>Address review feedback</strong></p>
+<pre><code class="language-bash"># Make requested changes
+git add .
+git commit -m &quot;Address review feedback&quot;
+git push origin feature/user-authentication
+</code></pre>
+</li>
+<li>
+<p><strong>Merge into main</strong></p>
+<ul>
+<li>After approval, merge through the web interface</li>
+<li>Or use command line:</li>
+</ul>
+<pre><code class="language-bash">git checkout main
+git merge feature/user-authentication
+git push origin main
+</code></pre>
+</li>
+<li>
+<p><strong>Delete the feature branch</strong></p>
+<pre><code class="language-bash"># Delete local branch
+git branch -d feature/user-authentication
+
+# Delete remote branch
+git push origin --delete feature/user-authentication
+</code></pre>
+</li>
+</ol>
+<h2 id="mergepull-requests-best-practices">Merge/Pull Requests Best Practices</h2>
+<p>Merge requests (GitLab) and pull requests (GitHub) are powerful collaboration tools that facilitate code review and discussion before changes are integrated.</p>
+<h3 id="creating-effective-merge-requests">Creating Effective Merge Requests</h3>
+<ol>
+<li>
+<p><strong>Keep changes focused and small</strong></p>
+<ul>
+<li>Smaller changes are easier to review</li>
+<li>Aim for less than 400 lines of code per request</li>
+<li>Each merge request should address a single concern</li>
+</ul>
+</li>
+<li>
+<p><strong>Write descriptive titles and descriptions</strong></p>
+<ul>
+<li>Title: Brief summary of what the change does</li>
+<li>Description: Explain the why, not just the what</li>
+<li>Include links to related issues or requirements</li>
+</ul>
+</li>
+<li>
+<p><strong>Add appropriate labels and assignees</strong></p>
+<ul>
+<li>Use labels to categorize the request (bug, feature, etc.)</li>
+<li>Assign to appropriate reviewers</li>
+</ul>
+</li>
+<li>
+<p><strong>Include tests and documentation</strong></p>
+<ul>
+<li>Add tests that verify your changes</li>
+<li>Update documentation if necessary</li>
+</ul>
+</li>
+</ol>
+<h3 id="example-merge-request-template">Example Merge Request Template</h3>
+<pre><code class="language-markdown">## Description
+Brief description of the changes
+
+## Related Issues
+- #123 Feature request
+- #456 Bug report
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Breaking change
+- [ ] Documentation update
+
+## How Has This Been Tested?
+Describe the tests you ran
+
+## Checklist
+- [ ] My code follows the project's style guidelines
+- [ ] I have added tests that prove my fix/feature works
+- [ ] New and existing tests pass
+- [ ] Documentation has been updated
+</code></pre>
+<h3 id="reviewing-code">Reviewing Code</h3>
+<ol>
+<li>
+<p><strong>Be thorough but respectful</strong></p>
+<ul>
+<li>Focus on the code, not the person</li>
+<li>Ask questions rather than making demands</li>
+<li>Provide constructive feedback</li>
+</ul>
+</li>
+<li>
+<p><strong>Check for:</strong></p>
+<ul>
+<li>Functionality: Does it work as expected?</li>
+<li>Code quality: Is it maintainable and readable?</li>
+<li>Tests: Are there sufficient tests?</li>
+<li>Security: Are there any vulnerabilities?</li>
+<li>Performance: Will it cause performance issues?</li>
+</ul>
+</li>
+<li>
+<p><strong>Use inline comments for specific issues</strong></p>
+<ul>
+<li>Be specific about what needs to change</li>
+<li>Explain why the change is needed</li>
+</ul>
+</li>
+</ol>
+<h2 id="advanced-workflow-concepts">Advanced Workflow Concepts</h2>
+<h3 id="continuous-integration-ci">Continuous Integration (CI)</h3>
+<p>Set up CI pipelines to automatically:</p>
+<ul>
+<li>Run tests</li>
+<li>Check code style</li>
+<li>Build the application</li>
+<li>Deploy to staging environments</li>
+</ul>
+<pre><code class="language-yaml"># Example .gitlab-ci.yml
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm test
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  script:
+    - deploy-script.sh
+  only:
+    - main
+</code></pre>
+<h3 id="protected-branches">Protected Branches</h3>
+<p>Configure protected branches in GitLab/GitHub to:</p>
+<ul>
+<li>Prevent direct pushes to important branches</li>
+<li>Require merge requests for all changes</li>
+<li>Enforce code review approvals</li>
+<li>Require CI pipeline to pass before merging</li>
+</ul>
+<h3 id="release-workflow">Release Workflow</h3>
+<p>For more structured releases:</p>
+<ol>
+<li>
+<p><strong>Maintain a develop branch</strong></p>
+<ul>
+<li>Feature branches merge into develop</li>
+<li>Develop contains the latest development changes</li>
+</ul>
+</li>
+<li>
+<p><strong>Create release branches</strong></p>
+<pre><code class="language-bash">git checkout develop
+git checkout -b release/v1.2.0
+</code></pre>
+</li>
+<li>
+<p><strong>Stabilize the release</strong></p>
+<ul>
+<li>Only bugfixes go into release branches</li>
+<li>No new features</li>
+</ul>
+</li>
+<li>
+<p><strong>Merge to main and tag</strong></p>
+<pre><code class="language-bash">git checkout main
+git merge release/v1.2.0
+git tag -a v1.2.0 -m &quot;Version 1.2.0&quot;
+git push origin main --tags
+</code></pre>
+</li>
+<li>
+<p><strong>Merge back to develop</strong></p>
+<pre><code class="language-bash">git checkout develop
+git merge release/v1.2.0
+git push origin develop
+</code></pre>
+</li>
+</ol>
+
+
+        </article>
+
+        
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
+          
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/en/courses/git/branches/" rel="next">Branches and Integration</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/en/courses/git/exercise/" rel="prev">Activity</a>
+  </div>
+  
+</div>
+
+        </div>
+        
+      </div>
+
+      <div class="body-footer">
+        <p>Last updated on Apr 8, 2025</p>
+
+        
+
+
+
+
+        
+
+
+
+
+        
+
+
+      </div>
+
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.5faf09821dbe513ca103e87bafd52766.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.20495e7d56dd1098dabc5f3dc75d9d30.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
